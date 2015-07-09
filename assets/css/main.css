@@ -2100,12 +2100,12 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #e74c3c;
+			background-color: #FDFCFC;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
 			background-size: 25em, 25em;
-			color: #fff;
+			color: #000;
 		}
 
 			.wrapper.style2 .button:hover {
