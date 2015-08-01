@@ -2059,8 +2059,8 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #e74c3c;
-			border-color: #e74c3c;
+			background: #E4392B;
+			border-color: #E4392B;
 			color: #fff !important;
 		}
 
@@ -2068,8 +2068,8 @@
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			.button.special:hover {
-				background: #c0392b !important;
-				border-color: #c0392b !important;
+				background: #50d2c2 !important;
+				border-color: #50d2c2 !important;
 			}
 
 		input[type="button"].fit,
@@ -2204,7 +2204,8 @@
 			position: absolute;
 			right: 1.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: 2em;
+			vertical-align: middle;
 		}
 
 			#header nav ul li {
@@ -2389,7 +2390,7 @@
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/106.jpg");
+		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("../../images/169.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -2408,8 +2409,8 @@
 			-webkit-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(60, 27, 43, 0.4);
-			color: #fff;
+			background: rgba(255, 255, 255, 0.8);
+			color: #E4392B;
 			display: inline-block;
 			opacity: 0;
 			padding: 3em;
