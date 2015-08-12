@@ -9,7 +9,7 @@ name: KeyReply Blog
 description: Musings from the KeyReply team on productivity
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: http://blog.keyreply.com/images/keyreply-logo.png
+avatar: http://keyreply.com/blog/images/keyreply-logo.png
 
 #
 # Flags below are optional
@@ -41,7 +41,7 @@ google_analytics: UA-55913366-8
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://blog.keyreply.com
+url: http://keyreply.com/blog/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -55,7 +55,7 @@ baseurl: ""
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title/
+permalink: /blog/:title/
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
@@ -79,7 +79,7 @@ exclude:
 share: yes
 
 locale:         en_us # eg. en_us
-icon:           /images/keyreply-logo.png # /assets/img/icon.png [best 300px X 300px]
+icon:           /blog/images/keyreply-logo.png # /assets/img/icon.png [best 300px X 300px]
 author:
   facebook:     graphpaper
   twitter:      keyreply

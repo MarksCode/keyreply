@@ -10,10 +10,10 @@ We set out to understand how long it would take to respond using the methods abo
 Based on a 30-run trial, it took about 46 - 262 seconds to respond by going out of the app, finding the right response, and copying and pasting it in. On the other hand, it took about 3 - 10 seconds to find the right response template and pop it into the message field using the keyboard approach. 
 
 ## Time with Standard mobile keyboard
-![alt text](/images/StandardKeyboard.png  "Standard Keyboard") 
+![alt text](/blog/images/StandardKeyboard.png  "Standard Keyboard") 
 
 ## Time with KeyReply keyboard
-![alt text](/images/KeyReplyKeyboard.png  "KeyReply Keyboard")
+![alt text](/blog/images/KeyReplyKeyboard.png  "KeyReply Keyboard")
 
 That's 6 - 15 x faster if you're the smart person with that response keyboard. And if you work on your phone a lot, like some of our interviewees do, that's a boatload of time saved for you to do other more productive (or fun) things. 
 
