@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How standardizing responses across reps can boost your business success
+title: How standardizing responses can boost your business success
 ---
 These days, there are inadvertent cringes to words such as "standardization". Generally, this could be due to the push for cultivation of individuals in companies, and encouraging open-ended and creative thinking among employees. While this approach has been proven to be successful in improving innovation and free-form solutions, it may not be as effective in roles which requires more repetitive responses such as support and operations.
 
