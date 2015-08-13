@@ -18,7 +18,8 @@
     {% endif %}
 
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
-    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+    <!-- <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}"> -->
+    <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <meta property="og:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.icon | prepend: site.baseurl | prepend: site.url }}{% endif %}">
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -46,13 +47,13 @@
       {% endfor %}
     {% endif %}
 
-    <meta property="fb:admins" content="{{ site.fb_admins }}">
-    <meta property="fb:app_id" content="{{ site.fb_appid }}">
+    <!-- <meta property="fb:admins" content="{{ site.fb_admins }}"> -->
+    <!-- <meta property="fb:app_id" content="{{ site.fb_appid }}"> -->
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.author.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
     <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.icon | prepend: site.baseurl | prepend: site.url }}{% endif %}">
     <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
