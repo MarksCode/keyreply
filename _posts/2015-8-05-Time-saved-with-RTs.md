@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How much time can you save with response templates on your phone?
+title: Save 12 vacation days a year with response templates on your phone
 ---
 
 If you've ever tried typing a long chunk of text on your mobile in response, you'll know how much of a pain it is. Especially if it is a response that you've been typing over and over numerous times, or one that you're trying to copy and paste from elsewhere you've previously replied. 
