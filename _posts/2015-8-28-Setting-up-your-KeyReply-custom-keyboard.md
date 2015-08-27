@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to set up your KeyReply custom keyboard quickly
+title: How to set up your KeyReply custom keyboard quickly in 5 steps
 ---
 Setting up your custom keyboard on iOS can be a slightly long process, but it's generally pretty easy. Since [Apple announced support for third-party custom keyboards](http://www.apple.com/ios/whats-new/quicktype/), there has been [greater interest](http://appleinsider.com/articles/14/11/12/roundup-the-best-third-party-keyboards-for-ios-8-) in creating custom keyboards that suit your every need, as we've also [previously noted](http://keyreply.com/blog/Our-Keyboard-picks/).
 
