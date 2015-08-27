@@ -1803,8 +1803,8 @@
 	}
 
 		.image:before {
-			background: url("images/overlay.png");
-			content: '';
+/*			background: url("images/overlay.png");
+*/			content: '';
 			height: 100%;
 			left: 0;
 			position: absolute;
@@ -2160,6 +2160,12 @@
 			padding: 4em;
 		}
 
+		.wrapper.style5{
+			background-image: url("images/overlay.png"), url("../../images/Mockup7_LoginCreative_wrapper.jpg");
+			background-size: cover;
+			color: #fff;
+		}
+
 /* Header */
 
 	@-moz-keyframes reveal-header {
@@ -2319,6 +2325,27 @@
 					border: solid 1px;
 				}
 
+		#header.alt2 {
+			-moz-animation: none;
+			-webkit-animation: none;
+			-ms-animation: none;
+			animation: none;
+			background: transparent;
+			box-shadow: none;
+			color: #E4392B;
+			padding: 2em 2.5em;
+			position: absolute;
+		}
+
+			#header.alt2 nav {
+				right: 2.5em;
+				top: 1.75em;
+			}
+
+				#header.alt2 nav ul li.active > a, #header.alt nav ul li:hover > a {
+					border: solid 1px;
+				}
+
 /* Dropotron */
 
 	.dropotron {
@@ -2435,7 +2462,7 @@
 			-webkit-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(228, 57, 43, 0.8);
+			background: rgba(228, 57, 43, 0.8), url("../../images/Mockup5_AllKR_resized.jpg");
 			color: #fff;
 			display: inline-block;
 			opacity: 0;
