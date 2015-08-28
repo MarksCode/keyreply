@@ -6,7 +6,7 @@ Setting up your custom keyboard on iOS can be a slightly long process, but it's 
 
 [KeyReply](http://www.keyreply.com) was made to help you manage responses across your team easily for increased productivity and customer satisfaction. So in order to help you get you all ready to start using KeyReply, here are the step-by-step instructions on setting up a third-party/custom keyboard on your Apple device. You can watch the video for a more detailed walkthrough.
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/nylZ6gtl9q0/0.jpg)](http://www.youtube.com/watch?v=nylZ6gtl9q0 "KeyReply Alpha User Signup Flow")
+[![IMAGE ALT TEXT](http://i.imgur.com/qiJlfCG.png)](http://www.youtube.com/watch?v=nylZ6gtl9q0 "KeyReply Alpha User Signup Flow")
 
 ## 1. Go to your "Settings" app 
 ![alt text](/blog/images/Setup_Step1_Settings.png  "Go to iOS settings app") 
