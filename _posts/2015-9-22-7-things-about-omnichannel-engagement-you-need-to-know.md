@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 7 things about omnichannel engagement you probably didn't know
+title: 7 things about omnichannel engagement you need to know
 ---
 
 If you’ve never heard of the term “omnichannel”, it’s time for you to sit up and take notice. It’s one of the trends that has been picked up on the radar of huge companies such as [Salesforce](https://help.salesforce.com/HTViewHelpDoc?id=service_presence_intro.htm&language=en_US) and [Zendesk](https://www.zendesk.com/company/press/companies-failing-deliver-omnichannel-customer-service-global-zendesk-survey-reveals/), becoming part of decks of consultants like [McKinsey](http://www.mckinsey.com/insights/marketing_sales/digitizing_the_consumer_decision_journey), and and being practiced by social channels like [Twitter](https://blog.twitter.com/2015/twitter-customer-service).
