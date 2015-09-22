@@ -21,7 +21,7 @@ If you think about your own business, what are some of the efforts that have bee
 
 It used to be that having a storefront was all you had to tend to. Eventually came the telephone. And SMS. Then email. And now you have all of the above plus everything from Facebook and Twitter, to Google search, to WeChat and WhatsApp, Messenger, Instagram, Snapchat and new channels that seem to pop up every other day, that customers try to reach you on. Now, if you’re running a business in 1995, you could get away with trying to force your customers to call or email you with queries. Unfortunately (or fortunately, depending on how you look at it), you’re in 2015 and you need to be ready for this multitude of channels. Or else…
 
-![alt text](https://s-media-cache-ak0.pinimg.com/736x/5a/2b/8f/5a2b8f2970399de8c37503732b43974b.jpg “Customers will reflect on how well you’ve done – And you better be ready to help them reflect positively”)
+![Customer satisfaction online](http://i62.tinypic.com/2gufi8z.jpg “Customers will reflect on how well you’ve done – And you better be ready to help them reflect positively”)
 
 Having these channels doesn’t only impact operations and customer service. It also impacts your marketing and branding, sales, finance, and human resource allocations, among other things. Think about the potential of turning each of these touchpoints into a brand experience for the customer; about how you could upsell your other products based on channels; how you need to now hire “social media managers” on your team… The impacts are big, and you need to consider all of them as a whole when evaluating how your business is going to thrive in this era.
 
