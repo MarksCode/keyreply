@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>Contact</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,800,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+    <body id="overflow" class="overflow">
+        <div class="loader">
+            <div class="load">
+                <img src="http://cdn.templatation.com/Site-templates/webapp/img/load-logo.png" alt="load"/>
+                <div class="load-animation">
+                    <span class="load-item"><img src="http://cdn.templatation.com/Site-templates/webapp/img/load.png" alt="load"/></span>
+                    <span class="load-item load-item-revers"><img src="http://cdn.templatation.com/Site-templates/webapp/img/load.png" alt="load"/></span>
+                    <span class="load-item delay-200"><img src="http://cdn.templatation.com/Site-templates/webapp/img/load.png" alt="load"/></span>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-nav">
+            <header class="header clearfix">
+                <div class="container">
+                    <a class="logo" href="index.html">
+                        <img src="http://cdn.templatation.com/Site-templates/webapp/img/logo.png" alt="logo"/>
+                    </a>
+                    <nav class="nav clearfix">
+                        <ul class="clearfix">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="sub-parent"><a href="testimonials.html">All Pages<span
+                                    class="arrow-down-green"></span></a>
+                                <ul class="sub-menu clearfix">
+                                    <li><a href="index.html">Index</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="single.html">Blog Single Page</a></li>
+                                    <li><a href="elements.html">Elements</a></li>
+                                    <li><a href="tour.html">Tour</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li ><a href="#">Blog</a></li>
+                            <li><a href="elements.html">Elements</a></li>
+                            <li><a href="tour.html">Tour</a></li>
+                        </ul>
+                        <ul class="sup-nav clearfix">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Try It Now</a></li>
+                            <li class="active"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="header-relative header-home">
+            <div class="clip">
+                <div class="bg bg-bg">
+                    <img class="center-image" src="img/contact.jpg" alt="home-bg"/>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title-block title-block_mod">
+                    <h1>CONTACT  <span>US</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                 <h2 class="section-title ">
+                    Contact <span>Us</span>
+                </h2>
+                <p class="main-text animate-fade">
+                    <strong>This is very basic contact us page, only for sake for having a functional contact form. Yes, the following contact form works. :)</strong>. vitae lorem sagittis luctus  convallis convallis id lobortis tortor tempor.
+                </p>
+                <div class="contact-form-container">
+                      <form onSubmit="return submitForm();" action="./" method="post" class="form-a" name="homefrm1" id="homefrm1">
+                          <div class="form-group form-name">
+                            <label for="inName">Your name</label>
+                            <input type="text" class="form-control in-n" id="inName" required name="name" placeholder="Enter name">
+                          </div>
+                          <div class="form-group form-email">
+                            <label for="InputEmail">Email address</label>
+                            <input type="email" class="form-control in-e" id="InputEmail" required name="email" placeholder="Enter email">
+                          </div>
+                          <div class="form-group form-sub">
+                            <label for="subj">Subject</label>
+                            <input type="text" class="form-control in-s" id="subj" name="sub" placeholder="Enter subject">
+                          </div>
+                          <div class="select-container">
+                          <label >Select product</label>
+                          <div class="form-group">
+                             <select name="prod"  class="turnintodropdown">
+                                    <option disabled>Select product</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Development">Development</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Marketing">Marketing</option>
+                                </select>
+                          </div>
+                          </div>
+                          <div class="form-group">
+                          <label for="mes" >Message</label>
+                                <textarea class="form-control" id="mes" name="msg" rows="3"></textarea>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="copyemail_check"> Send copy of email to yourself
+                            </label>
+                          </div>
+                          <button class="btn-subscribe" type="submit"><i class="mail-white-ico mail-ico"></i>Submit</button>
+                    </form>
+                            <div id="alert">
+                                    <div class="message"></div>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row row-ftr">
+                    <div class="col-sm-3 ftr-list-box  col-xs-6">
+                        <h3 class="ftr-title">
+                            Our product
+                        </h3>
+                        <ul class="ftr-list">
+                            <li><a href="#">Feature tour</a></li>
+                            <li><a href="#">Video tour</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Free trial</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 ftr-list-box col-xs-6">
+                        <h3 class="ftr-title">
+                            Support
+                        </h3>
+                        <ul class="ftr-list">
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 ftr-text-widget">
+                        <h3 class="ftr-title">
+                            Text Widget
+                        </h3>
+                        <p class="ftr-text">
+                            Donec non turpis sit amet lacus egestas pulvinar sed vitae urna. Etiam et nulla non justo lobortis volutpat. Nulla ornare, justo vitae lacinia dignissim, lectus magna pellentesque velit, eu posuere neque lacus nec nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt gravida malesuada.
+                        </p>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 col-contact">
+                        <div class="contact-container">
+                            <h3 class="ftr-title">
+                                Contact Us
+                            </h3>
+                            <div class="ftr-contact contact-address">
+                                <address>
+                                    789 8th Avenue, Los Angeles
+                                </address>
+                            </div>
+                            <div class="ftr-contact contact-mail">
+                                <a href="mailto:support@website.com">support@website.com</a>
+                            </div>
+                            <div class="ftr-contact contact-phone">
+                                <a href="tel:1.777-666-5555">1.777-666-5555</a><br>
+                                <a href="tel:1.444-333-2222">1.444-333-2222</a>
+                            </div>
+                        </div>
+                        <div class="col-social">
+                            <div class="ftr-social">
+                                <a  href="#"><i class="facebook-ico"></i></a>
+                                <a  href="#"><i class="tw-ico"></i></a>
+                                <a  href="#"><i class="google-ico"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copy clearfix">
+                    <div class="copy-right"><span>Copyright © 2014 WebApp.</span> All rights reserved.</div>
+                    <div class="copy-links">
+                        <a class="privacy-link" href="#">Privacy Policy</a>
+                        <a href="#">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/main.js"></script>
+    <script >
+        function submitForm() {
+				$.ajax({type:'POST', url:'email-action.php', data:$('#homefrm1').serialize(), success: function(response) {
+					$('#alert').find('.message').html(response);
+				}});
+                return false;
+            }       
+      </script>
+    </body>
+</html>
+
