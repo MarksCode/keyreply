@@ -33,9 +33,9 @@ Look for the "Add new keyboard" option after your list of keyboards. Here's wher
 
 Here you will see "KeyReply" under the third-party keyboards list. Select KeyReply to add us to your active keyboard list. Voila!
 
-## 6. Enable full access (optional for KeyReply)
-![alt text](/blog/images/Setup_Step6_EnableAccess.png  "Enable full access, for other keyboards") 
+## 6. Enable full access
+![alt text](/blog/images/Setup_Step6_EnableAccess.png  "Enable full access to get access to statistics") 
 
-This option isn't necessary for KeyReply, but just in case you may need to add other third-party keyboards, you may find that you are required to provide full access for the keyboard to work properly.
+By enabling full access on your keyboard, you can get access to useful statistics on how you've been using your replies and more analytics in the future. This will help you understand and manage your responses and time better.
 
 And you're all done! Get cracking on those blazing fast replies by logging in to the KeyReply app and giving the content packs a spin.
