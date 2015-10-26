@@ -3783,7 +3783,7 @@ ul {
     width: 100%;
     height: 100%
 }
-a[href^="http://maps.google.com/maps"] {
+a[href^="https://maps.google.com/maps"] {
     display: none !important
 }
 .gmnoprint a, .gmnoprint span {
