@@ -358,3 +358,84 @@
         });
     };
 })(jQuery);
+
+var KeyReply = {};
+
+KeyReply.Authenticate = function(login) {
+    if (login.tenancyName && login.usernameOrEmailAddress && login.password) {
+        return $.ajax({
+            method: "POST",
+            url: "https://app.keyreply.com/api/Account/Authenticate/",
+            data: JSON.stringify(login),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                if (response.success == true) {
+                    console.log("Login success");
+                    KeyReply.token = response.result
+                } else {
+                    console.log(response.error)
+                }
+            },
+            failure: function(errMsg) {
+                console.log("Login Failed")
+            }
+        });
+    } else {
+        console.log("Login information is incomplete");
+        return null;
+    }
+};
+
+KeyReply.loadContent = function(data) {
+    return $.ajax({
+        method: "POST",
+        url: "https://app.keyreply.com/api/services/app/content/loadContent",
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        headers: {
+            "Authorization": "Bearer " + KeyReply.token
+        },
+        dataType: "json",
+        success: function(response) {
+            if (response.success == true) {
+                console.log("%c success! Loading Content", "color: #007700");
+            }
+        },
+        failure: function(errMsg) {
+            console.log("%c Login Failed " + errMsg, "color: #770000")
+        }
+    });
+}
+
+
+
+KeyReply.run = function(team, username, password) {
+    var login = {
+        tenancyName: team,
+        usernameOrEmailAddress: username,
+        password: password
+    }
+
+    var content = {
+        "categoryList": [{
+            "title": "Landing Page",
+            "description": "Good content for Landing page"
+        }],
+        "replyList": [{
+            "title": "Welcome",
+            "content": "Welcome to KeyReply, enjoy your stay here!",
+            "category": "Landing Page"
+        }, {
+            "title": "Good bye",
+            "content": "See you later!",
+            "category": "Landing Page"
+        }]
+    };
+
+    KeyReply.Authenticate(login).success(function() {
+        if (KeyReply.token) {
+            KeyReply.loadContent(content)
+        }
+    });
+};
