@@ -3333,13 +3333,13 @@ ul {
     text-align: center
 }
 .col-benefits:nth-child(2n) .benefits-icon {
-    background: #4ec288
+    background: #E4392B
 }
 .col-benefits:nth-child(3n) .benefits-icon {
-    background: #41b078
+    background: #E4392B
 }
 .col-benefits:nth-child(4n) .benefits-icon {
-    background: #37a06b
+    background: #E4392B
 }
 .col-benefits:hover .benefits-icon {
     -webkit-transform: rotate(360deg) scale(1.1);
