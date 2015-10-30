@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to set up your KeyReply custom keyboard quickly in 6 steps
+title: How to set up your KeyReply custom keyboard quickly in 5 steps
 ---
 Setting up your custom keyboard on iOS can be a slightly long process, but it's generally pretty easy. Since [Apple announced support for third-party custom keyboards](http://www.apple.com/ios/whats-new/quicktype/), there has been [greater interest](http://appleinsider.com/articles/14/11/12/roundup-the-best-third-party-keyboards-for-ios-8-) in creating custom keyboards that suit your every need, as we've also [previously noted](http://keyreply.com/blog/Our-Keyboard-picks/).
 
@@ -33,9 +33,9 @@ Look for the "Add new keyboard" option after your list of keyboards. Here's wher
 
 Here you will see "KeyReply" under the third-party keyboards list. Select KeyReply to add us to your active keyboard list. Voila!
 
-## 6. Enable full access
-![alt text](/blog/images/Setup_Step6_EnableAccess.png  "Enable full access to get access to statistics") 
+<!--## 6. Enable full access-->
+<!--![alt text](/blog/images/Setup_Step6_EnableAccess.png  "Enable full access to get access to statistics") -->
 
-By enabling full access on your keyboard, you can get access to useful statistics on how you've been using your replies and more analytics in the future. This will help you understand and manage your responses and time better.
+<!--By enabling full access on your keyboard, you can get access to useful statistics on how you've been using your replies and more analytics in the future. This will help you understand and manage your responses and time better.-->
 
 And you're all done! Get cracking on those blazing fast replies by logging in to the KeyReply app and giving the content packs a spin.
