@@ -429,6 +429,13 @@ h5 {
     color: #fff;
     font-weight: 400
 }
+
+h6 {
+    font-size: 18px;
+    color: #E4392B;
+    font-weight: 400
+}
+
 a {
     color: #777
 }
