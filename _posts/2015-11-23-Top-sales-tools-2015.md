@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Infographic] Nuts and bolts of a revenue machine
+title: Nuts and bolts of a revenue machine [Infographic]
 ---
 Here at KeyReply, we spend a lot of time researching what our landscape looks like so we can provide the most value to our customers that is not only suited to their needs but also unique and differentiated. So after all the research we've done so far, we decided to put together an infographic that shows the best sales tools money can buy today, and where their strengths lie along the sales pipeline.
 
