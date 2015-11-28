@@ -29,7 +29,7 @@ Feedback from users of your previous consumer apps could also come in handy. We 
 
 Setting up sessions with mentors and other developers who have built enterprise-grade software will help greatly. Prepare a list of the questions you couldn't answer through your research, specific implementation questions, your proposed strategy and go into the meeting with the intention of clearing this list. Often you will find even more perspectives to it that you hadn't thought of, perhaps including internal deployment, audit certificates, and other factors important to enterprises. (We were lucky to have a steady stream of great mentors from the [BlueStartups](http://bluestartups.com/) program to help us as we progressed too.)
 
-Design is also especially important to this process. Your team should be actively gathering requirements from potential user at this point, starting with the important functions that your app needs to perform, its value to the user, and the best way to present them. (We assume that you have already validated there is a problem to be solved here and are now trying to build it.)
+Design is also especially important to this process. Your team should be actively gathering requirements from potential users at this point, starting with the important functions that your app needs to perform, its value to the user, and the best way to present them. (We assume that you have already validated there is a problem to be solved here and are now trying to build it.)
 
 ## 2. Strategy
 In general, enterprise apps have more non-functional requirements, in reliability, stability, transparency and performance. When forming a strategy, it needs to fulfill all these requirements as a baseline.
@@ -54,6 +54,8 @@ On KeyReply, we combined the beautiful front-end Metronic theme with the well-ar
 The ASP.NET Boilerplate package also made it easy for us to create an API, so to implement our backend, we simply had to call the API from our suite of apps (iOS, Mac apps) or any client.
 
 Also, learning .NET may feel daunting initially, but it does have a lot of similarity with Java and won't be too difficult to pick up if you already have background writing in other languages. Do it the "traditional" way and read sample code, Stack Overflow everything, and edit it to your needs.
+
+Again, we emphasize the fact that you need to involve whoever's working on product and design on your team and ensure that what you're implementing is in line with the vision and roadmap of the product, has sound visual identity, and fits the user experience that you ideally would have tested with real people.
 
 Most of the challenges of building enterprise-grade apps come from inexperience and perhaps a lack of understanding of the requirements. The Martian (2015) provides the most apt analogy for startups: Mark Watney, was explaining to a class, after he got back from Mars
 > Space is against you, so the fear of death is natural. You just need to solve one problem after the other till the end to survive.
