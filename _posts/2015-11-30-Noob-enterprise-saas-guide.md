@@ -60,6 +60,6 @@ Again, we emphasize the fact that you need to involve whoever's working on produ
 Most of the challenges of building enterprise-grade apps come from inexperience and perhaps a lack of understanding of the requirements. The Martian (2015) provides the most apt analogy for startups: Mark Watney was explaining to a class, after he got back from Mars:
 > Space is against you, so the fear of death is natural. You just need to solve one problem after the other till the end to survive.
 
-It’s ultimately not just about risk, glory or changing the world in the grand sense. It’s also about facing death every single day and just solving the most immediate problem in front you and then the next and the next, while keeping the end goal in mind — until someday you get to go home.
+As it's said in the movie, it’s ultimately about solving the most immediate problem in front you and then the next and the next, while keeping the end goal in mind — until someday you get to go home.
 
 Building apps is now easier than ever. What used to take big teams of software engineers months of development work can now be achieved in a day, at a relatively low cost. Startups like us should move faster, save money, and achieve more by focusing on delivering business value and the best customer experience.
