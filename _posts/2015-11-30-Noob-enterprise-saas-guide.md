@@ -57,7 +57,7 @@ Also, learning .NET may feel daunting initially, but it does have a lot of simil
 
 Again, we emphasize the fact that you need to involve whoever's working on product and design on your team and ensure that what you're implementing is in line with the vision and roadmap of the product, has sound visual identity, and fits the user experience that you ideally would have tested with real people.
 
-Most of the challenges of building enterprise-grade apps come from inexperience and perhaps a lack of understanding of the requirements. The Martian (2015) provides the most apt analogy for startups: Mark Watney, was explaining to a class, after he got back from Mars
+Most of the challenges of building enterprise-grade apps come from inexperience and perhaps a lack of understanding of the requirements. The Martian (2015) provides the most apt analogy for startups: Mark Watney was explaining to a class, after he got back from Mars:
 > Space is against you, so the fear of death is natural. You just need to solve one problem after the other till the end to survive.
 
 It’s ultimately not just about risk, glory or changing the world in the grand sense. It’s also about facing death every single day and just solving the most immediate problem in front you and then the next and the next, while keeping the end goal in mind — until someday you get to go home.
