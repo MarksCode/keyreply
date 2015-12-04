@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html >
     <head>
-        <title>Testimonials</title>
+        <title>KeyReply | Reviews & News</title>
+        <meta name="apple-itunes-app" content="app-id=1048426411" app-argument="https://keyreply.com/tour">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Increase productivity & efficiency of employees using keyboard response templates">
+        <meta name="keywords" content="productivity, efficiency, employees, keyboard, faster, better, intelligent, mobile, information, knowledge">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,800,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/style.css">
         <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55913366-10', 'auto');
+  ga('send', 'pageview');
+
+</script>
     </head>
+
     <body id="overflow" class="overflow">
-        <div class="loader">
-            <div class="load">
-                <img src="img/load-logo.png" alt="load"/>
-                <div class="load-animation">
-                    <span class="load-item"><img src="img/load.png" alt="load"/></span>
-                    <span class="load-item load-item-revers"><img src="img/load.png" alt="load"/></span>
-                    <span class="load-item delay-200"><img src="img/load.png" alt="load"/></span>
-                </div>
-            </div>
-        </div>
         <div class="overlay-nav">
             <header class="header clearfix">
                 <div class="container">
@@ -29,30 +33,22 @@
                     </a>
                     <nav class="nav clearfix">
                         <ul class="clearfix">
-                            <li ><a href="index.html">Home</a></li>
-                            <li class="sub-parent"><a href="testimonials.html">All Pages<span
+                        <li><a href="index.html">Home</a></li>
+                        <li class = "active sub-parent"><a href="tour.html">Tour<span
                                     class="arrow-down-green"></span></a>
                                 <ul class="sub-menu clearfix">
-                                    <li><a href="index.html">Index</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="single.html">Blog Single Page</a></li>
-                                    <li><a href="elements.html">Elements</a></li>
-                                    <li><a href="tour.html">Tour</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="usecases.html">Use cases</a></li>
+                                    <li><a href="reviews.html">Reviews</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="#">Testimonials</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="tour.html">Tour</a></li>
+                             <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="https://angel.co/keyreply" target="_blank">About</a></li>                            
+                            <li><a href="https://keyreply.com/blog/" target="_blank">Blog</a></li>
                         </ul>
                         <ul class="sup-nav clearfix">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Try It Now</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="https://app.keyreply.com/" target="_blank">Sign In</a></li>
+                            <li><a href="https://app.keyreply.com/Account/Register" target="_blank">Try It Now</a></li>
+                            <li><a href="mailto:support@keyreply.com">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="menu-button">
@@ -63,7 +59,7 @@
                 </div>
             </header>
         </div>
-        <div class="header-container-tm header-home">
+        <!-- <div class="header-container-tm header-home">
             <div class="clip">
                 <div class="bg bg-bg">
                     <img class="center-image" src="img/testimonials-bg.jpg" alt="testimonials-bg"/>
@@ -121,60 +117,86 @@
                      </div>
                  </div>
             </div>
+        </div> -->
+                <div class="header-container-home header-home">
+                <div class="swiper-container slider-home">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide slide-home">
+                            <img class="slide-img" src="img/reviews_bg.jpg" alt="KeyReply is loved by customers and press media worldwide"/>
+
+                            <div class="container">
+                                <div class="title-block">
+                                    
+                                    <h1><span>Love from customers & press friends</span></h1>
+                                    <p class="sub-title">Worldwide reviews & coverage on KeyReply</p>
+                                    <div class="btn-box">
+                                        <a href="#box" class="button btn-learn"><i class="ico learn-ico"></i>
+                                            Read more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="pagination pagination-home"></div>
+
         </div>
-        <section class="section">
+        <section class="section" id="box">
             <div class="container">
                 <h2 class="section-title animate-fade">
-                    Testimonials From our <span>Precious Customers</span>
+                    Reasons to love <span>KeyReply</span>
                 </h2>
-                <p class="main-text animate-fade">
+                <!-- <p class="main-text animate-fade">
                     Suspendisse a arcu efficitur erat auctor viverra. Morbi molestie arcu vitae dolor mollis iaculis. Pellentesque elit leo, semper in rhoncus a, vulputate non lacus. Praesent varius commodo ipsum at molestie. Morbi ullamcorper sed arcu id rutrum. In dolor augue, varius a interdum sed
-                </p>
+                </p> -->
                 <div class="row row-fr">
                     <div class=" col-md-3 col-friend">
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo1.jpg" alt="photo"/>
+                            <a href="http://www.ifanr.com/app/583756" target="_blank"><img src="img/ifanr.jpg" alt="photo"/></a>
                             <div class="fr-content">
-                                <div class="fr-name">Micke Cutter,</div>
-                                <span class="fr-position">CEO WP INTERNATIONAL</span>
+                                <div class="fr-name">一个输入法就可以提高团队生产力?- KeyReply #iOS</div>
+                                <span class="fr-position">ifanr, China</span>
                                 <p class="text">
-                                    Cras sit amet viverra ex, in vulputate purus. Praesent ultricies commodo ultrices. Nam at vulputate augue. Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligularem.
+                                    这款神奇的手机键盘，不仅能让你快捷设置并输入很多常用的文字模板，更强大的是还能支持团队共享及多人使用。你只需要调出 KeyReply 键盘，点击对应模板就能快速输入之前设定好的大段文字。
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Nov 16, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo2.jpg" alt="photo"/>
+                            <a href="http://www.hawaiiweblog.com/2015/11/18/blue-startups-apps" target="_blank"><img src="img/hb.jpg" alt="photo"/></a>
                             <div class="fr-content">
-                                <div class="fr-name">Erica Tan,</div>
-                                <span class="fr-position">CEO WP INTERNATIONAL</span>
+                                <div class="fr-name">Geek Beat - Grumbling, Replying, Traveling apps</div>
+                                <span class="fr-position">Hawaii Blog, USA</span>
                                 <p class="text">
-                                    Cras sit amet viverra ex, in vulputate purus. Praesent ultricies commodo ultrices. Nam at vulputate augue. Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem.
+                                    If you find yourself sending the same message to people over and over again, especially from your smartphone (where typing and texting can be especially hard on your fingers), KeyReply is for you.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Nov 18, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="comments-fr-container animate-top">
+                        <!-- <div class="comments-fr-container animate-top">
                             <img src="img/photo3.jpg" alt="photo"/>
                             <div class="fr-content">
                                 <div class="fr-name">Gold Team,</div>
@@ -194,41 +216,62 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-md-3 col-friend">
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo4.jpg" alt="photo"/>
+                            <a href="https://www.techinasia.com/talk/37-tools-successful-salespeople-live/" target="_blank"><img src="img/tia.jpg" alt="photo"/></a>
                             <div class="fr-content">
-                                <div class="fr-name">Eric Storm,,</div>
-                                <span class="fr-position">CEO Symphony</span>
+                                <div class="fr-name">37 tools successful salespeople cannot live without</div>
+                                <span class="fr-position">Tech In Asia, Asia</span>
                                 <p class="text">
-                                    Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi. Maecenas pulvinar sed velit et accumsan. In eu neque non felis scelerisque rutrum. Pellentesque et viverra velit, at egestas odio. Aenean ac nisi sagittis, mollis dui nec, sodales justo. Aliquam ut laoreet ante.
+                                    KeyReply: reply faster to common queries with a keyboard that has your team’s responses within any text field on mobile.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Nov 27, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo5.jpg" alt="photo"/>
-                            <div class="fr-content">
-                                <div class="fr-name">Linda Linderman,</div>
-                                <span class="fr-position">CEO Linderman</span>
+                            <a href="http://www.nextbigwhat.com/keyreply-297/" target="_blank"><img src="img/nbw.jpg" alt="photo"/>
+                            <div class="fr-content"></a>
+                                <div class="fr-name">KeyReply: Mobile keyboard for teams to reply better</div>
+                                <span class="fr-position">NextBigWhat, India</span>
                                 <p class="text">
-                                    Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi. Maecenas pulvinar sed velit et accumsan. In eu neque non felis scelerisque rutrum. Pellentesque et viverra velit, at egestas odio. Aenean ac nisi sagittis, mollis dui nec, sodales justo. Aliquam ut laorviverra tellus.
+                                    KeyReply enables better team communication with customers as an innovative keyboard solution.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
+                                <div class="comm-data">Nov 25, 2015</div>
+                                <!-- <div class="comm-social">
+                                    <a class="fr-face facebook-min-ico" href="#"></a>
+                                    <a  href="#" class="fr-tw tw-min-ico"></a>
+                                    <span class="fr-like">
+                                        <a class="like-ico" href="#"></a>
+                                        2
+                                    </span>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- <div class="comments-fr-container animate-top">
+                            <a href="http://binaryoptionevolution.com/2015/12/02/keyreply-team-keyboard-app/"><img src="img/photo6.jpg" alt="photo"/></a>
+                            <div class="fr-content">
+                                <div class="fr-name">KeyReply Team Keyboard App for iOS</div>
+                                <span class="fr-position">BinaryOptionEvolution</span>
+                                <p class="text">
+                                    KeyReply helps teams reply to customers better & faster on every medium. Teams can use their high-quality replies on every channel customers are on – for a consistent customer experience at all touchpoints, across all team members.
+                                </p>
+                            </div>
+                            <div class="fr-info clearfix">
+                                <div class="comm-data">Dec 2, 2015</div>
                                 <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
@@ -238,73 +281,52 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comments-fr-container animate-top">
-                            <img src="img/photo6.jpg" alt="photo"/>
-                            <div class="fr-content">
-                                <div class="fr-name">Dorian Gray,</div>
-                                <span class="fr-position">Gray Corp.</span>
-                                <p class="text">
-                                    Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem. Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi. Maecenas pulvinar sed velit et accumsan.Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi.
-                                </p>
-                            </div>
-                            <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
-                                    <a class="fr-face facebook-min-ico" href="#"></a>
-                                    <a  href="#" class="fr-tw tw-min-ico"></a>
-                                    <span class="fr-like">
-                                        <a class="like-ico" href="#"></a>
-                                        2
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-md-3 col-friend">
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo8.jpg" alt="photo"/>
+                            <a href="http://www.bizjournals.com/pacific/blog/morning_call/2015/09/hawaii-s-blue-startups-names-10-companies-to-sixth.html" target="_blank"><img src="img/pbn.jpg" alt="photo"/></a>
                             <div class="fr-content">
-                                <div class="fr-name">Erin Brokovich,</div>
-                                <span class="fr-position">CEO Brokovich</span>
+                                <div class="fr-name">Hawaii’s Blue Startups names 10 companies to sixth cohort </div>
+                                <span class="fr-position">Pacific Business News, USA</span>
                                 <p class="text">
-                                    Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem. Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem. Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi.
+                                    Keyreply, an omnichannel keyboard that helps the mobile workforce respond faster and better.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Sep 23, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo7.jpg" alt="photo"/>
+                            <a href="http://binaryoptionevolution.com/2015/12/02/keyreply-team-keyboard-app/" target="_blank"><img src="img/boe.jpg" alt="photo"/></a>
                             <div class="fr-content">
-                                <div class="fr-name">Dorian Gray,</div>
-                                <span class="fr-position">Gray Corp.</span>
+                                <div class="fr-name">KeyReply Team Keyboard App for iOS</div>
+                                <span class="fr-position">BinaryOptionEvolution</span>
                                 <p class="text">
-                                    Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem. Nullam pulvinar mauris posuere lectus volutpat luctus et nec neque. Aenean vel auctor ligula, non interdum lorem. Curabitur tellus turpis, mattis ac erat ac, pharetra condimentum mi.
+                                    KeyReply helps teams reply to customers better & faster on every medium. Teams can use their high-quality replies on every channel customers are on – for a consistent customer experience at all touchpoints, across all team members.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Dec 2, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="comments-fr-container animate-top">
+                        <!-- <div class="comments-fr-container animate-top">
                             <img src="img/photo9.jpg" alt="photo"/>
                             <div class="fr-content">
                                 <div class="fr-name">Thomas Damos,</div>
@@ -324,31 +346,31 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-md-3 col-friend">
                         <div class="comments-fr-container animate-top">
-                            <img src="img/photo10.jpg" alt="photo"/>
-                            <div class="fr-content">
-                                <div class="fr-name">Hugo Boss,</div>
-                                <span class="fr-position">PR Hugo</span>
+                            <a href="https://www.youtube.com/watch?v=-YHVo2NdL2M" target="_blank"><img src="img/hnn.jpg" alt="photo"/>
+                            <div class="fr-content"></a>
+                                <div class="fr-name">Geek Beat</div>
+                                <span class="fr-position">Hawaii News Now, USA</span>
                                 <p class="text">
-                                    Quisque ut leo eu nibh scelerisque mollis. Nulla eget ornare mi. Sed ultricies turpis quam, sit amet volutpat leo dapibus id. Suspendisse semper volutpat sem, sit amet mattis leo ornare sit amet. Duis ornare porta odio eget ultricies. Vestibulum nec velit eu justo lobortis suscipit a a turpis. Quisque ut leo eu nibh scelerisque mollis. Nulla eget ornare mi.
+                                    KeyReply stores your messages in a modified keyboard that allows you to paste directly from your keyboard. You can use it on email, Gmail, Facebook Messaging, and anything that needs a keyboard.
                                 </p>
                             </div>
                             <div class="fr-info clearfix">
-                                <div class="comm-data">Sep 12, 2014</div>
-                                <div class="comm-social">
+                                <div class="comm-data">Nov 18, 2015</div>
+                                <!-- <div class="comm-social">
                                     <a class="fr-face facebook-min-ico" href="#"></a>
                                     <a  href="#" class="fr-tw tw-min-ico"></a>
                                     <span class="fr-like">
                                         <a class="like-ico" href="#"></a>
                                         2
                                     </span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="comments-fr-container animate-top">
+                        <!-- <div class="comments-fr-container animate-top">
                             <img src="img/photo11.jpg" alt="photo"/>
                             <div class="fr-content">
                                 <div class="fr-name">TermoSoft Team</div>
@@ -368,8 +390,8 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comments-fr-container animate-top">
+                        </div> -->
+                        <!-- <div class="comments-fr-container animate-top">
                             <img src="img/photo12.jpg" alt="photo"/>
                             <div class="fr-content">
                                 <div class="fr-name">Dj Sun,</div>
@@ -389,10 +411,10 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="pager-container pager-article clearfix">
+                <!-- <div class="pager-container pager-article clearfix">
                     <a class="prev" href="#">prev <span>page</span></a>
                     <a class="active" href="#">1</a>
                     <a href="#">2</a>
@@ -401,10 +423,10 @@
                     <span  class="p-point">...</span>
                     <a href="#">10</a>
                     <a class="next" href="#">Next <span>page</span></a>
-                </div>
+                </div> -->
             </div>
         </section>
-        <div class="video-container-slider">
+        <!-- <div class="video-container-slider">
                 <div id="close-video" class="close-video">
                 </div>
                 <iframe class="video-sl video" src="https://www.youtube.com/" ></iframe>
@@ -429,8 +451,8 @@
                     </div>
                 </div>
                 <div class="pagination pagination-video"></div>
-        </div>
-        <section class="section feedback-section">
+        </div> -->
+        <!-- <section class="section feedback-section">
             <div class="clip">
                 <div class="bg bg-bg">
                     <img class="center-image" src="img/people-bg.jpg" alt="people"/>
@@ -441,10 +463,10 @@
                     <div class="col-sm-7 col-md-8 col-sm-push-5 col-md-push-4">
                         <div class="feedback-container">
                             <h2 class="section-title section-fb-title animate-right">
-                                Questions? We'd <span>Love to Answer.</span>
+                                We want to <span>hear from you!</span>
                             </h2>
                             <p class="main-text color_white animate-right">
-                                <strong> Note: The form on left works, but the attachment does not work at this time.</strong> id eleifend turpis magna ac purus. Morbi ullamcorper sed arcu id rutrum. In dolor augue, varius a interdum sed, tempus rhoncus dui. Praesent vehicula dolor vitae lorem sagittis luctus. Sed vitae felis non ante convallis convallis.
+                                If you want to share your own story of how KeyReply has helped your team, made your life easier, increased your happiness, improved your business, etc - We want to hear from you! We're always looking to showcase your team's successes and workflows to help others get better too.
                             </p>
                             <div class=" animate-right app-contact-container">
                                 <h3 class="app-contact-title">
@@ -462,8 +484,8 @@
                                     <a href="tel:1.777-666-5555">1.777-666-5555</a>
                                     <a href="tel:1.444-333-2222">1.444-333-2222</a>
                                 </div>
-                            </div>
-                            <a href="#" class="button btn-now animate-right"><i class="ico getup-green-ico"></i>download our vCard</a>
+                            </div> -->
+                            <!-- <a href="#" class="button btn-now animate-right"><i class="ico getup-green-ico"></i>download our vCard</a>
                         </div>
                     </div>
                     <div class="col-sm-5 col-md-4  col-sm-pull-7 col-md-pull-8">
@@ -472,7 +494,7 @@
                                 <input class="f-input" type="text" name="name" required placeholder="Your name *"/>
                                 <input class="f-input" type="email" name="email" required placeholder="Email *"/>
                                 <input class="f-input" type="text" name="sub" required placeholder="Subject *"/>
-                                <div class="mask-wrapper">
+                                <!-- <div class="mask-wrapper">
                                     <div class="mask">
                                         <input class="fileInputText" type="text" disabled>
                                         <button class="send-file">Attch. (Not functional)</button>
@@ -483,48 +505,45 @@
                                 <textarea class="fb-textarea" name="message" placeholder="Your feedback *"></textarea>
                                 <button class="btn-subscribe fb-btn-submit" type="submit"><i class="mail-white-ico mail-ico"></i>submit</button>
                              <div id="alert"><div class="message"></div></div> <!-- form submit message hooked here by ajax -->
-                            </form>
+                            <!-- </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer">
+        </section> -->
+            <footer class="footer">
             <div class="container">
                 <div class="row row-ftr">
+                     <div class="col-sm-3 col-xs-6 ftr-text-widget">
+                        <h3 class="ftr-title">
+                            About KeyReply
+                        </h3>
+                        <p class="ftr-text">
+                            KeyReply helps the mobile workforce of tomorrow reply better and faster on the go. Through the KeyReply keyboard, teams have the power to create and send high-quality replies with just a tap. Customers and stakeholders will receive timely and consistent replies, increasing their satisfaction with the company and brand.
+                        </p>
+                        <a href="https://geo.itunes.apple.com/us/app/keyreply-team-keyboard-for/id1048426411?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+                    </div>
                     <div class="col-sm-3 ftr-list-box  col-xs-6">
                         <h3 class="ftr-title">
                             Our product
                         </h3>
                         <ul class="ftr-list">
-                            <li><a href="#">Feature tour</a></li>
-                            <li><a href="#">Video tour</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Free trial</a></li>
-                            <li><a href="#">Affiliate Program</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                        </ul>
+                        <li><a href="tour.html">Feature tour</a></li>
+                        <li><a href="usecases.html">Use cases</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                       </ul>
                     </div>
-                    <div class="col-sm-3 ftr-list-box col-xs-6">
+                   <div class="col-sm-3 ftr-list-box col-xs-6">
                         <h3 class="ftr-title">
                             Support
                         </h3>
                         <ul class="ftr-list">
-                            <li><a href="#">Webinars</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">API</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="purchasepolicy.html">Purchase Policy</a></li>
+                            <li><a href="mailto:support@keyreply.com">Contact</a></li>
                         </ul>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 ftr-text-widget">
-                        <h3 class="ftr-title">
-                            Text Widget
-                        </h3>
-                        <p class="ftr-text">
-                            Donec non turpis sit amet lacus egestas pulvinar sed vitae urna. Etiam et nulla non justo lobortis volutpat. Nulla ornare, justo vitae lacinia dignissim, lectus magna pellentesque velit, eu posuere neque lacus nec nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt gravida malesuada.
-                        </p>
                     </div>
                     <div class="col-sm-3 col-xs-6 col-contact">
                         <div class="contact-container">
@@ -533,47 +552,39 @@
                             </h3>
                             <div class="ftr-contact contact-address">
                                 <address>
-                                    789 8th Avenue, Los Angeles
+                                    340 S. Lemon Ave. #8883, Walnut, CA 91789
                                 </address>
                             </div>
                             <div class="ftr-contact contact-mail">
-                                <a href="mailto:support@website.com">support@website.com</a>
+                                <a href="mailto:support@keyreply.com">support@keyreply.com</a>
                             </div>
-                            <div class="ftr-contact contact-phone">
+                            <!-- <div class="ftr-contact contact-phone">
                                 <a href="tel:1.777-666-5555">1.777-666-5555</a><br>
                                 <a href="tel:1.444-333-2222">1.444-333-2222</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-social">
                             <div class="ftr-social">
-                                <a  href="#"><i class="facebook-ico"></i></a>
-                                <a  href="#"><i class="tw-ico"></i></a>
-                                <a  href="#"><i class="google-ico"></i></a>
+                                <a  href="http://facebook.com/keyreply"><i class="facebook-ico"></i></a>
+                                <a  href="http://twitter.com/keyreply"><i class="tw-ico"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="copy clearfix">
-                    <div class="copy-right"><span>Copyright © 2014 WebApp.</span> All rights reserved.</div>
+                    <div class="copy-right"><span>Copyright © 2015 Graph Paper Co.</span> All rights reserved.</div>
                     <div class="copy-links">
-                        <a class="privacy-link" href="#">Privacy Policy</a>
-                        <a href="#">Terms and Conditions</a>
+                        <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Use</a>
                     </div>
                 </div>
             </div>
         </footer>
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/ScrollToPlugin.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-        function submitForm() {
-				$.ajax({type:'POST', url:'email-action.php', data:$('#homefrm1').serialize(), success: function(response) {
-					$('#alert').find('.message').html(response);
-				}});
-                return false;
-            }
-      </script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+    
     </body>
 </html>
