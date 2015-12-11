@@ -79,8 +79,9 @@
         // viber:
     }
 
-    $('.kr-link').each(function(e) {
-        link = $(e);
+    $('.kr-link').each(function(index, e) {
+        var link = $(e);
+        console.log(link);
         var type = link.data('type');
         var deeplink;
 
