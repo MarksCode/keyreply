@@ -53,6 +53,7 @@
                     <a id="kr-phone">Phone</a>
                     <a id="kr-telegram">Telegram</a>
                     <a id="kr-facetime">Facetime</a>
+                    <a id="kr-facebook">Messenger</a>
                     </h3>
                 </div>
                 <div class="col-sm-3 ftr-list-box  col-xs-6">
@@ -116,6 +117,9 @@
     <script src="js/map.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+    var ua = navigator.userAgent;
+    var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    var Android = !!ua.match(/Android/i)
 
     var data = {
         email: "max@graphpaper.com",
@@ -123,6 +127,7 @@
         sms: "1-808-670-5836",
         phone: "1-808-670-5836",
         facetime: "xumx@me.com",
+        facebook: "500410191"
     }
 
     $('#kr-email').attr("href", "mailto:" + data.email + "?subject=Support request");
@@ -131,6 +136,14 @@
     $('#kr-facetime').attr("href", "facetime-audio:" + data.facetime);
     $('#kr-telegram').attr("href", "tg://resolve?domain=" + data.telegram);
 
+    if (iOS) {
+        $('#kr-facebook').attr("href", "fb-messenger://user-thread/" + data.facebook) //iOS
+    } else if (Android) {
+        $('#kr-facebook').attr("href", "fb-messenger://user/" + data.facebook) //Android    
+    }
+    
+
+    
     </script>
 </body>
 
