@@ -136,7 +136,7 @@
     */
 
     function openChat(event) {
-        var type = this.data('type');
+        var type = $(event.target).data('type');
         var deeplink;
 
         var ua = navigator.userAgent;
