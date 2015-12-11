@@ -48,12 +48,12 @@
             <div class="row row-ftr">
                 <div class="col-sm-3 col-xs-6 ftr-text-widget">
                     <h3 class="ftr-title">
-                    <a id="kr-email">Email</a>
-                    <a id="kr-sms">SMS</a>
-                    <a id="kr-phone">Phone</a>
-                    <a id="kr-telegram">Telegram</a>
-                    <a id="kr-facetime">Facetime</a>
-                    <a id="kr-facebook">Messenger</a>
+                        <a class="kr-link" data-type="email">Email</a>
+                        <a class="kr-link" data-type="sms">SMS</a>
+                        <a class="kr-link" data-type="phone">Phone</a>
+                        <a class="kr-link" data-type="telegram">Telegram</a>
+                        <a class="kr-link" data-type="facetime">Facetime</a>
+                        <a class="kr-link" data-type="facebook">Messenger</a>
                     </h3>
                 </div>
                 <div class="col-sm-3 ftr-list-box  col-xs-6">
@@ -117,33 +117,69 @@
     <script src="js/map.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-    var ua = navigator.userAgent;
-    var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-    var Android = !!ua.match(/Android/i)
+    //1. Need to have robust device detection
+    //2. Low friction setup process
+    //3. Dynamic .js generation
+    //4. Encrypted .js url
+    //5. Front end UI
 
-    var data = {
-        email: "max@graphpaper.com",
-        telegram: "max_xu",
-        sms: "1-808-670-5836",
-        phone: "1-808-670-5836",
-        facetime: "xumx@me.com",
-        facebook: "500410191"
+    /*
+        if embed code
+            static .js
+            cdn cache
+            local data
+
+        pro
+            key -> database
+            encrypted
+            analytics
+    */
+
+    function openChat(event) {
+        var type = this.data('type');
+        var deeplink;
+
+        var ua = navigator.userAgent;
+        var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+        var Android = !!ua.match(/Android/i)
+
+        var data = {
+            email: "max@graphpaper.com",
+            telegram: "max_xu",
+            sms: "1-808-670-5836",
+            phone: "1-808-670-5836",
+            facetime: "xumx@me.com",
+            facebook: "500410191"
+        }
+
+        console.log(type);
+
+        switch (type) {
+            case 'email':
+                deeplink = "mailto:" + data.email + "?subject=Support request";
+                break;
+            case 'sms':
+                deeplink = "sms:" + data.sms;
+                break;
+            case 'phone':
+                deeplink = "tel:" + data.phone;
+                break;
+            case 'facetime':
+                deeplink = "facetime-audio:" + data.facetime;
+            case 'telegram':
+                deeplink = "tg://resolve?domain=" + data.telegram;
+            case 'facebook':
+                // http://findmyfbid.com/
+                if (iOS) {
+                    deeplink = "fb-messenger://user-thread/" + data.facebook
+                } else if (Android) {
+                    deeplink = "fb-messenger://user/" + data.facebook
+                }
+                break;
+        }
     }
 
-    $('#kr-email').attr("href", "mailto:" + data.email + "?subject=Support request");
-    $('#kr-sms').attr("href", "sms:" + data.sms);
-    $('#kr-phone').attr("href", "tel:" + data.phone);
-    $('#kr-facetime').attr("href", "facetime-audio:" + data.facetime);
-    $('#kr-telegram').attr("href", "tg://resolve?domain=" + data.telegram);
-
-    if (iOS) {
-        $('#kr-facebook').attr("href", "fb-messenger://user-thread/" + data.facebook) //iOS
-    } else if (Android) {
-        $('#kr-facebook').attr("href", "fb-messenger://user/" + data.facebook) //Android    
-    }
-    
-
-    
+    $('.kr-link').click(openChat)
     </script>
 </body>
 
