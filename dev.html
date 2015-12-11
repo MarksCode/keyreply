@@ -176,7 +176,13 @@
                     deeplink = "fb-messenger://user/" + data.facebook
                 }
                 break;
+
+            default:
+                deeplink = "mailto:" + data.email + "?subject=Support request";
+                break;
         }
+
+        if (deeplink) window.open(deeplink);
     }
 
     $('.kr-link').click(openChat)
