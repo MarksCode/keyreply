@@ -12,12 +12,10 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
-
     <link rel="apple-touch-icon" href="Icon-Small@2x.png">
     <link rel="apple-touch-icon" sizes="76x76" href="Icon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="Icon-60@2x.png">
     <link rel="apple-touch-icon" sizes="152x152" href="Icon-76@2x.png">
-
     <meta name="keywords" content="messaging, mobile, effective sales, higher productivity, increase efficiency, teams, keyboard, faster, better, intelligent, knowledgebase, business">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,800,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -40,24 +38,7 @@
     ga('send', 'pageview');
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "KeyReply",
-        "url": "https://www.keyreply.com",
-        "logo": "http://i58.tinypic.com/2vnq9f6.png",
-        "sameAs": [
-            "http://www.facebook.com/graphpaper",
-            "http://www.twitter.com/keyreply",
-            "http://plus.google.com/graphpaper"
-        ],
-        "contactPoint": [{
-            "@type": "ContactPoint",
-            "telephone": "+1-415-996-6171",
-            "contactType": "customer service",
-            "availableLanguage": "English"
-        }]
-    }
+        { "@context": "http://schema.org", "@type": "Organization", "name": "KeyReply", "url": "https://www.keyreply.com", "logo": "http://i58.tinypic.com/2vnq9f6.png", "sameAs": [ "http://www.facebook.com/graphpaper", "http://www.twitter.com/keyreply", "http://plus.google.com/graphpaper" ], "contactPoint": [{ "@type": "ContactPoint", "telephone": "+1-415-996-6171", "contactType": "customer service", "availableLanguage": "English" }] }
     </script>
 </head>
 
@@ -72,8 +53,6 @@
                     <p class="ftr-text">
                         KeyReply helps the mobile workforce of tomorrow reply better and faster on the go. Through the KeyReply keyboard, teams have the power to create and send high-quality replies with just a tap. Customers and stakeholders will receive timely and consistent replies, increasing their satisfaction with the company and brand.
                     </p>
-                    
-
                 </div>
                 <div class="col-sm-3 ftr-list-box  col-xs-6">
                     <h3 class="ftr-title">
@@ -82,7 +61,6 @@
                     <ul class="ftr-list">
                         <li><a href="tour.html">Feature tour</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-
                         <!--                             <li><a href="testimonials.html">Testimonials</a></li>
  -->
                     </ul>
@@ -123,8 +101,9 @@
             <div class="copy clearfix">
                 <div class="copy-right"><span>Copyright © 2015 Graph Paper Co.</span> All rights reserved.</div>
                 <div class="copy-links">
-                    <a class="privacy-link" href="privacy.html">Privacy Policy</a>
-                    <a id="chat-link" href="terms.html">Terms of Use</a>
+                    <a id="email-chat-link">Email</a>
+                    <a id="sms-chat-link">SMS</a>
+                    <a id="telegram-chat-link">Telegram</a>
                 </div>
             </div>
         </div>
@@ -138,9 +117,16 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script src="js/map.js"></script>
     <script src="js/main.js"></script>
-
     <script type="text/javascript">
-        $('#chat-link').attr("href", "https://telegram.me/max_xu");
+    var data = {
+        email: "max@graphpaper.com"
+        telegram: "max_xu",
+        phone: "1-808-670-5836"
+    }
+
+    $('#email-chat-link').attr("href", "mailto:" + data.email + "?subject=Support request&body=order")
+    $('#sms-chat-link').attr("href", "sms:" + data.phone)
+    $('#telegram-chat-link').attr("href", "https://telegram.me/" + data.telegram);
     </script>
 </body>
 
