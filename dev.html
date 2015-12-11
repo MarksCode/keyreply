@@ -39,6 +39,7 @@
                         <a class="kr-link" data-type="facetime">Facetime</a><br/ >
                         <a class="kr-link" data-type="facebook">Messenger</a><br/ >
                         <a class="kr-link" data-type="wechat">微信</a><br/ >
+                        <a class="kr-link" data-type="kakao">Kakao</a><br/ >
                     </ul>
                 </div>
             </div>
@@ -74,7 +75,7 @@
         facebook: "500410191"
         wechat: "http://weixin.qq.com/r/3LmMlLrE3Oejrf739_zO" //QR Code
         line:
-        kaokao:
+        kakao: "인어교주해적단" //Yellow ID or QR Code
         viber:
     }
 
@@ -113,13 +114,19 @@
                 break;
             case 'wechat':
                 deeplink = data.wechat
+            case 'kakao':
+                deeplink = 
             default:
                 deeplink = "mailto:" + data.email + "?subject=Support request";
                 break;
         }
 
-        link.attr("href", deeplink)
-    })
+        // if (mobile) {
+            link.attr("href", deeplink)    
+        // } else {
+            // show QR Code
+        // }
+    });
     </script>
 </body>
 
