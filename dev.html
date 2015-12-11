@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    
     <script type="application/ld+json">
         { "@context": "http://schema.org", "@type": "Organization", "name": "KeyReply", "url": "https://www.keyreply.com", "logo": "http://i58.tinypic.com/2vnq9f6.png", "sameAs": [ "http://www.facebook.com/graphpaper", "http://www.twitter.com/keyreply", "http://plus.google.com/graphpaper" ], "contactPoint": [{ "@type": "ContactPoint", "telephone": "+1-415-996-6171", "contactType": "customer service", "availableLanguage": "English" }] }
     </script>
@@ -46,7 +45,6 @@
     </footer>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
     //1. Need to have robust device detection
     //2. Low friction setup process
@@ -66,22 +64,22 @@
             analytics
     */
 
-    function openChat(event) {
-        var type = $(event.target).data('type');
+    var data = {
+        email: "max@graphpaper.com",
+        telegram: "max_xu",
+        sms: "1-808-670-5836",
+        phone: "1-808-670-5836",
+        facetime: "xumx@me.com",
+        facebook: "500410191"
+    }
+
+    $('.kr-link').each(function(link) {
+        var type = link.data('type');
         var deeplink;
 
         var ua = navigator.userAgent;
         var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
         var Android = !!ua.match(/Android/i)
-
-        var data = {
-            email: "max@graphpaper.com",
-            telegram: "max_xu",
-            sms: "1-808-670-5836",
-            phone: "1-808-670-5836",
-            facetime: "xumx@me.com",
-            facebook: "500410191"
-        }
 
         console.log(type);
 
@@ -113,10 +111,8 @@
                 break;
         }
 
-        if (deeplink) window.open(deeplink).close();
-    }
-
-    $('.kr-link').click(openChat)
+        link.attr("href", deeplink)
+    })
     </script>
 </body>
 
