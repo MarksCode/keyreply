@@ -32,14 +32,14 @@
             <div class="row row-ftr">
                 <div class="col-sm-3 col-xs-6 ftr-text-widget">
                     <h3 class="ftr-title">
-                        <a class="kr-link" href="" data-type="email">Email</a><br/ >
-                        <a class="kr-link" href="" data-type="sms">SMS</a><br/ >
-                        <a class="kr-link" href="" data-type="phone">Phone</a><br/ >
-                        <a class="kr-link" href="" data-type="telegram">Telegram</a><br/ >
-                        <a class="kr-link" href="" data-type="facetime">Facetime</a><br/ >
-                        <a class="kr-link" href="" data-type="facebook">Messenger</a><br/ >
-                        <a class="kr-link" href="" data-type="wechat">微信</a><br/ >
-                        <a class="kr-link" href="" data-type="kakao">Kakao</a><br/ >
+                        <a class="kr-link" data-type="email">Email</a><br/ >
+                        <a class="kr-link" data-type="sms">SMS</a><br/ >
+                        <a class="kr-link" data-type="phone">Phone</a><br/ >
+                        <a class="kr-link" data-type="telegram">Telegram</a><br/ >
+                        <a class="kr-link" data-type="facetime">Facetime</a><br/ >
+                        <a class="kr-link" data-type="facebook">Messenger</a><br/ >
+                        <a class="kr-link" data-type="wechat">微信</a><br/ >
+                        <a class="kr-link" data-type="kakao">Kakao</a><br/ >
                     </h3>
                 </div>
             </div>
@@ -79,8 +79,8 @@
         viber:
     }
 
-    $('.kr-link').each(function(link) {
-        link = $(link);
+    $('.kr-link').click(function(event) {
+        link = $(event.target);
         var type = link.data('type');
         var deeplink;
 
@@ -122,7 +122,8 @@
         }
 
         // if (mobile) {
-            link.attr("href", deeplink)    
+            window.open(deeplink)
+            // link.attr("href", )    
         // } else {
             // show QR Code
         // }
