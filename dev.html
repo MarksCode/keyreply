@@ -31,14 +31,15 @@
         <div class="container">
             <div class="row row-ftr">
                 <div class="col-sm-3 col-xs-6 ftr-text-widget">
-                    <h3 class="ftr-title">
-                        <a class="kr-link" data-type="email">Email</a>
-                        <a class="kr-link" data-type="sms">SMS</a>
-                        <a class="kr-link" data-type="phone">Phone</a>
-                        <a class="kr-link" data-type="telegram">Telegram</a>
-                        <a class="kr-link" data-type="facetime">Facetime</a>
-                        <a class="kr-link" data-type="facebook">Messenger</a>
-                    </h3>
+                    <ul class="ftr-title">
+                        <a class="kr-link" data-type="email">Email</a><br/ >
+                        <a class="kr-link" data-type="sms">SMS</a><br/ >
+                        <a class="kr-link" data-type="phone">Phone</a><br/ >
+                        <a class="kr-link" data-type="telegram">Telegram</a><br/ >
+                        <a class="kr-link" data-type="facetime">Facetime</a><br/ >
+                        <a class="kr-link" data-type="facebook">Messenger</a><br/ >
+                        <a class="kr-link" data-type="wechat">微信</a><br/ >
+                    </ul>
                 </div>
             </div>
         </div>
@@ -71,6 +72,10 @@
         phone: "1-808-670-5836",
         facetime: "xumx@me.com",
         facebook: "500410191"
+        wechat: "http://weixin.qq.com/r/3LmMlLrE3Oejrf739_zO" //QR Code
+        line:
+        kaokao:
+        viber:
     }
 
     $('.kr-link').each(function(link) {
@@ -106,7 +111,8 @@
                     deeplink = "fb-messenger://user/" + data.facebook
                 }
                 break;
-
+            case 'wechat':
+                deeplink = data.wechat
             default:
                 deeplink = "mailto:" + data.email + "?subject=Support request";
                 break;
