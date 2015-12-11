@@ -101,9 +101,9 @@
             <div class="copy clearfix">
                 <div class="copy-right"><span>Copyright © 2015 Graph Paper Co.</span> All rights reserved.</div>
                 <div class="copy-links">
-                    <a id="email-chat-link">Email</a>
-                    <a id="sms-chat-link">SMS</a>
-                    <a id="telegram-chat-link">Telegram</a>
+                    <a id="email-chat-link" href="#">Email</a>
+                    <a id="sms-chat-link" href="#">SMS</a>
+                    <a id="telegram-chat-link" href="#">Telegram</a>
                 </div>
             </div>
         </div>
@@ -124,8 +124,8 @@
         phone: "1-808-670-5836"
     }
 
-    $('#email-chat-link').attr("href", "mailto:" + data.email + "?subject=Support request&body=order")
-    $('#sms-chat-link').attr("href", "sms:" + data.phone)
+    $('#email-chat-link').attr("href", "mailto:" + data.email + "?subject=Support request");
+    $('#sms-chat-link').attr("href", "sms:" + data.phone);
     $('#telegram-chat-link').attr("href", "https://telegram.me/" + data.telegram);
     </script>
 </body>
