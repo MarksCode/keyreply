@@ -72,15 +72,15 @@
         sms: "1-808-670-5836",
         phone: "1-808-670-5836",
         facetime: "xumx@me.com",
-        facebook: "500410191"
-        wechat: "http://weixin.qq.com/r/3LmMlLrE3Oejrf739_zO" //QR Code
-        line:
-        kakao: "인어교주해적단" //Yellow ID or QR Code
-        viber:
+        facebook: "500410191",
+        wechat: "http://weixin.qq.com/r/3LmMlLrE3Oejrf739_zO", //QR Code
+        // line:,
+        kakao: "인어교주해적단", //Yellow ID or QR Code
+        // viber:
     }
 
-    $('.kr-link').click(function(event) {
-        link = $(event.target);
+    $('.kr-link').each(function(link) {
+        link = $(link);
         var type = link.data('type');
         var deeplink;
 
@@ -122,8 +122,7 @@
         }
 
         // if (mobile) {
-            window.open(deeplink)
-            // link.attr("href", )    
+            link.attr("href", deeplink)    
         // } else {
             // show QR Code
         // }
