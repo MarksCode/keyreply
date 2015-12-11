@@ -103,18 +103,21 @@
                 break;
             case 'facetime':
                 deeplink = "facetime-audio:" + data.facetime;
+                break;
             case 'telegram':
                 deeplink = "tg://resolve?domain=" + data.telegram;
+                break;
             case 'facebook':
                 // http://findmyfbid.com/
                 if (iOS) {
-                    deeplink = "fb-messenger://user-thread/" + data.facebook
+                    deeplink = "fb-messenger://user-thread/" + data.facebook;
                 } else if (Android) {
-                    deeplink = "fb-messenger://user/" + data.facebook
+                    deeplink = "fb-messenger://user/" + data.facebook;
                 }
                 break;
             case 'wechat':
-                deeplink = data.wechat
+                deeplink = data.wechat;
+                break;
             case 'kakao':
                 // deeplink = 
             default:
