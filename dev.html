@@ -64,7 +64,17 @@
             key -> database
             encrypted
             analytics
+
+
+
+            wechat
+                QR Code
+                    http://weixin.qq.com/r/CUwxKfXE-KiDrbFK9xkb
+                android
+                    weixin://contacts/profile/微信ID
+                
     */
+
 
     var data = {
         email: "max@graphpaper.com",
@@ -116,10 +126,12 @@
                 }
                 break;
             case 'wechat':
+                // weixin://contacts/profile/微信ID
                 deeplink = data.wechat;
                 break;
-            case 'kakao':
-                // deeplink = 
+            case 'kakao': //official
+                deeplink = "http://goto.kakao.com/" + data.kakao;
+                break;
             default:
                 deeplink = "mailto:" + data.email + "?subject=Support request";
                 break;
