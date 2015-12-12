@@ -1,11 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900");
 
-/*
-	Split Screen by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 /* Reset */
 
@@ -125,14 +120,14 @@
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		color: #e0749a;
+		color: #E4392B;
 		border-bottom: dotted 1px;
 		text-decoration: none;
 	}
 
 		a:hover {
-			border-bottom-color: #e0749a;
-			color: #e0749a !important;
+			border-bottom-color: #E4392B;
+			color: #E4392B !important;
 		}
 
 	strong, b {
@@ -157,7 +152,7 @@
 	}
 
 		h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
-			color: #e0749a;
+			color: #E4392B;
 			font-weight: 300;
 		}
 
@@ -339,7 +334,7 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #e0749a;
+			border-color: #E4392B;
 		}
 
 	.select-wrapper {
@@ -448,7 +443,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #e0749a;
+			border-color: #E4392B;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -825,7 +820,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #e0749a;
+			box-shadow: inset 0 0 0 2px #E4392B;
 		}
 
 			input[type="submit"]:hover:active,
@@ -841,7 +836,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #e0749a;
+			background-color: #E4392B;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
