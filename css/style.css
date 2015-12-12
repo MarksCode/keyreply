@@ -1796,7 +1796,7 @@ ul {
 /* 05 - SPRITE */
 .live-ico, .translate, .benefits3, .comments-green-ico, .benefits4, .folowers-ico, .benefits1, .happy-ico, .triangle, .benefits2, .device-ico, .big-ico, .shoping-ico, .cloud-ico, .drive-ico, .easy-ico, .getup-green-ico, .getup-white-ico, .mail-white-ico, .support-ico, .discount-icon, .multiplatform-ico, .content-ico1, .data-base-ico, .faq-ico, .getup-w-ico, .more-benefits, .pricing-ico, .security-ico, .tw-w-ico, .arrow-down-white, .learn-ico, .more-black-ico, .more-gren-ico, .more-grey-ico, .more-ico, .search-ico, .tw-white-ico, .content-ico4, .procesing-ico, .start-green-ico, .start-wight-ico, .content-ico2, .comment-ico, .contact-place-ico, .custom-ico2, .custom-ico3, .custom-ico4, .date-ico, .dorian-ico, .google-ico, .instalation-ico, .ok-green-ico, .ok-grey-ico, .reply-ico, .secure-ico, .time-ico, .arrow-down, .arrow-top, .elem-google-h, .elem-google, .experience-ico, .content-ico3, .elem-twit-h, .elem-twit, .phone-ico, .elem-in-h, .elem-in, .elem-photo-h-ico, .elem-photo-ico, .arrow-down-green, .close-green-ico, .close-white-ico, .custom-ico, .elem-p-h, .elem-p, .facebook-w-ico, .tw-min-ico, .usab-ico, .work-ico, .like-ico, .arrow-left-green, .arrow-right-green, .facebook-ico, .elem-facebook-h, .elem-facebook, .facebook-min-ico, .min-arrow-green-left, .min-arrow-green, .min-arrow-white {
     display: inline-block;
-    background: url('../img/sprite-red.png') no-repeat;
+    background: url('../img/sprite.png') no-repeat;
     text-indent: -9999px;
     text-align: left
 }
