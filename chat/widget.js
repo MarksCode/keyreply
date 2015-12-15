@@ -1,6 +1,7 @@
 window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js" async><\/script>');
 window.onload = function() {
     var settings = {},
+    	root = 'https://keyreply.com/',
         script = $('#keyreply-script'),
         cipher = script.data('settings');
     settings.color = script.data('color');
@@ -12,7 +13,7 @@ window.onload = function() {
     var anchor = $('<div>').appendTo($('body'));
     var launcher = $('<img>')
         .attr('id', 'keyreply-launcher-button')
-        .attr('src', 'img/launcher/' + settings.color + '.png')
+        .attr('src', root + 'images/launcher/' + settings.color + '.png')
         .css('bottom', '20px')
         .css('z-index', '1')
         .appendTo(anchor);
@@ -20,7 +21,7 @@ window.onload = function() {
     $.each(settings.apps, function(key, value) {
         $('<img>')
             .addClass('keyreply-chat-icon')
-            .attr('src', 'img/apps/' + key + '.png')
+            .attr('src', root + 'images/apps/' + key + '.png')
             .attr('data-type', key)
             .css('bottom', '20px')
             .appendTo(anchor);
