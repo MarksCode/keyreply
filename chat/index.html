@@ -147,15 +147,9 @@
                         if (input.value) {
                             apps[input.name] = input.value
                         }
-                    })
+                    });
 
-                    var settings = {
-                        apps: apps,
-                        color: color
-                    }
-
-
-                    var payload = btoa(encodeURI(JSON.stringify(settings)));
+                    var payload = btoa(encodeURI(JSON.stringify(apps)));
                     document.getElementById("embed").value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-settings="' + payload + '">'
                 }
                 </script>
@@ -185,7 +179,7 @@
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-settings="JTdCJTIyYXBwcyUyMjolN0IlMjJwaG9uZSUyMjolMjIxMjM0NTY3JTIyLCUyMnRlbGVncmFtJTIyOiUyMnRlc3RlciUyMiwlMjJzbXMlMjI6JTIydGVzdGVyJTIyLCUyMmtha2FvJTIyOiUyMnRlc3RlciUyMiwlMjJlbWFpbCUyMjolMjJ0ZXN0ZXJAZXhhbXBsZS5jb20lMjIlN0QsJTIyY29sb3IlMjI6JTIycmVkJTIyJTdE">
-    <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="> -->
+    // <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="> -->
     </script>
 </body>
 
