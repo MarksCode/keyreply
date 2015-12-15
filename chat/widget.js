@@ -13,7 +13,7 @@ window.onload = function() {
     var anchor = $('<div>').appendTo($('body'));
     var launcher = $('<img>')
         .attr('id', 'keyreply-launcher-button')
-        .attr('src', root + 'images/launcher/' + settings.color + '.png')
+        .attr('src', root + 'chat/images/launcher/' + settings.color + '.png')
         .css('bottom', '20px')
         .css('z-index', '1')
         .appendTo(anchor);
@@ -21,7 +21,7 @@ window.onload = function() {
     $.each(settings.apps, function(key, value) {
         $('<img>')
             .addClass('keyreply-chat-icon')
-            .attr('src', root + 'images/apps/' + key + '.png')
+            .attr('src', root + 'chat/images/apps/' + key + '.png')
             .attr('data-type', key)
             .css('bottom', '20px')
             .appendTo(anchor);
