@@ -1,69 +1,192 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Chat by KeyReply</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-55913366-13', 'auto');
-		  ga('send', 'pageview');
+<head>
+    <title>Chat by KeyReply</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		</script>
-	</head>
-	<body>
+    ga('create', 'UA-55913366-13', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<body>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Wrapper -->
+        <section id="wrapper">
+            <div class="inner">
+                <h1><b>Chat</b> by KeyReply</h1>
+                <h2>The chat widget to end all chat widgets - Free Forever.</h2>
+                <p>No more ancient contact forms or expensive bloated live chat widgets.
+                    </br>Try it, share it and stop the search for a good live chat widget forever.</p>
+                <style>
+                .input-block {
+                    position: relative;
+                    width: 450px;
+                    height: 120px;
+                    padding: 16px 30px;
+                    margin: 50px 30px;
+                    color: white;
+                    border-radius: 4px;
+                    background: #00DC00;
+                }
+                
+                .input-block img.app-icon {
+                    position: absolute;
+                    top: -30px;
+                    left: -30px;
+                    height: 65px;
+                    width: 65px;
+                }
+                
+                .input-block .app-label {
+                    font-weight: 500;
+                    font-size: 1.2em;
+                }
+                
+                .input-block input {
+                    background: none;
+                    border-width: 0 0 2px 0;
+                    border-radius: 0;
+                    height: 40px;
+                    padding-left: 0;
+                }
+                
+                .input-block.inverse .app-label {
+                    color: #3B1E1D;
+                }
+                
+                .input-block.inverse input {
+                    color: #3B1E1D;
+                    border-color: #3B1E1D;
+                }
+                
+                .input-block.inverse input:focus {
+                    border-color: #3B1E1D;
+                }
+                
+                .input-block input:focus {
+                    border-color: white;
+                }
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<div class="inner">
-							<h1><b>Chat</b> by KeyReply</h1>
-							<h2>The chat widget to end all chat widgets - Free Forever.</h2>
-							<p>No more ancient contact forms or expensive bloated live chat widgets.
-							</br>Try it, share it and stop the search for a good live chat widget forever.</p>
-							<ul class="actions">
-								<li><a href="#" class="button special icon fa-arrow-down">GET IT NOW</a></li>
-							</ul>
-						</div>
-						<footer>
-							<ul class="icons">
-								<li><a href="https://twitter.com/keyreply" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							</ul>
-						</footer>
-					</section>
+                #embed {
+                	word-break: break-all; 
+                }
+                </style>
+                <div class="input-block" style="background: #00DC00;">
+                    <img class="app-icon" src="images/apps/phone.png" alt="phone">
+                    <div class="app-label">
+                        Phone
+                    </div>
+                    <input name="phone" type="text" placeholder="phone number…">
+                </div>
+                <div class="input-block" style="background: #00A4E8;">
+                    <img class="app-icon" src="images/apps/telegram.png" alt="phone">
+                    <div class="app-label">
+                        Telegram
+                    </div>
+                    <input name="telegram" type="text" placeholder="telegram ID">
+                </div>
+                <div class="input-block" style="background: #00DC00;">
+                    <img class="app-icon" src="images/apps/sms.png" alt="phone">
+                    <div class="app-label">
+                        SMS
+                    </div>
+                    <input name="sms" type="text" placeholder="phone number…">
+                </div>
+                <div class="input-block" style="background: #0079FF;">
+                    <img class="app-icon" src="images/apps/facebook.png" alt="phone">
+                    <div class="app-label">
+                        Facebook Messenger &nbsp; <a href="http://findmyfbid.com/" style="color:white; font-size: 0.8em;">Hint</a>
+                    </div>
+                    <input name="facebook" type="text" placeholder="facebook ID…">
+                </div>
+                <div class="input-block inverse" style="background: #FFE100;">
+                    <img class="app-icon" src="images/apps/kakao.png" alt="phone">
+                    <div class="app-label">
+                        Kakao Talk
+                    </div>
+                    <input name="kakao" type="text" placeholder="Yellow ID…">
+                </div>
+                <div class="input-block" style="background: #1C62EF;">
+                    <img class="app-icon" src="images/apps/email.png" alt="phone">
+                    <div class="app-label">
+                        Email
+                    </div>
+                    <input name="email" type="text">
+                </div>
+                <ul class="actions" style="text-align:center;">
+                    <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
+                </ul>
+                <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" placeholder="embed code here…">
+                </textarea>
+                <script>
+                function generate() {
+                    var apps = {},
+                        color = "red";
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="content">
-								<ul>
-									<li><img src="images/pic01.jpg" alt="" /></li>
-									<li><img src="images/pic02.jpg" alt="" /></li>
-									<!-- <li><img src="images/pic03.jpg" alt="" /></li>
-									<li><img src="images/pic04.jpg" alt="" /></li>
-									<li><img src="images/pic05.jpg" alt="" /></li> -->
-								</ul>
-							</div>
-						</div>
-					</section>
+                    $('.input-block input').each(function(index, input) {
+                        if (input.value) {
+                            apps[input.name] = input.value
+                        }
+                    })
 
-			</div>
+                    var settings = {
+                        apps: apps,
+                        color: color
+                    }
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 
-			<script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA==">
-	</script>
-	</body>
+                    var payload = btoa(encodeURI(JSON.stringify(settings)));
+                    document.getElementById("embed").value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-settings="' + payload + '">'
+                }
+                </script>
+            </div>
+            <footer>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/keyreply" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                </ul>
+            </footer>
+        </section>
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="content">
+                    <ul>
+                        <li><img src="images/pic01.jpg" alt="" /></li>
+                        <li><img src="images/pic02.jpg" alt="" /></li>
+                        <li><img src="images/pic03.jpg" alt="" /></li>
+                        <li><img src="images/pic04.jpg" alt="" /></li>
+                        <!-- <li><img src="images/pic05.jpg" alt="" /></li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Scripts -->
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-settings="JTdCJTIyYXBwcyUyMjolN0IlMjJwaG9uZSUyMjolMjIxMjM0NTY3JTIyLCUyMnRlbGVncmFtJTIyOiUyMnRlc3RlciUyMiwlMjJzbXMlMjI6JTIydGVzdGVyJTIyLCUyMmtha2FvJTIyOiUyMnRlc3RlciUyMiwlMjJlbWFpbCUyMjolMjJ0ZXN0ZXJAZXhhbXBsZS5jb20lMjIlN0QsJTIyY29sb3IlMjI6JTIycmVkJTIyJTdE">
+    <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="> -->
+    </script>
+</body>
+
 </html>
