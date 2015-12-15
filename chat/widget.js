@@ -90,7 +90,7 @@ window.onload = function() {
         }
 
         app.click(function() {
-            window.open(link).close();
+            window.open(link);
         });
     });
 };
