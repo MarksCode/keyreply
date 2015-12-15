@@ -41,6 +41,14 @@
                     <li><a id="get-it" class="button special">Get it now!</a></li>
                 </ul>
                 <style>
+                @media screen and (min-width: 963px) {
+                    #banner {
+                        position: fixed;
+                        left: 0;
+                        height: 100vh;
+                    }
+                }
+
                 .input-block {
                     cursor: move;
                     position: relative;
@@ -62,7 +70,7 @@
                 
                 .input-block .app-label {
                     font-weight: 500;
-                    font-size: 1.2em;
+                    font-size: 20px;
                 }
                 
                 .input-block input {
@@ -71,6 +79,7 @@
                     border-radius: 0;
                     height: 40px;
                     padding-left: 0;
+                    font-size: 20px;
                 }
                 
                 .input-block.inverse .app-label {
@@ -193,7 +202,7 @@
             </footer>
         </section>
         <!-- Banner -->
-        <section id="banner" style="position: fixed; left: 0; height: 100vh;">
+        <section id="banner">
             <div class="inner">
                 <div class="content">
                     <ul>
