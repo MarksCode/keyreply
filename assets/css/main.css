@@ -2602,24 +2602,6 @@
 					border: 0;
 				}
 
-/* Wide */
-
-	@media screen and (max-width: 1680px) {
-
-		/* Basic */
-
-			body, input, select, textarea {
-				font-size: 14pt;
-			}
-
-		/* Section/Article */
-
-			header.special {
-				padding-top: 5.5em;
-				margin-bottom: 4em;
-			}
-
-	}
 
 /* Normal */
 
@@ -2668,6 +2650,7 @@
 
 			#banner {
 				background-attachment: scroll;
+				position: fixed; left: 0; height: 100vh;
 			}
 
 		/* CTA */
