@@ -37,9 +37,12 @@
                 <h2>The chat widget to end all chat widgets - Free Forever.</h2>
                 <p>No more ancient contact forms or expensive bloated live chat widgets.
                     </br>Try it, share it and stop the search for a good live chat widget forever.</p>
+                <ul class="actions" style="text-align:center;">
+                    <li><a id="get-it" class="button special">Get it now!</a></li>
+                </ul>
                 <style>
                 .input-block {
-                	cursor: move;
+                    cursor: move;
                     position: relative;
                     height: 120px;
                     padding: 16px 30px;
@@ -101,7 +104,7 @@
                     border-width: 2px;
                 }
                 </style>
-                <div class="input-block-container">
+                <div class="input-block-container" style="display:none;">
                     <div class="input-block" style="background: #00DC00;">
                         <img class="app-icon" src="images/apps/phone.png" alt="phone">
                         <div class="app-label">
@@ -159,11 +162,14 @@
                         <input name="email" type="text">
                     </div>
                 </div>
-                <ul class="actions" style="text-align:center;">
-                    <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
-                </ul>
-                <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false">
-                </textarea>
+                <div class="actions-block" style="display:none;">
+                    <ul class="actions" style="text-align:center;">
+                        <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
+                    </ul>
+                    <p>Simply copy this code into your web page.</p>
+                    <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false">
+                    </textarea>
+                </div>
                 <script>
                 function generate() {
                     var apps = {},
@@ -176,7 +182,7 @@
                     });
 
                     var payload = btoa(encodeURI(JSON.stringify(apps)));
-                    document.getElementById("embed").value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-settings="' + payload + '">'
+                    document.getElementById("embed").value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '">'
                 }
                 </script>
             </div>
@@ -187,7 +193,7 @@
             </footer>
         </section>
         <!-- Banner -->
-        <section id="banner">
+        <section id="banner" style="position: fixed; left: 0; height: 100vh;">
             <div class="inner">
                 <div class="content">
                     <ul>
@@ -215,10 +221,15 @@
             opacity: 0.8,
             placeholder: 'sortable-placeholder'
         });
+
+        $("#get-it").click(function() {
+            $(".actions-block").show();
+            $(".input-block-container").show();
+        });
+
     });
     </script>
-    <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIydGVzdEBleGFtcGxlLmNvbSUyMiwlMjJrYWthbyUyMjolMjJ0ZXN0JTIyLCUyMmZhY2Vib29rJTIyOiUyMnRlc3QlMjIsJTIyc21zJTIyOiUyMjEzMTM1MTUxJTIyLCUyMnRlbGVncmFtJTIyOiUyMnRlc3QlMjIsJTIycGhvbmUlMjI6JTIyMTIzNDU2JTIyJTdE"> -->
-    <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="></script>
+    <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="></script>
 </body>
 
 </html>

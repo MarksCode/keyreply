@@ -3,7 +3,7 @@ window.onload = function() {
     var settings = {},
     	root = 'https://keyreply.com/',
         script = $('#keyreply-script'),
-        cipher = script.data('settings');
+        cipher = script.data('apps');
     settings.color = script.data('color');
     settings.apps = JSON.parse(decodeURI(atob(cipher)));
     $('<style>')
