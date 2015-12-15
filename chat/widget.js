@@ -1,4 +1,4 @@
-window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js" async><\/script>');
+window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>');
 window.onload = function() {
     var settings = {},
     	root = 'https://keyreply.com/',
@@ -78,8 +78,11 @@ window.onload = function() {
                 }
                 break;
             case 'wechat':
-                // weixin://contacts/profile/微信ID
-                link = settings.apps.wechat;
+                // 
+                // link = settings.apps.wechat;
+                if (Android) {
+                    link = "weixin://contacts/profile/xumx__"
+                }
                 break;
             case 'kakao': //official
                 link = "http://goto.kakao.com/" + settings.apps.kakao;

@@ -39,8 +39,8 @@
                     </br>Try it, share it and stop the search for a good live chat widget forever.</p>
                 <style>
                 .input-block {
+                	cursor: move;
                     position: relative;
-                    width: 450px;
                     height: 120px;
                     padding: 16px 30px;
                     margin: 50px 30px;
@@ -86,57 +86,83 @@
                 .input-block input:focus {
                     border-color: white;
                 }
-
+                
                 #embed {
-                	word-break: break-all; 
+                    word-break: break-all;
+                }
+                
+                .sortable-placeholder {
+                    position: relative;
+                    height: 120px;
+                    padding: 16px 30px;
+                    margin: 50px 30px;
+                    border-radius: 4px;
+                    border-style: dashed;
+                    border-width: 2px;
                 }
                 </style>
-                <div class="input-block" style="background: #00DC00;">
-                    <img class="app-icon" src="images/apps/phone.png" alt="phone">
-                    <div class="app-label">
-                        Phone
+                <div class="input-block-container">
+                    <div class="input-block" style="background: #00DC00;">
+                        <img class="app-icon" src="images/apps/phone.png" alt="phone">
+                        <div class="app-label">
+                            Phone
+                        </div>
+                        <input name="phone" type="text" placeholder="phone number…">
                     </div>
-                    <input name="phone" type="text" placeholder="phone number…">
-                </div>
-                <div class="input-block" style="background: #00A4E8;">
-                    <img class="app-icon" src="images/apps/telegram.png" alt="phone">
-                    <div class="app-label">
-                        Telegram
+                    <div class="input-block" style="background: #00DD00;">
+                        <img class="app-icon" src="images/apps/facetime.png" alt="facetime">
+                        <div class="app-label">
+                            FaceTime
+                        </div>
+                        <input name="phone" type="text" placeholder="phone number…">
                     </div>
-                    <input name="telegram" type="text" placeholder="telegram ID">
-                </div>
-                <div class="input-block" style="background: #00DC00;">
-                    <img class="app-icon" src="images/apps/sms.png" alt="phone">
-                    <div class="app-label">
-                        SMS
+                    <div class="input-block" style="background: #00A4E8;">
+                        <img class="app-icon" src="images/apps/telegram.png" alt="telegram">
+                        <div class="app-label">
+                            Telegram
+                        </div>
+                        <input name="telegram" type="text" placeholder="telegram ID">
                     </div>
-                    <input name="sms" type="text" placeholder="phone number…">
-                </div>
-                <div class="input-block" style="background: #0079FF;">
-                    <img class="app-icon" src="images/apps/facebook.png" alt="phone">
-                    <div class="app-label">
-                        Facebook Messenger &nbsp; <a href="http://findmyfbid.com/" style="color:white; font-size: 0.8em;">Hint</a>
+                    <div class="input-block" style="background: #00DC00;">
+                        <img class="app-icon" src="images/apps/sms.png" alt="sms">
+                        <div class="app-label">
+                            SMS
+                        </div>
+                        <input name="sms" type="text" placeholder="phone number…">
                     </div>
-                    <input name="facebook" type="text" placeholder="facebook ID…">
-                </div>
-                <div class="input-block inverse" style="background: #FFE100;">
-                    <img class="app-icon" src="images/apps/kakao.png" alt="phone">
-                    <div class="app-label">
-                        Kakao Talk
+                    <div class="input-block" style="background: #00DA00;">
+                        <img class="app-icon" src="images/apps/wechat.png" alt="wechat">
+                        <div class="app-label">
+                            WeChat
+                        </div>
+                        <input name="wechat" type="text" placeholder="微信 ID…">
                     </div>
-                    <input name="kakao" type="text" placeholder="Yellow ID…">
-                </div>
-                <div class="input-block" style="background: #1C62EF;">
-                    <img class="app-icon" src="images/apps/email.png" alt="phone">
-                    <div class="app-label">
-                        Email
+                    <div class="input-block" style="background: #0079FF;">
+                        <img class="app-icon" src="images/apps/facebook.png" alt="phone">
+                        <div class="app-label">
+                            Facebook Messenger &nbsp; <a href="http://findmyfbid.com/" style="color:white; font-size: 0.8em;">Hint</a>
+                        </div>
+                        <input name="facebook" type="text" placeholder="facebook ID…">
                     </div>
-                    <input name="email" type="text">
+                    <div class="input-block inverse" style="background: #FFE100;">
+                        <img class="app-icon" src="images/apps/kakao.png" alt="Kakao Talk">
+                        <div class="app-label">
+                            Kakao Talk
+                        </div>
+                        <input name="kakao" type="text" placeholder="Yellow ID…">
+                    </div>
+                    <div class="input-block" style="background: #1C62EF;">
+                        <img class="app-icon" src="images/apps/email.png" alt="email">
+                        <div class="app-label">
+                            Email
+                        </div>
+                        <input name="email" type="text">
+                    </div>
                 </div>
                 <ul class="actions" style="text-align:center;">
                     <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
                 </ul>
-                <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" placeholder="embed code here…">
+                <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false">
                 </textarea>
                 <script>
                 function generate() {
@@ -178,9 +204,21 @@
     <!-- Scripts -->
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
-    <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIydGVzdEBleGFtcGxlLmNvbSUyMiwlMjJrYWthbyUyMjolMjJ0ZXN0JTIyLCUyMmZhY2Vib29rJTIyOiUyMnRlc3QlMjIsJTIyc21zJTIyOiUyMjEzMTM1MTUxJTIyLCUyMnRlbGVncmFtJTIyOiUyMnRlc3QlMjIsJTIycGhvbmUlMjI6JTIyMTIzNDU2JTIyJTdE"> -->
-    <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA==">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+    $(function() {
+        $(".input-block-container").sortable({
+            axis: 'y',
+            cursor: 'move',
+            delay: 100,
+            opacity: 0.8,
+            placeholder: 'sortable-placeholder'
+        });
+    });
     </script>
+    <!-- <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIydGVzdEBleGFtcGxlLmNvbSUyMiwlMjJrYWthbyUyMjolMjJ0ZXN0JTIyLCUyMmZhY2Vib29rJTIyOiUyMnRlc3QlMjIsJTIyc21zJTIyOiUyMjEzMTM1MTUxJTIyLCUyMnRlbGVncmFtJTIyOiUyMnRlc3QlMjIsJTIycGhvbmUlMjI6JTIyMTIzNDU2JTIyJTdE"> -->
+    <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-settings="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="></script>
 </body>
 
 </html>
