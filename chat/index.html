@@ -38,7 +38,8 @@
                 <h2 style="background:white;">Simplest live chat widget on the planet</h2>
                 <p style="background:white;">Add mobile-friendly chat support to your website in less than 5 minutes! 
                 <br/>
-                Connect with your site visitors using popular messaging apps. The widget creates a deeplink into the chat applications on the visitor's phone. 
+                Connect with your site visitors using popular messaging apps. With one tap, your visitors can open a direct line to you using their favorite chat application.
+
                 
                 <br>
                 Goodbye old-fashioned contact forms and expensive live chat plans.
@@ -142,6 +143,18 @@
 
                 <div class="input-block-container" style="display:none;">
                     <h1><b>Step 1:</b> Choose the apps that you want to enable for your website. Then fill in the required information. </h1>
+
+                    <div class="input-block" style="background: #1C62EF;">
+                        <img class="app-icon" src="images/apps/email.png" alt="email">
+                        <div class="app-label">
+                            Email
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
+                        </div>
+                        <input name="email" type="text" placeholder="example@company.com">
+                    </div>
                     <div class="input-block inactive" style="background: #00DC00;">
                         <img class="app-icon" src="images/apps/phone.png" alt="phone">
                         <div class="app-label">
@@ -223,17 +236,6 @@
                             </div>
                         </div>
                         <input name="kakao" type="text" placeholder="Yellow ID…">
-                    </div>
-                    <div class="input-block inactive" style="background: #1C62EF;">
-                        <img class="app-icon" src="images/apps/email.png" alt="email">
-                        <div class="app-label">
-                            Email
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="email" type="text" placeholder="example@company.com">
                     </div>
                     <div class="actions-block">
                     <h1><b>Step 2:</b> Pick a color for the chat icon.</h1>
@@ -345,12 +347,25 @@
             <div class="inner">
                 <div class="content" style="background-color:#E4392B;">
                     <ul>
-                        <li><img src="images/KeyReply_chat_widget.gif" alt="" /></li>
+                        <li>
+                            <img src="images/KeyReply_chat_widget.gif" alt="" />
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
+
+    
+    <!--
+    <style>
+        
+    </style>
+    <div style="box-shadow:rgba(0,0,0,.2) 0 5px 10px 0; width: 300px; padding: 3px; position:fixed; right: 75px; bottom: 20px; background-color: white; border-radius: 3px;">
+        <img src="qr/carylyne.jpg" style="max-width: 100%; vertical-align: bottom;" alt="">
+    </div>
+    -->
+
     <!-- Scripts -->
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
@@ -396,7 +411,9 @@
         });
     });
     </script>
-    <script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBrZXlyZXBseS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyMTIzNTA3NTQxMzE4NTYyMSUyMiwlMjJ3ZWNoYXQlMjI6JTIyc3BlbmNlcnlhbmclMjIsJTIyc21zJTIyOiUyMisxNDE1OTk2NjE3MSUyMiwlMjJ0ZWxlZ3JhbSUyMjolMjJjYXJ5bHluZSUyMiwlMjJwaG9uZSUyMjolMjIrMTQxNTk5NjYxNzElMjIlN0Q="></script>
+    <!-- <script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBrZXlyZXBseS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyMTIzNTA3NTQxMzE4NTYyMSUyMiwlMjJ3ZWNoYXQlMjI6JTIyc3BlbmNlcnlhbmclMjIsJTIyc21zJTIyOiUyMisxNDE1OTk2NjE3MSUyMiwlMjJ0ZWxlZ3JhbSUyMjolMjJjYXJ5bHluZSUyMiwlMjJwaG9uZSUyMjolMjIrMTQxNTk5NjYxNzElMjIlN0Q="></script> -->
+    
+    <script defer id="keyreply-script" src="widget.js" data-color="yellow" data-apps="JTdCJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBrZXlyZXBseS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyMTIzNTA3NTQxMzE4NTYyMSUyMiwlMjJ3ZWNoYXQlMjI6JTIyc3BlbmNlcnlhbmclMjIsJTIyc21zJTIyOiUyMisxNDE1OTk2NjE3MSUyMiwlMjJ0ZWxlZ3JhbSUyMjolMjJjYXJ5bHluZSUyMiwlMjJwaG9uZSUyMjolMjIrMTQxNTk5NjYxNzElMjIlN0Q="></script>
 
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
