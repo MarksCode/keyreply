@@ -41,3 +41,5 @@ We prepared an instructions guide below for you to understand more about how to 
 12. 点击到文本或电邮编辑中，选择的回复会既然出现！如没有的话可以选用粘贴到文本中。
 13. 成功!
 
+Thank you and we look forward to your feedback.
+
