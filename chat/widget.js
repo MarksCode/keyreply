@@ -1,7 +1,5 @@
 window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>');
 window.onload = function() {
-    window.onload && window.onload();
-
     var settings = {},
     	root = 'https://keyreply.com/',
         script = $('#keyreply-script'),
