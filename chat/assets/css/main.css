@@ -438,10 +438,13 @@
 			color: #ffffff;
 			content: '\f00c';
 		}
-
-		input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
-			border-color: #E4392B;
+	
+		.inverse input[type="checkbox"] + label:before {
+			border-color: #000;	
+		}
+		.inverse input[type="checkbox"]:checked + label:before,
+		.inverse input[type="radio"]:checked + label:before {
+			color: #000;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -473,6 +476,31 @@
 	}
 
 	.polyfill-placeholder {
+		color: #e6e8eb !important;
+		opacity: 1.0;
+	}
+
+	.inverse ::-webkit-input-placeholder {
+		color: #000 !important;
+		opacity: 1.0;
+	}
+
+	.inverse :-moz-placeholder {
+		color: #e6e8eb !important;
+		opacity: 1.0;
+	}
+
+	.inverse ::-moz-placeholder {
+		color: #e6e8eb !important;
+		opacity: 1.0;
+	}
+
+	.inverse :-ms-input-placeholder {
+		color: #e6e8eb !important;
+		opacity: 1.0;
+	}
+
+	.inverse .polyfill-placeholder {
 		color: #e6e8eb !important;
 		opacity: 1.0;
 	}

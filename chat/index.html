@@ -236,9 +236,59 @@
                         <input name="email" type="text" placeholder="example@company.com">
                     </div>
                     <div class="actions-block">
-                    <h1><b>Step 3:</b></h1>
+                    <h1><b>Step 2:</b> Pick a color for the chat icon.</h1>
+                    
+                    <style>
+                        #icon-color-picker > div {
+                            cursor: pointer;
+                            position: relative;
+                            display: inline-block;
+                        }
+
+                        #icon-color-picker > div.selected:before {
+                            position:absolute; 
+                            top: -40px;
+                            left: 0px;
+                            right: 0px;
+                            width: 30px;
+                            font-size: 30px;
+                            margin: 0 auto;
+                            color: #E4392B;
+                            font-family: FontAwesome;
+                            content: '\f024';
+                        }
+                    </style>
+                    <div id="icon-color-picker" style="text-align:center;">
+                        <div data-color="black">                            
+                            <img src="/chat/images/launcher/black.png" alt="">
+                        </div>
+                        <div data-color="blue">
+                            <img src="/chat/images/launcher/blue.png" alt="">
+                        </div>
+                        <div data-color="green">
+                            <img src="/chat/images/launcher/green.png" alt="">
+                        </div>
+                        <div data-color="grey">
+                            <img src="/chat/images/launcher/grey.png" alt="">
+                        </div>
+                        <div data-color="orange">
+                            <img src="/chat/images/launcher/orange.png" alt="">
+                        </div>
+                        <div data-color="purple">
+                            <img src="/chat/images/launcher/purple.png" alt="">
+                        </div>
+                        <div data-color="red">
+                            <img src="/chat/images/launcher/red.png" alt="">
+                        </div>
+                        <div data-color="yellow">
+                            <img src="/chat/images/launcher/yellow.png" alt="">
+                        </div>
+                    </div>
+    
+                    <br>
+
                     <ul class="actions" style="text-align:center;">
-                        <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
+                        <li><a href="javascript:generate();" class="button special icon fa-magic">Generate embed code</a></li>
                     </ul>
 
                     <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" style="color: #333333">
@@ -257,6 +307,8 @@
                 function generate() {
                     var apps = {},
                         color = "red";
+
+                    color = $('#icon-color-picker > div.selected').data('color');
 
                     $($('.input-block:not(.inactive) input').get().reverse()).each(function(index, input) {
                         if (input.value) {
@@ -283,13 +335,9 @@
         <!-- Banner -->
         <section id="banner">
             <div class="inner">
-                <div class="content">
+                <div class="content" style="background-color:#E4392B;">
                     <ul>
-                        <li><img src="images/pic01.jpg" alt="" /></li>
-                        <li><img src="images/pic02.jpg" alt="" /></li>
-                        <li><img src="images/pic03.jpg" alt="" /></li>
-                        <li><img src="images/pic04.jpg" alt="" /></li>
-                        <!-- <li><img src="images/pic05.jpg" alt="" /></li> -->
+                        <li><img src="images/KeyReply_chat_widget.gif" alt="" /></li>
                     </ul>
                 </div>
             </div>
@@ -332,6 +380,11 @@
             if (block.is('.inactive')) {
                 block.find('input[type=checkbox]').click();
             }
+        });
+
+        $('#icon-color-picker > div').click(function (event) {
+           $(event.currentTarget).addClass('selected');
+           $(event.currentTarget).siblings().removeClass('selected'); 
         });
     });
     </script>
