@@ -319,7 +319,7 @@
                     var payload = btoa(encodeURI(JSON.stringify(apps)));
                     var embed = document.getElementById("embed");
 
-                    embed.value = '<script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"></script>'
+                    embed.value = '<script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
                     embed.focus();
                     embed.select();
                 }
