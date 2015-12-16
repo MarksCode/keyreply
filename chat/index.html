@@ -319,7 +319,7 @@
                     var payload = btoa(encodeURI(JSON.stringify(apps)));
                     var embed = document.getElementById("embed");
 
-                    embed.value = '<script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '">'
+                    embed.value = '<script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"></script>'
                     embed.focus();
                     embed.select();
                 }
@@ -388,7 +388,7 @@
         });
     });
     </script>
-    <script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBrZXlyZXBseS5jb20lMjIsJTIyJTIyOiUyMm9uJTIyLCUyMmZhY2Vib29rJTIyOiUyMjEyMzUwNzU0MTMxODU2MjElMjIsJTIyd2VjaGF0JTIyOiUyMnNwZW5jZXJ5YW5nJTIyLCUyMnNtcyUyMjolMjIrMTQxNTk5NjYxNzElMjIsJTIydGVsZWdyYW0lMjI6JTIyY2FyeWx5bmUlMjIsJTIycGhvbmUlMjI6JTIyKzE0MTU5OTY2MTcxJTIyJTdE">
+    <script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBrZXlyZXBseS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyMTIzNTA3NTQxMzE4NTYyMSUyMiwlMjJ3ZWNoYXQlMjI6JTIyc3BlbmNlcnlhbmclMjIsJTIyc21zJTIyOiUyMisxNDE1OTk2NjE3MSUyMiwlMjJ0ZWxlZ3JhbSUyMjolMjJjYXJ5bHluZSUyMiwlMjJwaG9uZSUyMjolMjIrMTQxNTk5NjYxNzElMjIlN0Q="></script>
 
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
