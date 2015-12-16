@@ -79,9 +79,9 @@ window.onload = function() {
                 break;
             case 'wechat':
                 // link = settings.apps.wechat;
-                if (Android) {
-                    link = "weixin://contacts/profile/" + settings.apps.wechat;
-                }
+                // if (Android) {
+                    // link = "weixin://contacts/profile/" + settings.apps.wechat;
+                // }
                 break;
             case 'kakao': //official
                 link = "http://goto.kakao.com/" + settings.apps.kakao;
