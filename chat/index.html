@@ -35,15 +35,15 @@
             <canvas style="position:absolute; right: 0; bottom: 0; top:0; z-index:-1;"></canvas>
             <div class="inner">
                 <h1 style="background:white; width: 250px;"><b>Chat</b> by KeyReply</h1>
-                <h2 style="background:white;">The easiest live chat widget on the planet.</h2>
-                <p style="background:white;">Add mobile friendly chat support to your website in just 5 minutes! 
+                <h2 style="background:white;">Simplest live chat widget on the planet</h2>
+                <p style="background:white;">Add mobile-friendly chat support to your website in less than 5 minutes! 
                 <br/>
-                Connect with your site visitors using popular messaging apps.
+                Connect with your site visitors using popular messaging apps. The widget creates a deeplink into the chat applications on the user's phone. 
 
                 <br/>
                 No more old-fashioned contact form and expensive live chat plans.
                 <br/>
-                Chat by KeyReply is <b>free</b> and <b>open source</b>.
+                Chat by KeyReply is <b>100% free!</b>
 
                 </p>
                 <ul class="actions" style="text-align:center;">
@@ -91,6 +91,14 @@
                     font-size: 20px;
                 }
                 
+                .input-block.inactive {
+                    background-color: #999999 !important;
+                }
+
+                .input-block.inactive img {
+                    -webkit-filter: grayscale(100%);
+                } 
+
                 .input-block.inverse .app-label {
                     color: #3B1E1D;
                 }
@@ -121,70 +129,117 @@
                     border-style: dashed;
                     border-width: 2px;
                 }
+
+                .checkbox-container {
+                    position: absolute; 
+                    right: 0; 
+                    top: 0;
+                    width: 40px;
+                }
+
                 </style>
+
+
                 <div class="input-block-container" style="display:none;">
-                    <div class="input-block" style="background: #00DC00;">
+                    <h1><b>Step 1:</b> Choose the apps that you want to enable for your website. Then fill in the required information. </h1>
+                    <div class="input-block inactive" style="background: #00DC00;">
                         <img class="app-icon" src="images/apps/phone.png" alt="phone">
                         <div class="app-label">
                             Phone
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
                         <input name="phone" type="text" placeholder="phone number…">
                     </div>
-                    <div class="input-block" style="background: #00DD00;">
+                    <div class="input-block inactive" style="background: #00DD00;">
                         <img class="app-icon" src="images/apps/facetime.png" alt="facetime">
                         <div class="app-label">
                             FaceTime
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
                         <input name="phone" type="text" placeholder="Apple ID">
                     </div>
-                    <div class="input-block" style="background: #00A4E8;">
+                    <div class="input-block inactive" style="background: #00A4E8;">
                         <img class="app-icon" src="images/apps/telegram.png" alt="telegram">
                         <div class="app-label">
                             Telegram
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
                         <input name="telegram" type="text" placeholder="Username">
                     </div>
-                    <div class="input-block" style="background: #00DC00;">
+                    <div class="input-block inactive" style="background: #00DC00;">
                         <img class="app-icon" src="images/apps/sms.png" alt="sms">
                         <div class="app-label">
                             SMS
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
+                            
                         </div>
                         <input name="sms" type="text" placeholder="phone number…">
                     </div>
-                    <div class="input-block" style="background: #00DA00;">
+                    <div class="input-block inactive" style="background: #00DA00;">
                         <img class="app-icon" src="images/apps/wechat.png" alt="wechat">
                         <div class="app-label">
                             WeChat
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>                            
                         </div>
                         <input name="wechat" type="text" placeholder="微信 ID…">
                     </div>
-                    <div class="input-block" style="background: #0079FF;">
+                    <div class="input-block inactive" style="background: #0079FF;">
                         <img class="app-icon" src="images/apps/facebook.png" alt="phone">
                         <div class="app-label">
-                            Facebook Messenger <a target="_blank" href="http://findmyfbid.com/" style="color:white; font-size: 12px; float:right;">What is Facebook ID?</a>
+                            Facebook Messenger
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
-                        <input name="facebook" type="text" placeholder="Facebook ID…">
+                        <input name="facebook" type="text" placeholder="Facebook ID…"><a target="_blank" href="http://findmyfbid.com/" style="color:white; font-size: 12px; float:right;">What is Facebook ID?</a>
                     </div>
-                    <div class="input-block inverse" style="background: #FFE100;">
+                    <div class="input-block inactive inverse" style="background: #FFE100;">
                         <img class="app-icon" src="images/apps/kakao.png" alt="Kakao Talk">
                         <div class="app-label">
                             Kakao Talk
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
                         <input name="kakao" type="text" placeholder="Yellow ID…">
                     </div>
-                    <div class="input-block" style="background: #1C62EF;">
+                    <div class="input-block inactive" style="background: #1C62EF;">
                         <img class="app-icon" src="images/apps/email.png" alt="email">
                         <div class="app-label">
                             Email
+                            <div class="checkbox-container">
+                              <input type="checkbox" class="toggle"/>
+                              <label for="toggle" class="well"></label>
+                            </div>
                         </div>
                         <input name="email" type="text" placeholder="example@company.com">
                     </div>
-                </div>
-                <div class="actions-block" style="display:none;">
+                    <div class="actions-block">
+                    <h1><b>Step 3:</b></h1>
                     <ul class="actions" style="text-align:center;">
                         <li><a href="javascript:generate();" class="button special icon fa-arrow-down">Generate embed code</a></li>
                     </ul>
-                    
 
                     <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" style="color: #333333">
                     </textarea>
@@ -195,14 +250,15 @@
                         Copy the above code and insert it into your website's HTML source code.
                         Insert it on every page that you want the Chat Widget to appear.
                     </p>
-
                 </div>
+                </div>
+
                 <script>
                 function generate() {
                     var apps = {},
                         color = "red";
 
-                    $($('.input-block input').get().reverse()).each(function(index, input) {
+                    $($('.input-block:not(.inactive) input').get().reverse()).each(function(index, input) {
                         if (input.value) {
                             apps[input.name] = input.value
                         }
@@ -211,7 +267,7 @@
                     var payload = btoa(encodeURI(JSON.stringify(apps)));
                     var embed = document.getElementById("embed");
 
-                    embed.value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '">'
+                    embed.value = '<script defer id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '">'
                     embed.focus();
                     embed.select();
                 }
@@ -220,7 +276,7 @@
             <footer>
                 <ul class="icons" style="color:#555555;">
                     <li><a href="https://twitter.com/keyreply" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="https://github.com/xumx/" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <!-- <li><a href="https://github.com/xumx/" class="icon fa-github"><span class="label">Github</span></a></li> -->
                 </ul>
             </footer>
         </section>
@@ -249,16 +305,34 @@
         $(".input-block-container").sortable({
             axis: 'y',
             cursor: 'move',
+            items: '.input-block',
             delay: 100,
             opacity: 0.8,
             placeholder: 'sortable-placeholder'
         });
 
         $("#get-it").click(function() {
-            $(".actions-block").show();
             $(".input-block-container").show();
         });
 
+        $('.well').click(function(event) {
+          $(event.target).siblings().click()
+        });
+
+        $('input[type=checkbox]').click(function (event) {
+            if ($(event.target).is(':checked')) {
+                $(event.target).parent().parent().parent().removeClass("inactive");
+            } else {
+                $(event.target).parent().parent().parent().addClass("inactive");
+            }
+        });
+
+        $('input[type=text]').focus(function (event) {
+            var block = $(event.target).parent();
+            if (block.is('.inactive')) {
+                block.find('input[type=checkbox]').click();
+            }
+        });
     });
     </script>
     <script id="keyreply-script" src="//keyreply.com/chat/widget.js?c=3" data-color="red" data-apps="JTdCJTIyZW1haWwlMjI6JTIybWF4QGdyYXBocGFwZXIuY29tJTIyLCUyMnRlbGVncmFtJTIyOiUyMm1heF94dSUyMiwlMjJzbXMlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIycGhvbmUlMjI6JTIyMS04MDgtNjcwLTU4MzYlMjIsJTIyZmFjZXRpbWUlMjI6JTIyeHVteEBtZS5jb20lMjIsJTIyZmFjZWJvb2slMjI6JTIyNTAwNDEwMTkxJTIyLCUyMndlY2hhdCUyMjolMjJodHRwOi8vd2VpeGluLnFxLmNvbS9yLzNMbU1sTHJFM09lanJmNzM5X3pPJTIyLCUyMmtha2FvJTIyOiUyMiVFQyU5RCVCOCVFQyU5NiVCNCVFQSVCNSU5MCVFQyVBMyVCQyVFRCU5NSVCNCVFQyVBMCU4MSVFQiU4QiVBOCUyMiU3RA=="></script>

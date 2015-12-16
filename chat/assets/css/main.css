@@ -435,8 +435,6 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #74797f;
-			border-color: #74797f;
 			color: #ffffff;
 			content: '\f00c';
 		}
