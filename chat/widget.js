@@ -10,7 +10,7 @@ window.onload = function() {
         .text("#keyreply-launcher-button,.keyreply-chat-icon{position:fixed;height:50px;width:50px;right:16px;opacity:0;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;border-radius:25px;display:none}#keyreply-launcher-button{display:block!important;opacity:1!important}")
         .appendTo($('head'))
 
-    var anchor = $('<div>').appendTo($('body'));
+    var anchor = $('<div>').css('z-index', '2147483000').appendTo($('body'));
     var launcher = $('<img>')
         .attr('id', 'keyreply-launcher-button')
         .attr('src', root + 'chat/images/launcher/' + settings.color + '.png')
