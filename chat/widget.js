@@ -106,24 +106,24 @@ window.onload = function() {
         }
 
         app.click(function() {
-            // if (qr) {
-            //     panel.append(qr)
-            //         .show()
-            //         .animate({
-            //             'right': '75px',
-            //             'opacity': 1,
-            //         }, 'fast');
-            // }
+            if (qr) {
+                panel.append(qr)
+                    .show()
+                    .animate({
+                        'right': '75px',
+                        'opacity': 1,
+                    }, 'fast');
+            }
 
-            // if (link) {
-            //     panel.animate({
-            //         'right': '-300px',
-            //         'opacity': 0,
-            //     }, 'fast').hide();
+            if (link) {
+                panel.animate({
+                    'right': '-300px',
+                    'opacity': 0,
+                }, 'fast').hide();
 
-            //     window.open(link);
-            // }
-            window.open(link);
+
+                $('<a>').attr('href', link).attr('target', '_blank').click();
+            }
         });
     });
 };
