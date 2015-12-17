@@ -121,8 +121,11 @@ window.onload = function() {
                     'opacity': 0,
                 }, 'fast').hide();
 
-
-                window.open(link);
+                var a = document.createElement('a')
+                a.href = link;
+                document.body.appendChild(a);
+                a.click();
+                // window.open(link);
             }
         });
     });
