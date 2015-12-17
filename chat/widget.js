@@ -122,7 +122,7 @@ window.onload = function() {
                 }, 'fast').hide();
 
 
-                $('<a>').attr('href', link).attr('target', '_blank').click();
+                window.open(link);
             }
         });
     });
