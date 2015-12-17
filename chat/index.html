@@ -165,14 +165,17 @@
                         border-color: white;
                     }
                     
-                    .input-block .hint {
+                    .input-block a.hint {
                         color: white;
                         float: right;
-                        font-size: 12px;
-                        vertical-align: bottom;
+                        font-size: 14px;
+                        position: absolute;
+                        bottom: 6px;
+                        right: 30px;
+                        font-weight: normal;
                     }
                     
-                    .input-block.inverse .hint {
+                    .input-block.inverse a.hint {
                         color: black;
                     }
                     
@@ -242,6 +245,7 @@
                                 </div>
                             </div>
                             <input name="telegram" type="text" placeholder="Username">
+                            <a class="hint" target="_blank" href="https://telegram.org/faq#q-what-are-usernames-how-do-i-get-one">What is my Telegram username?</a>
                         </div>
                         <div class="input-block inactive" style="background: #0AD02C;">
                             <img class="app-icon" src="images/apps/sms.svg" alt="sms">
@@ -298,7 +302,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
                                     <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" />
                                 </svg> <span>Upload Snapcode image file</span></label>
-                            <a target="_blank" class="hint" href="https://accounts.snapchat.com/accounts/snapcodes">What is Snapcode?</a>
+                            <a class="hint" target="_blank" href="https://accounts.snapchat.com/accounts/snapcodes">What is my Snapcode?</a>
                         </div>
                         <div class="input-block inactive" style="background: #0084FF;">
                             <img class="app-icon" src="images/apps/facebook.svg" alt="phone">
@@ -309,7 +313,7 @@
                                     <label for="toggle" class="well"></label>
                                 </div>
                             </div>
-                            <input name="facebook" type="text" placeholder="Facebook ID…"><a target="_blank" href="http://findmyfbid.com/" style="color:white; font-size: 12px; float:right;">What is Facebook ID?</a>
+                            <input name="facebook" type="text" placeholder="Facebook ID…"><a class="hint" target="_blank" href="http://findmyfbid.com/">What is my Facebook ID?</a>
                         </div>
                         <div class="input-block inactive inverse" style="background: #FBDE24;">
                             <img class="app-icon" src="images/apps/kakao.svg" alt="Kakao Talk">
