@@ -7,16 +7,23 @@ window.onload = function() {
     settings.color = script.data('color');
     settings.apps = JSON.parse(decodeURI(atob(cipher)));
     $('<style>')
-        .text("#keyreply-launcher-button,.keyreply-chat-icon{position:fixed;height:50px;width:50px;right:16px;opacity:0;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;border-radius:25px;display:none}#keyreply-launcher-button{display:block!important;opacity:1!important}")
+        .text(".keyreply-panel,.keyreply-launcher,.keyreply-chat-icon{bottom:20px;position:fixed;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;z-index:10000}.keyreply-launcher,.keyreply-chat-icon{height:50px;width:50px;right:16px;border-radius:25px}.keyreply-chat-icon,.keyreply-panel{display:none;opacity:0}.keyreply-panel{width:300px;padding:3px;border-radius:3px}")
         .appendTo($('head'))
 
-    var anchor = $('<div>').css('z-index', '100').appendTo($('body'));
-    var launcher = $('<img>')
-        .attr('id', 'keyreply-launcher-button')
-        .attr('src', root + 'chat/images/launcher/' + settings.color + '.png')
-        .css('bottom', '20px')
-        .css('z-index', '100')
+    var anchor = $('<div>')
+        .attr('id', 'keyreply-container')
+        .appendTo($('body'));
+
+    var launcher = $('<div>')
+        .addClass('keyreply-launcher')
+        .css('background-image', 'url("' + root + 'chat/images/launcher/' + settings.color + '.png")')
+        .css('background-size', 'contain')
+        .css('z-index', '100000')
         .appendTo(anchor);
+
+    var panel = $('<div>')
+        .addClass('keyreply-panel')
+        .appendTo(anchor)
 
     var ua = navigator.userAgent;
     var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
@@ -25,13 +32,11 @@ window.onload = function() {
     var Mac = !!ua.match(/Macintosh/i)
 
     $.each(settings.apps, function(key, value) {
-        if (Mobile || key == 'email' || key == 'phone' || key == 'telegram' || key == 'facebook') {
+        if (Mobile || key == 'wechat' || key == 'email' || key == 'phone' || key == 'telegram' || key == 'facebook') {
             $('<img>')
                 .addClass('keyreply-chat-icon')
                 .attr('src', root + 'chat/images/apps/' + key + '.png')
                 .attr('data-type', key)
-                .css('bottom', '20px')
-                .css('z-index', '100')
                 .appendTo(anchor);
         }
     });
@@ -41,11 +46,13 @@ window.onload = function() {
             img = $(img)
             if (img.is(':visible')) {
                 img.animate({
-                    'bottom': '16px',
+                    'bottom': '20px',
                     'opacity': 0
                 }, 'fast', function() {
                     img.hide();
                 });
+
+                panel.hide().css('right', '-300px');
             } else {
                 img.show().animate({
                     'bottom': (70 + index * 52) + 'px',
@@ -55,9 +62,8 @@ window.onload = function() {
         })
     })
 
-
     $('.keyreply-chat-icon').each(function(index, icon) {
-        var link, app = $(icon);
+        var link, qr, app = $(icon);
 
         switch (app.data('type')) {
             case 'email':
@@ -86,10 +92,10 @@ window.onload = function() {
                 }
                 break;
             case 'wechat':
-                // link = settings.apps.wechat;
-                // if (Android) {
-                // link = "weixin://contacts/profile/" + settings.apps.wechat;
-                // }
+                qr = $('<img>')
+                    .css('max-width', '100%')
+                    .css('vertical-align', 'bottom')
+                    .attr('src', settings.apps.wechat)
                 break;
             case 'kakao': //official
                 link = "http://goto.kakao.com/" + settings.apps.kakao;
@@ -100,7 +106,24 @@ window.onload = function() {
         }
 
         app.click(function() {
-            window.open(link);
+            if (qr) {
+                panel
+                    .append(qr)
+                    .show()
+                    .animate({
+                        'right': '75px',
+                        'opacity': 1,
+                    }, 'fast');
+            }
+
+            if (link) {
+                panel.animate({
+                    'right': '-300px',
+                    'opacity': 0,
+                }, 'fast').hide();
+
+                window.open(link);
+            }
         });
     });
 };
