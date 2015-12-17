@@ -421,10 +421,9 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script>
     function generate() {
-        var apps = {},
-            color = "red";
+        var color, apps = {};
 
-        color = $('#icon-color-picker > div.selected').data('color');
+        color = $('#icon-color-picker > div.selected').data('color') || 'red';
 
         $($('.input-block:not(.inactive)').find('input[type=text], input[type=file]').get().reverse()).each(function(index, input) {
             if (input.value) {

@@ -4,7 +4,7 @@ window.onload = function() {
         root = 'https://keyreply.com/',
         script = $('#keyreply-script'),
         cipher = script.data('apps');
-    settings.color = script.data('color');
+    settings.color = script.data('color').replace('#', '%23');
     settings.apps = JSON.parse(decodeURI(atob(cipher)));
     $('<style>')
         .text(".keyreply-panel,.keyreply-launcher,.keyreply-chat-icon{bottom:20px;position:fixed;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;z-index:10000}.keyreply-launcher,.keyreply-chat-icon{height:50px;width:50px;right:16px;border-radius:25px}.keyreply-chat-icon,.keyreply-panel{display:none;opacity:0}.keyreply-panel{width:300px;padding:3px;border-radius:3px}")
@@ -16,7 +16,7 @@ window.onload = function() {
 
     var launcher = $('<div>')
         .addClass('keyreply-launcher')
-        .css('background-image', 'url("' + root + 'chat/images/apps/launcher.svg")')
+        .css('background-image', 'url("data:image/svg+xml;charset=utf8,%3Csvg width=\'26\' height=\'26\' viewBox=\'0 0 26 26\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cellipse fill=\'' + settings.color + '\' cx=\'13\' cy=\'13\' rx=\'12\' ry=\'12\'/%3E%3Cpath d=\'M6.798 15.503l1.453-.92c.617.215 1.29.334 2 .334 2.898 0 5.247-1.996 5.247-4.46 0-2.46-2.35-4.457-5.248-4.457C7.35 6 5 7.996 5 10.458c0 1.446.81 2.73 2.065 3.545l-.503 1.273c-.038.03-.062.076-.062.127 0 .09.074.162.166.162.054 0 .1-.024.132-.062z\' stroke=\'%23E4392B\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3Cpath d=\'M20.297 18.97l.04-.065-.578-1.155c1.066-.814 1.737-1.993 1.737-3.305 0-2.455-2.35-4.445-5.248-4.445-2.9 0-5.25 1.99-5.25 4.445s2.35 4.445 5.25 4.445c.838 0 1.63-.167 2.334-.463l1.39.756c.035.05.095.085.163.085.107 0 .194-.085.194-.19 0-.04-.012-.076-.033-.107z\' stroke=\'%23E4392B\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3C/g%3E%3C/svg%3E")')
         .css('background-size', 'contain')
         .css('z-index', '100000')
         .appendTo(anchor);
