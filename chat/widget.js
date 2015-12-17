@@ -138,7 +138,7 @@ window.onload = function() {
                     'opacity': 0,
                 }, 'fast').hide();
 
-                $('<a>').attr('href', link)[0].click();
+                $('<a>').attr('href', link).appendTo(anchor)[0].click();
             }
         });
     });
