@@ -35,6 +35,8 @@ window.onload = function() {
         if (Mobile || key != 'sms') {
             $('<img>')
                 .addClass('keyreply-chat-icon')
+                .attr('title', key)
+                .attr('alt', key)
                 .attr('src', root + 'chat/images/apps/' + key + '.svg')
                 .attr('data-type', key)
                 .appendTo(anchor);
