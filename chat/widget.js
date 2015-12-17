@@ -7,7 +7,7 @@ window.onload = function() {
     settings.color = script.data('color').replace('#', '%23');
     settings.apps = JSON.parse(decodeURI(atob(cipher)));
     $('<style>')
-        .text(".keyreply-panel,.keyreply-launcher,.keyreply-chat-icon{bottom:20px;position:fixed;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;z-index:10000}.keyreply-launcher,.keyreply-chat-icon{height:50px;width:50px;right:16px;border-radius:25px}.keyreply-chat-icon,.keyreply-panel{display:none;opacity:0}.keyreply-panel{width:300px;padding:3px;border-radius:3px}")
+        .text(".keyreply-panel,.keyreply-launcher,.keyreply-chat-icon{bottom:20px;position:fixed;box-shadow:rgba(0,0,0,.2) 0 5px 10px 0;z-index:10000}.keyreply-launcher,.keyreply-chat-icon{height:50px;width:50px;right:16px;border-radius:25px}.keyreply-chat-icon,.keyreply-panel{display:none;opacity:0}.keyreply-panel{max-width:300px;padding:3px;border-radius:3px}")
         .appendTo($('head'))
 
     var anchor = $('<div>')
