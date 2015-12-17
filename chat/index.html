@@ -36,308 +36,367 @@
             <div class="inner">
                 <h1 style="background:white; width: 250px;"><b>Chat</b> by KeyReply</h1>
                 <h2 style="background:white;">Simplest live chat widget on the planet</h2>
-                <p style="background:white;">Add mobile-friendly chat support to your website in less than 5 minutes! 
-                <br/>
-                Connect with your site visitors using popular messaging apps. With one tap, your visitors can open a direct line to you using their favorite chat application.
-
-                
-                <br>
-                Goodbye old-fashioned contact forms and expensive live chat plans.
-                <br>
-                <br>
-                <b>Best of all, Chat by KeyReply is 100% free!</b>
-
-                <ul class="actions" style="text-align:center;">
-                    <li><a id="get-it" class="button special">Get it now!</a></li>
-                </ul>
-                <style>
-                @media screen and (min-width: 963px) {
-                    #banner {
-                        position: fixed;
-                        left: 0;
-                        height: 100vh;
-                    }
-                }
-
-                .input-block {
-                    cursor: move;
-                    position: relative;
-                    height: 120px;
-                    padding: 16px 30px;
-                    margin: 50px 30px;
-                    color: white;
-                    border-radius: 4px;
-                    background: #00DC00;
-                }
-                
-                .input-block img.app-icon {
-                    position: absolute;
-                    top: -30px;
-                    left: -30px;
-                    height: 65px;
-                    width: 65px;
-                }
-                
-                .input-block .app-label {
-                    font-weight: 500;
-                    font-size: 20px;
-                }
-                
-                .input-block input {
-                    background: none;
-                    border-width: 0 0 2px 0;
-                    border-radius: 0;
-                    height: 40px;
-                    padding-left: 0;
-                    font-size: 20px;
-                }
-                
-                .input-block.inactive {
-                    background-color: #999999 !important;
-                }
-
-                .input-block.inactive img {
-                    -webkit-filter: grayscale(100%);
-                } 
-
-                .input-block.inverse .app-label {
-                    color: #3B1E1D;
-                }
-                
-                .input-block.inverse input {
-                    color: #3B1E1D;
-                    border-color: #3B1E1D;
-                }
-                
-                .input-block.inverse input:focus {
-                    border-color: #3B1E1D;
-                }
-                
-                .input-block input:focus {
-                    border-color: white;
-                }
-                
-                #embed {
-                    word-break: break-all;
-                }
-                
-                .sortable-placeholder {
-                    position: relative;
-                    height: 120px;
-                    padding: 16px 30px;
-                    margin: 50px 30px;
-                    border-radius: 4px;
-                    border-style: dashed;
-                    border-width: 2px;
-                }
-
-                .checkbox-container {
-                    position: absolute; 
-                    right: 0; 
-                    top: 0;
-                    width: 40px;
-                }
-
-                </style>
-
-
-                <div class="input-block-container" style="display:none;">
-                    <h1><b>Step 1:</b> Choose the apps that you want to enable for your website. Then fill in the required information. </h1>
-
-                    <div class="input-block" style="background: #1C62EF;">
-                        <img class="app-icon" src="images/apps/email.png" alt="email">
-                        <div class="app-label">
-                            Email
-                            <div class="checkbox-container">
-                              <input type="checkbox" checked class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="email" type="text" placeholder="example@company.com">
-                    </div>
-                    <div class="input-block inactive" style="background: #00DC00;">
-                        <img class="app-icon" src="images/apps/phone.png" alt="phone">
-                        <div class="app-label">
-                            Phone
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="phone" type="text" placeholder="phone number…">
-                    </div>
-                    <div class="input-block inactive" style="background: #00DD00;">
-                        <img class="app-icon" src="images/apps/facetime.png" alt="facetime">
-                        <div class="app-label">
-                            FaceTime
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="phone" type="text" placeholder="Apple ID">
-                    </div>
-                    <div class="input-block inactive" style="background: #00A4E8;">
-                        <img class="app-icon" src="images/apps/telegram.png" alt="telegram">
-                        <div class="app-label">
-                            Telegram
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="telegram" type="text" placeholder="Username">
-                    </div>
-                    <div class="input-block inactive" style="background: #00DC00;">
-                        <img class="app-icon" src="images/apps/sms.png" alt="sms">
-                        <div class="app-label">
-                            SMS
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                            
-                        </div>
-                        <input name="sms" type="text" placeholder="phone number…">
-                    </div>
-                    <div class="input-block inactive" style="background: #00DA00;">
-                        <img class="app-icon" src="images/apps/wechat.png" alt="wechat">
-                        <div class="app-label">
-                            WeChat
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>                            
-                        </div>
-                        <input name="wechat" type="text" placeholder="URL to QR code image…">
-                    </div>
-                    <div class="input-block inactive" style="background: #0079FF;">
-                        <img class="app-icon" src="images/apps/facebook.png" alt="phone">
-                        <div class="app-label">
-                            Facebook Messenger
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="facebook" type="text" placeholder="Facebook ID…"><a target="_blank" href="http://findmyfbid.com/" style="color:white; font-size: 12px; float:right;">What is Facebook ID?</a>
-                    </div>
-                    <div class="input-block inactive inverse" style="background: #FFE100;">
-                        <img class="app-icon" src="images/apps/kakao.png" alt="Kakao Talk">
-                        <div class="app-label">
-                            Kakao Talk
-                            <div class="checkbox-container">
-                              <input type="checkbox" class="toggle"/>
-                              <label for="toggle" class="well"></label>
-                            </div>
-                        </div>
-                        <input name="kakao" type="text" placeholder="Yellow ID…">
-                    </div>
-                    <div class="actions-block">
-                    <h1><b>Step 2:</b> Pick a color for the chat icon.</h1>
-                    
-                    <style>
-                        #icon-color-picker > div {
-                            cursor: pointer;
-                            position: relative;
-                            display: inline-block;
-                        }
-
-                        #icon-color-picker > div.selected:before {
-                            position:absolute; 
-                            top: -30px;
-                            left: 0px;
-                            right: 0px;
-                            width: 25px;
-                            font-size: 25px;
-                            margin: 0 auto;
-                            color: #E4392B;
-                            font-family: FontAwesome;
-                            content: '\f024';
-                        }
-                    </style>
-                    <div id="icon-color-picker" style="text-align:center;">
-                        <div data-color="black">                            
-                            <img style="width:60px;" src="/chat/images/launcher/black.png" alt="">
-                        </div>
-                        <div data-color="blue">
-                            <img style="width:60px;" src="/chat/images/launcher/blue.png" alt="">
-                        </div>
-                        <div data-color="green">
-                            <img style="width:60px;" src="/chat/images/launcher/green.png" alt="">
-                        </div>
-                        <div data-color="grey">
-                            <img style="width:60px;" src="/chat/images/launcher/grey.png" alt="">
-                        </div>
-                        <div data-color="orange">
-                            <img style="width:60px;" src="/chat/images/launcher/orange.png" alt="">
-                        </div>
-                        <div data-color="purple">
-                            <img style="width:60px;" src="/chat/images/launcher/purple.png" alt="">
-                        </div>
-                        <div data-color="red">
-                            <img style="width:60px;" src="/chat/images/launcher/red.png" alt="">
-                        </div>
-                        <div data-color="yellow">
-                            <img style="width:60px;" src="/chat/images/launcher/yellow.png" alt="">
-                        </div>
-                    </div>
-    
+                <p style="background:white;">Add mobile-friendly chat support to your website in less than 5 minutes!
+                    <br/> Connect with your site visitors using popular messaging apps. With one tap, your visitors can open a direct line to you using their favorite chat application.
+                    <br> Goodbye old-fashioned contact forms and expensive live chat plans.
                     <br>
-
+                    <br>
+                    <b>Best of all, Chat by KeyReply is 100% free!</b>
                     <ul class="actions" style="text-align:center;">
-                        <li><a href="javascript:generate();" class="button special icon fa-magic">Generate embed code</a></li>
+                        <li><a id="get-it" class="button special">Get it now!</a></li>
                     </ul>
-
-                    <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" style="color: #333333">
-                    </textarea>
+                    <style>
+                    .inputfile {
+                        width: 0.1px;
+                        height: 0.1px;
+                        opacity: 0;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: -1;
+                    }
                     
-                    <br>
-
-                    <p style="color: #333333">
-                        Copy the above code and insert it into your website's HTML source code.
-                        Insert it on every page that you want the Chat Widget to appear.
-                    </p>
-
-                    <p>
-                        <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkeyreply.com%2Fchat%2F&hashtags=keyreply&text=Simplest%20chat%20widget%20on%20the%20planet.">
+                    .inputfile + label {
+                        max-width: 100%;
+                        min-width: 50%;
+                        font-size: 1rem;
+                        /* 20px */
+                        font-weight: 500;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        display: inline-block;
+                        overflow: hidden;
+                        padding: 0.4rem 0.8rem;
+                    }
+                    
+                    .inputfile:focus + label,
+                    .inputfile.has-focus + label {
+                        outline: none;
+                    }
+                    
+                    .inputfile + label * {
+                        /* pointer-events: none; */
+                        /* in case of FastClick lib use */
+                    }
+                    
+                    .inputfile + label svg {
+                        width: 1em;
+                        height: 1em;
+                        vertical-align: middle;
+                        fill: currentColor;
+                        margin-top: -0.25em;
+                        /* 4px */
+                        margin-right: 0.25em;
+                        /* 4px */
+                    }
+                    
+                    .inputfile + label {
+                        color: white;
+                        border: 2px solid currentColor;
+                    }
+                    
+                    .inverse .inputfile + label {
+                        color: black;
+                    }
+                    
+                    @media screen and (min-width: 963px) {
+                        #banner {
+                            position: fixed;
+                            left: 0;
+                            height: 100vh;
+                        }
+                    }
+                    
+                    .input-block {
+                        cursor: move;
+                        position: relative;
+                        height: 120px;
+                        padding: 16px 30px;
+                        margin: 50px 30px;
+                        color: white;
+                        border-radius: 4px;
+                        background: #00DC00;
+                    }
+                    
+                    .input-block img.app-icon {
+                        position: absolute;
+                        top: -30px;
+                        left: -30px;
+                        height: 65px;
+                        width: 65px;
+                    }
+                    
+                    .input-block .app-label {
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+                    
+                    .input-block input {
+                        background: none;
+                        border-width: 0 0 2px 0;
+                        border-radius: 0;
+                        height: 40px;
+                        padding-left: 0;
+                        font-size: 20px;
+                    }
+                    
+                    .input-block.inactive {
+                        background-color: #999999 !important;
+                    }
+                    
+                    .input-block.inactive img {
+                        -webkit-filter: grayscale(100%);
+                    }
+                    
+                    .input-block.inverse .app-label {
+                        color: #3B1E1D;
+                    }
+                    
+                    .input-block.inverse input {
+                        border-color: #3B1E1D;
+                        color: #3B1E1D;
+                    }
+                    
+                    .input-block.inverse input:focus {
+                        border-color: #3B1E1D;
+                    }
+                    
+                    .input-block input:focus {
+                        border-color: white;
+                    }
+                    
+                    .input-block .hint {
+                        color: white;
+                        float: right;
+                        font-size: 12px;
+                        vertical-align: bottom;
+                    }
+                    
+                    .input-block.inverse .hint {
+                        color: black;
+                    }
+                    
+                    #embed {
+                        word-break: break-all;
+                    }
+                    
+                    .sortable-placeholder {
+                        position: relative;
+                        height: 120px;
+                        padding: 16px 30px;
+                        margin: 50px 30px;
+                        border-radius: 4px;
+                        border-style: dashed;
+                        border-width: 2px;
+                    }
+                    
+                    .checkbox-container {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 40px;
+                    }
+                    </style>
+                    <div class="input-block-container" style="display:none;">
+                        <h1><b>Step 1:</b> Choose the apps that you want to enable for your website. Then fill in the required information. </h1>
+                        <div class="input-block" style="background: #2D70E7;">
+                            <img class="app-icon" src="images/apps/email.svg" alt="email">
+                            <div class="app-label">
+                                Email
+                                <div class="checkbox-container">
+                                    <input type="checkbox" checked class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="email" type="text" placeholder="example@company.com">
+                        </div>
+                        <div class="input-block inactive" style="background: #0AD02C;">
+                            <img class="app-icon" src="images/apps/phone.svg" alt="phone">
+                            <div class="app-label">
+                                Phone
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="phone" type="text" placeholder="phone number…">
+                        </div>
+                        <div class="input-block inactive" style="background: #0DD12F;">
+                            <img class="app-icon" src="images/apps/facetime.svg" alt="facetime">
+                            <div class="app-label">
+                                FaceTime
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="phone" type="text" placeholder="Apple ID">
+                        </div>
+                        <div class="input-block inactive" style="background: #2DA5E1;">
+                            <img class="app-icon" src="images/apps/telegram.svg" alt="telegram">
+                            <div class="app-label">
+                                Telegram
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="telegram" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-block inactive" style="background: #0AD02C;">
+                            <img class="app-icon" src="images/apps/sms.svg" alt="sms">
+                            <div class="app-label">
+                                SMS
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="sms" type="text" placeholder="phone number…">
+                        </div>
+                        <div class="input-block inactive" style="background: #1ECE29;">
+                            <img class="app-icon" src="images/apps/wechat.svg" alt="wechat">
+                            <div class="app-label">
+                                WeChat
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input id="wechat-qr" type="file" name="wechat" class="inputfile" />
+                            <label for="wechat-qr">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" />
+                                </svg> <span>Upload WeChat QR code</span></label>
+                        </div>
+                        <div class="input-block inactive" style="background: #3ACE01;">
+                            <img class="app-icon" src="images/apps/line.svg" alt="line">
+                            <div class="app-label">
+                                Line
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input id="line-qr" type="file" name="wechat" class="inputfile" />
+                            <label for="line-qr">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" />
+                                </svg> <span>Upload Line QR code</span></label>
+                        </div>
+                        <div class="input-block inverse inactive" style="background: #FFFC00;">
+                            <img class="app-icon" src="images/apps/snapchat.svg" alt="snapchat">
+                            <div class="app-label">
+                                Snapchat
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input id="snapchat-qr" type="file" name="snapchat" class="inputfile" />
+                            <label for="snapchat-qr">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" />
+                                </svg> <span>Upload Snapcode image file</span></label>
+                            <a target="_blank" class="hint" href="https://accounts.snapchat.com/accounts/snapcodes">What is Snapcode?</a>
+                        </div>
+                        <div class="input-block inactive" style="background: #0084FF;">
+                            <img class="app-icon" src="images/apps/facebook.svg" alt="phone">
+                            <div class="app-label">
+                                Facebook Messenger
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="facebook" type="text" placeholder="Facebook ID…"><a target="_blank" href="http://findmyfbid.com/" style="color:white; font-size: 12px; float:right;">What is Facebook ID?</a>
+                        </div>
+                        <div class="input-block inactive inverse" style="background: #FBDE24;">
+                            <img class="app-icon" src="images/apps/kakao.svg" alt="Kakao Talk">
+                            <div class="app-label">
+                                Kakao Talk
+                                <div class="checkbox-container">
+                                    <input type="checkbox" class="toggle" />
+                                    <label for="toggle" class="well"></label>
+                                </div>
+                            </div>
+                            <input name="kakao" type="text" placeholder="Yellow ID…">
+                        </div>
+                        <div class="actions-block">
+                            <h1><b>Step 2:</b> Pick a color for the chat icon.</h1>
+                            <style>
+                            #icon-color-picker > div {
+                                cursor: pointer;
+                                position: relative;
+                                display: inline-block;
+                            }
+                            
+                            #icon-color-picker > div.selected:before {
+                                position: absolute;
+                                top: -30px;
+                                left: 0px;
+                                right: 0px;
+                                width: 25px;
+                                font-size: 25px;
+                                margin: 0 auto;
+                                color: #E4392B;
+                                font-family: FontAwesome;
+                                content: '\f024';
+                            }
+                            </style>
+                            <div id="icon-color-picker" style="text-align:center;">
+                                <div data-color="black">
+                                    <img style="width:60px;" src="/chat/images/launcher/black.png" alt="">
+                                </div>
+                                <div data-color="blue">
+                                    <img style="width:60px;" src="/chat/images/launcher/blue.png" alt="">
+                                </div>
+                                <div data-color="green">
+                                    <img style="width:60px;" src="/chat/images/launcher/green.png" alt="">
+                                </div>
+                                <div data-color="grey">
+                                    <img style="width:60px;" src="/chat/images/launcher/grey.png" alt="">
+                                </div>
+                                <div data-color="orange">
+                                    <img style="width:60px;" src="/chat/images/launcher/orange.png" alt="">
+                                </div>
+                                <div data-color="purple">
+                                    <img style="width:60px;" src="/chat/images/launcher/purple.png" alt="">
+                                </div>
+                                <div data-color="red">
+                                    <img style="width:60px;" src="/chat/images/launcher/red.png" alt="">
+                                </div>
+                                <div data-color="yellow">
+                                    <img style="width:60px;" src="/chat/images/launcher/yellow.png" alt="">
+                                </div>
+                            </div>
+                            <br>
+                            <ul class="actions" style="text-align:center;">
+                                <li><a href="javascript:generate();" class="button special icon fa-magic">Generate embed code</a></li>
+                            </ul>
+                            <textarea id="embed" readonly="readonly" onclick="this.focus();this.select();" cols="30" rows="6" spellcheck="false" style="color: #333333">
+                            </textarea>
+                            <br>
+                            <p style="color: #333333">
+                                Copy the above code and insert it into your website's HTML source code. Insert it on every page that you want the Chat Widget to appear.
+                            </p>
+                            <p>
+                                <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkeyreply.com%2Fchat%2F&text=Simplest%20chat%20widget%20on%20the%20planet.%20&via=keyreply&related=keyreply">
                             Like what you see? Share it on twitter!
                         </a>
-                    </p>
-                </div>
-                </div>
-
-                <script>
-                function generate() {
-                    var apps = {},
-                        color = "red";
-
-                    color = $('#icon-color-picker > div.selected').data('color');
-
-                    $($('.input-block:not(.inactive) input[type=text]').get().reverse()).each(function(index, input) {
-                        if (input.value) {
-                            apps[input.name] = input.value
-                        }
-                    });
-
-                    var payload = btoa(encodeURI(JSON.stringify(apps)));
-                    var embed = document.getElementById("embed");
-
-                    embed.value = '<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
-                    embed.focus();
-                    embed.select();
-                }
-                </script>
+                            </p>
+                        </div>
+                    </div>
             </div>
             <footer>
                 <ul class="icons" style="color:#555555;">
                     <li><a target="_blank" href="https://twitter.com/keyreply" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                     <li><a target="_blank" href="https://facebook.com/keyreply" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://keyreply.com/" class="icon fa-home"><span class="label">Home</span></a></li> 
+                    <li><a href="https://keyreply.com/" class="icon fa-home"><span class="label">Home</span></a></li>
                 </ul>
                 <span style="font-size: 16px; color: #555555;">KeyReply helps you reply better and faster across all platforms. <a href="https://keyreply.com/">Check it out! </a> </span>
             </footer>
@@ -354,15 +413,84 @@
                 </div>
             </div>
         </section>
-    </div>    
-
+    </div>
     <!-- Scripts -->
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script>
+    function generate() {
+        var apps = {},
+            color = "red";
+
+        color = $('#icon-color-picker > div.selected').data('color');
+
+        $($('.input-block:not(.inactive)').find('input[type=text], input[type=file]').get().reverse()).each(function(index, input) {
+            if (input.value) {
+                if (input.data) {
+                    apps[input.name] = input.data;
+                } else {
+                    apps[input.name] = input.value
+                }
+            }
+        });
+
+        var payload = btoa(encodeURI(JSON.stringify(apps)));
+        var embed = document.getElementById("embed");
+
+        embed.value = '<!-- Live Chat Widget powered by https://keyreply.com/chat/ -->\n<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
+        embed.focus();
+        embed.select();
+    }
+
     $(function() {
+        $('.inputfile').each(function() {
+            var $input = $(this),
+                $label = $input.next('label'),
+                labelVal = $label.html();
+
+            $input.on('change', function(e) {
+                var fileName = '';
+                if (e.target.value)
+                    fileName = e.target.value.split('\\').pop();
+
+                if (fileName)
+                    $label.find('span').html(fileName);
+                else
+                    $label.html(labelVal);
+
+                for (var i = 0, f; f = e.target.files[i]; i++) {
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        event.target.data = e.target.result;
+                    };
+
+                    // Read in the image file as a data URL.
+                    reader.readAsDataURL(f);
+
+                    var block = $(e.target).parent();
+                    if (block.is('.inactive')) {
+                        block.find('input[type=checkbox]').click();
+                    }
+                }
+            });
+
+            // Firefox bug fix
+            $input
+                .on('focus', function() {
+                    $input.addClass('has-focus');
+                })
+                .on('blur', function() {
+                    $input.removeClass('has-focus');
+                });
+        });
+
         $(".input-block-container").sortable({
             axis: 'y',
             cursor: 'move',
@@ -377,10 +505,10 @@
         });
 
         $('.well').click(function(event) {
-          $(event.target).siblings().click()
+            $(event.target).siblings().click()
         });
 
-        $('input[type=checkbox]').click(function (event) {
+        $('input[type=checkbox]').click(function(event) {
             if ($(event.target).is(':checked')) {
                 $(event.target).parent().parent().parent().removeClass("inactive");
             } else {
@@ -388,101 +516,141 @@
             }
         });
 
-        $('input[type=text]').focus(function (event) {
+        $('input[type=text]').focus(function(event) {
             var block = $(event.target).parent();
             if (block.is('.inactive')) {
                 block.find('input[type=checkbox]').click();
             }
         });
 
-        $('#icon-color-picker > div').click(function (event) {
-           $(event.currentTarget).addClass('selected');
-           $(event.currentTarget).siblings().removeClass('selected'); 
+        $('#icon-color-picker > div').click(function(event) {
+            $(event.currentTarget).addClass('selected');
+            $(event.currentTarget).siblings().removeClass('selected');
         });
     });
     </script>
-    
     <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZmFjZWJvb2slMjI6JTIya2V5cmVwbHklMjIsJTIyc21zJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMnRlbGVncmFtJTIyOiUyMmNhcnlseW5lJTIyLCUyMnBob25lJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMmVtYWlsJTIyOiUyMnN1cHBvcnRAa2V5cmVwbHkuY29tJTIyJTdE"></script>
-
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
+    if (!navigator.userAgent.match(/mobi/i)) {
+        /* https://github.com/d3/d3-timer Copyright 2015 Mike Bostock */
+        "undefined" == typeof requestAnimationFrame && (requestAnimationFrame = "undefined" != typeof window && (window.msRequestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.oRequestAnimationFrame) || function(e) {
+                return setTimeout(e, 25)
+            }),
+            function(e, t) {
+                "object" == typeof exports && "undefined" != typeof module ? t(exports) : "function" == typeof define && define.amd ? define(["exports"], t) : t(e.timer = {})
+            }(this, function(e) {
+                "use strict";
 
-if (!navigator.userAgent.match(/mobi/i)) {
-/* https://github.com/d3/d3-timer Copyright 2015 Mike Bostock */
-    "undefined"==typeof requestAnimationFrame&&(requestAnimationFrame="undefined"!=typeof window&&(window.msRequestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.oRequestAnimationFrame)||function(e){return setTimeout(e,25)}),function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.timer={})}(this,function(e){"use strict";function t(){l=s=0,c=1/0,n(a())}function n(e){if(!l){var n=e-Date.now();n>24?c>e&&(s&&clearTimeout(s),s=setTimeout(t,n),c=e):(s&&(s=clearTimeout(s),c=1/0),l=requestAnimationFrame(t))}}function i(e,t){this.callback=e,this.time=t,this.flush=!1,this.next=null}function o(e,t,o){o=null==o?Date.now():+o,null!=t&&(o+=+t);var u=new i(e,o);r?r.next=u:m=u,r=u,n(o)}function u(e,t,n){n=null==n?Date.now():+n,null!=t&&(n+=+t),f.callback=e,f.time=n}function a(e){e=null==e?Date.now():+e;var t=f;for(f=m;f;)e>=f.time&&(f.flush=f.callback(e-f.time,e)),f=f.next;f=t,e=1/0;for(var n,i=m;i;)i.flush?i=n?n.next=i.next:m=i.next:(i.time<e&&(e=i.time),i=(n=i).next);return r=n,e}var m,r,f,l,s,c=1/0;e.timer=o,e.timerReplace=u,e.timerFlush=a});
+                function t() {
+                    l = s = 0, c = 1 / 0, n(a())
+                }
 
-    var canvas = document.querySelector("canvas"),
-        context = canvas.getContext("2d");
+                function n(e) {
+                    if (!l) {
+                        var n = e - Date.now();
+                        n > 24 ? c > e && (s && clearTimeout(s), s = setTimeout(t, n), c = e) : (s && (s = clearTimeout(s), c = 1 / 0), l = requestAnimationFrame(t))
+                    }
+                }
+
+                function i(e, t) {
+                    this.callback = e, this.time = t, this.flush = !1, this.next = null
+                }
+
+                function o(e, t, o) {
+                    o = null == o ? Date.now() : +o, null != t && (o += +t);
+                    var u = new i(e, o);
+                    r ? r.next = u : m = u, r = u, n(o)
+                }
+
+                function u(e, t, n) {
+                    n = null == n ? Date.now() : +n, null != t && (n += +t), f.callback = e, f.time = n
+                }
+
+                function a(e) {
+                    e = null == e ? Date.now() : +e;
+                    var t = f;
+                    for (f = m; f;) e >= f.time && (f.flush = f.callback(e - f.time, e)), f = f.next;
+                    f = t, e = 1 / 0;
+                    for (var n, i = m; i;) i.flush ? i = n ? n.next = i.next : m = i.next : (i.time < e && (e = i.time), i = (n = i).next);
+                    return r = n, e
+                }
+                var m, r, f, l, s, c = 1 / 0;
+                e.timer = o, e.timerReplace = u, e.timerFlush = a
+            });
+
+        var canvas = document.querySelector("canvas"),
+            context = canvas.getContext("2d");
 
         canvas.width = document.getElementById("wrapper").clientWidth;
         canvas.height = document.body.clientHeight;
         var width = canvas.width,
-        height = canvas.height,
-        radius = 1.5,
-        minDistance = 60,
-        maxDistance = 120,
-        minDistance2 = minDistance * minDistance,
-        maxDistance2 = maxDistance * maxDistance;
+            height = canvas.height,
+            radius = 1.5,
+            minDistance = 60,
+            maxDistance = 120,
+            minDistance2 = minDistance * minDistance,
+            maxDistance2 = maxDistance * maxDistance;
 
-    var tau = 2 * Math.PI,
-        n = 80,
-        particles = new Array(n);
+        var tau = 2 * Math.PI,
+            n = 80,
+            particles = new Array(n);
 
-    for (var i = 0; i < n; ++i) {
-      particles[i] = {
-        x0: width * Math.random(),
-        y0: height * Math.random(),
-        v: .05 * (Math.random() - .5),
-        v2: .05 * (Math.random() - .5)
-      };
+        for (var i = 0; i < n; ++i) {
+            particles[i] = {
+                x0: width * Math.random(),
+                y0: height * Math.random(),
+                v: .05 * (Math.random() - .5),
+                v2: .05 * (Math.random() - .5)
+            };
+        }
+
+        timer.timer(function(elapsed) {
+            context.clearRect(0, 0, width, height);
+            context.strokeStyle = "#BBBBBB";
+            context.fillStyle = "#BBBBBB";
+
+            for (var i = 0; i < n; ++i) {
+                for (var j = i + 1; j < n; ++j) {
+                    var pi = particles[i],
+                        pj = particles[j],
+                        dx = pi.x - pj.x,
+                        dy = pi.y - pj.y,
+                        d2 = dx * dx + dy * dy;
+                    if (d2 < maxDistance2) {
+                        context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
+                        context.beginPath();
+                        context.moveTo(pi.x, pi.y);
+                        context.lineTo(pj.x, pj.y);
+                        context.stroke();
+                    }
+                }
+            }
+            context.globalAlpha = 1;
+
+            for (var i = 0; i < n; ++i) {
+                var p = particles[i];
+                p.y = p.y0 + elapsed * p.v;
+                p.x = p.x0 + elapsed * p.v2;
+                if (p.y > height + maxDistance) {
+                    p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
+                } else if (p.y < -maxDistance) {
+                    p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
+                }
+
+                if (p.x > width + maxDistance) {
+                    p.y = height * Math.random(), p.x0 -= width + 2 * maxDistance;
+                } else if (p.x < -maxDistance) {
+                    p.y = height * Math.random(), p.x0 += width + 2 * maxDistance;
+                }
+
+                context.beginPath();
+                context.arc(p.x, p.y, radius, 0, tau);
+                context.fill();
+            }
+        });
     }
-
-    timer.timer(function(elapsed) {
-        context.clearRect(0, 0, width, height);
-        context.strokeStyle = "#BBBBBB";
-        context.fillStyle = "#BBBBBB";
-
-      for (var i = 0; i < n; ++i) {
-        for (var j = i + 1; j < n; ++j) {
-          var pi = particles[i],
-              pj = particles[j],
-              dx = pi.x - pj.x,
-              dy = pi.y - pj.y,
-              d2 = dx * dx + dy * dy;
-          if (d2 < maxDistance2) {
-            context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
-            context.beginPath();
-            context.moveTo(pi.x, pi.y);
-            context.lineTo(pj.x, pj.y);
-            context.stroke();
-          }
-        }
-      }
-      context.globalAlpha = 1;
-
-      for (var i = 0; i < n; ++i) {
-        var p = particles[i];
-        p.y = p.y0 + elapsed * p.v;
-        p.x = p.x0 + elapsed * p.v2;
-        if (p.y > height + maxDistance) {
-            p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
-        } else if (p.y < -maxDistance) {
-            p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
-        }
-
-        if (p.x > width + maxDistance) {
-            p.y = height * Math.random(), p.x0 -= width + 2 * maxDistance;
-        } else if (p.x < -maxDistance) {
-            p.y = height * Math.random(), p.x0 += width + 2 * maxDistance;
-        }
-
-        context.beginPath();
-        context.arc(p.x, p.y, radius, 0, tau);
-        context.fill();
-      }
-    });
-}
-</script>
+    </script>
 </body>
 
 </html>

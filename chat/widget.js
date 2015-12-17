@@ -32,10 +32,10 @@ window.onload = function() {
     var Mac = !!ua.match(/Macintosh/i)
 
     $.each(settings.apps, function(key, value) {
-        if (Mobile || key == 'wechat' || key == 'email' || key == 'phone' || key == 'telegram' || key == 'facebook') {
+        if (Mobile || key != 'sms') {
             $('<img>')
                 .addClass('keyreply-chat-icon')
-                .attr('src', root + 'chat/images/apps/' + key + '.png')
+                .attr('src', root + 'chat/images/apps/' + key + '.svg')
                 .attr('data-type', key)
                 .appendTo(anchor);
         }
@@ -91,14 +91,20 @@ window.onload = function() {
                     link = "https://www.facebook.com/messages/" + settings.apps.facebook;
                 }
                 break;
+            case 'kakao':
+                link = "http://goto.kakao.com/" + settings.apps.kakao;
+                break;
             case 'wechat':
                 qr = $('<img>')
                     .css('max-width', '100%')
                     .css('vertical-align', 'bottom')
                     .attr('src', settings.apps.wechat)
                 break;
-            case 'kakao': //official
-                link = "http://goto.kakao.com/" + settings.apps.kakao;
+            case 'snapchat':
+                qr = $('<img>')
+                    .css('max-width', '100%')
+                    .css('vertical-align', 'bottom')
+                    .attr('src', settings.apps.snapchat)
                 break;
             default:
                 link = "mailto:" + settings.apps.email + "?subject=Support request";
@@ -121,11 +127,7 @@ window.onload = function() {
                     'opacity': 0,
                 }, 'fast').hide();
 
-                var a = document.createElement('a')
-                a.href = link;
-                document.body.appendChild(a);
-                a.click();
-                // window.open(link);
+                $('<a>').attr('href', link)[0].click();
             }
         });
     });
