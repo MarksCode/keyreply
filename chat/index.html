@@ -561,7 +561,7 @@
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
-                        event.target.data = e.target.result;
+                        $input[0].data = e.target.result;
                     };
 
                     // Read in the image file as a data URL.

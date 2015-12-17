@@ -100,6 +100,12 @@ window.onload = function() {
                     .css('vertical-align', 'bottom')
                     .attr('src', settings.apps.wechat)
                 break;
+            case 'line':
+                qr = $('<img>')
+                    .css('max-width', '100%')
+                    .css('vertical-align', 'bottom')
+                    .attr('src', settings.apps.line)
+                break;
             case 'snapchat':
                 qr = $('<img>')
                     .css('max-width', '100%')
