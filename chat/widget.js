@@ -96,18 +96,21 @@ window.onload = function() {
                 break;
             case 'wechat':
                 qr = $('<img>')
+                    .css('float', 'right')
                     .css('max-width', '100%')
                     .css('vertical-align', 'bottom')
                     .attr('src', settings.apps.wechat)
                 break;
             case 'line':
                 qr = $('<img>')
+                    .css('float', 'right')
                     .css('max-width', '100%')
                     .css('vertical-align', 'bottom')
                     .attr('src', settings.apps.line)
                 break;
             case 'snapchat':
                 qr = $('<img>')
+                    .css('float', 'right')
                     .css('max-width', '100%')
                     .css('vertical-align', 'bottom')
                     .attr('src', settings.apps.snapchat)
@@ -119,7 +122,7 @@ window.onload = function() {
 
         app.click(function() {
             if (qr) {
-                panel.append(qr)
+                panel.empty().append(qr)
                     .show()
                     .animate({
                         'right': '75px',
