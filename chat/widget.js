@@ -16,7 +16,7 @@ window.onload = function() {
 
     var launcher = $('<div>')
         .addClass('keyreply-launcher')
-        .css('background-image', 'url("' + root + 'chat/images/launcher/' + settings.color + '.png")')
+        .css('background-image', 'url("' + root + 'chat/images/apps/launcher.svg")')
         .css('background-size', 'contain')
         .css('z-index', '100000')
         .appendTo(anchor);
