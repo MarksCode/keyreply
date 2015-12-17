@@ -350,12 +350,12 @@
                                 cursor: pointer;
                                 position: relative;
                                 display: inline-block;
-                                height: 54px;
-                                width: 54px;
+                                height: 52px;
+                                width: 52px;
                                 border-radius: 27px;
                                 padding: 0;
                                 border-style: dashed;
-                                border-width: 2px;
+                                border-width: 1px;
                                 border-color: white;
                             }
                             
@@ -517,7 +517,7 @@
     function generate() {
         var color, apps = {};
 
-        color = $('#icon-color-picker > div.selected').data('color') || 'red';
+        color = $('#icon-color-picker > div.selected').data('color') || '#E4392B';
 
         $($('.input-block:not(.inactive)').find('input[type=text], input[type=file]').get().reverse()).each(function(index, input) {
             if (input.value) {
@@ -622,7 +622,7 @@
         });
     });
     </script>
-    <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="red" data-apps="JTdCJTIyZmFjZWJvb2slMjI6JTIya2V5cmVwbHklMjIsJTIyc21zJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMnRlbGVncmFtJTIyOiUyMmNhcnlseW5lJTIyLCUyMnBob25lJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMmVtYWlsJTIyOiUyMnN1cHBvcnRAa2V5cmVwbHkuY29tJTIyJTdE"></script>
+    <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="#E4392B" data-apps="JTdCJTIyZmFjZWJvb2slMjI6JTIya2V5cmVwbHklMjIsJTIyc21zJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMnRlbGVncmFtJTIyOiUyMmNhcnlseW5lJTIyLCUyMnBob25lJTIyOiUyMjE0MTU5OTY2MTcxJTIyLCUyMmVtYWlsJTIyOiUyMnN1cHBvcnRAa2V5cmVwbHkuY29tJTIyJTdE"></script>
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
     if (!navigator.userAgent.match(/mobi/i)) {
