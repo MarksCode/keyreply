@@ -1,4 +1,4 @@
-window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>'); kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZHI9";
+window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>'); kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGg9";
 window.onload = function() {
     var $ = window.jQuery;
 
