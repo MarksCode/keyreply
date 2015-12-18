@@ -10,7 +10,7 @@ window.onload = function() {
         cipher = script.data('apps');
 
     settings.color = script.data('color').replace('#', '%23');
-    settings.tags = [atob(kga), site, salt].join('');
+    settings.tags = [atob(kga), site, salt, "&cd=widget"].join('');
     settings.apps = JSON.parse(decodeURI(atob(cipher)));
 
     $('<style>')
