@@ -83,7 +83,7 @@ window.onload = function() {
                 link = "facetime-audio:" + settings.apps.facetime;
                 break;
             case 'telegram':
-                link = "tg://resolve?domain=" + settings.apps.telegram;
+                link = "tg://resolve?domain=" + settings.apps.telegram.replace('@','');
                 break;
             case 'facebook':
                 // http://findmyfbid.com/
