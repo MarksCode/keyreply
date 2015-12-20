@@ -1,4 +1,5 @@
-window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>'); kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9";
+window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.4.min.js"><\/script>'); var = kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9";
+
 window.onload = function() {
     var $ = window.jQuery;
 
@@ -40,7 +41,7 @@ window.onload = function() {
     var Mac = !!ua.match(/Macintosh/i)
 
     $.each(settings.apps, function(key, value) {
-        if (Mobile || key != 'sms') {
+        if (Mobile || key != 'sms' || key != 'kakao') {
             $('<img>')
                 .addClass('keyreply-chat-icon')
                 .attr('title', key.charAt(0).toUpperCase() + key.slice(1))
@@ -146,7 +147,11 @@ window.onload = function() {
                     'opacity': 0,
                 }, 'fast').hide();
 
-                $('<a>').attr('href', link).appendTo(anchor)[0].click();
+                if (Mobile) {
+                    $('<a>').attr('href', link).appendTo(anchor)[0].click();
+                } else {
+                    $('<a>').attr('target', '_blank').attr('href', link).appendTo(anchor)[0].click();
+                }
             }
         });
     });
