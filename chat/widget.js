@@ -74,7 +74,7 @@
         var Mac = !!ua.match(/Macintosh/i)
 
         $.each(settings.apps, function(key, value) {
-            if (Mobile || key != 'sms' || key != 'kakao' || key != 'skype') {
+            if (Mobile || (key != 'sms' && key != 'kakao' && key != 'skype')) {
                 $('<div>')
                     .addClass('keyreply-chat-icon')
                     .attr('data-type', key)
