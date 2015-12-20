@@ -41,7 +41,7 @@
     width: 150px;
 }
 
-.keyreply-chat-icon .keyreply-qr {
+.keyreply-chat-icon.keyreply-panel .keyreply-qr {
     height: 200px;
     width: 200px;
     position: absolute;
@@ -49,24 +49,23 @@
     left: 0;
     opacity: 1;
     margin: 50px;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
+    border-radius: 5px;
+    visibility: visible;
+    background-size: contain;
+    -webkit-transition: visibility 0s linear 0.2s, opacity 0.2s linear 0.2s;
+    transition: visibility 0s linear 0.2s, opacity 0.2s linear 0.2s;
 }
 
 .keyreply-chat-icon:not(.keyreply-panel) .keyreply-qr {
-    /*display: none;*/
+    visibility: hidden;
     opacity: 0;
-}
-
-.keyreply-chat-icon .keyreply-qr > img {
-    height: 100%;
-    width: 100%;
 }
 
 .keyreply-label {
     opacity: 0;
-    padding: 10px 0;
-    line-height: 28px;
+    margin-top:10px;
+    margin-left: -4px;
+    line-height: 32px;
     font-size: 20px;
     font-weight: 400;
     position: absolute;
