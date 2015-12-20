@@ -1,0 +1,88 @@
+.keyreply-launcher,
+.keyreply-chat-icon {
+    cursor: pointer;
+    bottom: 20px;
+    position: fixed;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.keyreply-chat-icon {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
+    -webkit-transition: width 0.25s, height 0.25s;
+    transition: width 0.25s, height 0.25s;
+}
+
+.keyreply-launcher,
+.keyreply-chat-icon {
+    height: 50px;
+    width: 50px;
+    right: 16px;
+    border-radius: 25px
+}
+
+.keyreply-chat-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+.keyreply-chat-icon {
+    display: none;
+    opacity: 0
+}
+
+.keyreply-panel {
+    width: 300px;
+    height: 300px;
+    right: 75px;
+}
+
+.keyreply-chat-icon:not(.keyreply-panel):hover {
+    width: 150px;
+}
+
+.keyreply-chat-icon .keyreply-qr {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    margin: 50px;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.keyreply-chat-icon:not(.keyreply-panel) .keyreply-qr {
+    /*display: none;*/
+    opacity: 0;
+}
+
+.keyreply-chat-icon .keyreply-qr > img {
+    height: 100%;
+    width: 100%;
+}
+
+.keyreply-label {
+    opacity: 0;
+    padding: 10px 0;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.keyreply-chat-icon:hover .keyreply-label {
+    opacity: 1;
+}
+
+.keyreply-chat-icon.keyreply-panel .keyreply-label {
+    opacity: 1;
+}
