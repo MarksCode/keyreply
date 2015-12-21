@@ -1,4 +1,12 @@
 (function() {
+    //Load Stylesheet
+    var head = document.getElementsByTagName('head')[0],
+        link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'https://keyreply.com/chat/widget.css';
+    head.appendChild(link);
+
     (window.jQuery && init()) || loadScript("https://code.jquery.com/jquery-2.1.4.min.js", init);
 
     function loadScript(url, callback) {
@@ -31,7 +39,7 @@
             site = window.location.host,
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
             kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9",
-            root = (site == 'localhost:8080') ? '' : 'https://keyreply.com/',
+            root = 'https://keyreply.com/',
             cipher = script.data('apps'),
             colors = {
                 skype: '#00AFF0',
@@ -51,8 +59,6 @@
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
         settings.tags = [atob(kga), site, salt].join('');
         settings.color = script.data('color');
-
-        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css'));
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
