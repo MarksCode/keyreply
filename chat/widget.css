@@ -29,7 +29,7 @@
 .keyreply-chat-icon {
     height: 50px;
     width: 50px;
-    right: 16px;
+    right: 14px;
     border-radius: 25px
 }
 
@@ -90,6 +90,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
 }
 
 .keyreply-chat-icon:hover .keyreply-label {

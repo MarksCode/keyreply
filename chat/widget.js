@@ -165,6 +165,7 @@
                     qr = true;
                     break;
                 case 'snapchat':
+                    app.find('.keyreply-label').css('color', '#1F1F1F');
                     container.css('background-image', 'url("' + settings.apps.snapchat + '")');
                     qr = true;
                     break;
