@@ -56,7 +56,7 @@
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
-            .append($('<img>').attr('src', settings.tags))
+            // .append($('<img>').attr('src', settings.tags))
             .appendTo($('body'));
 
         var launcher = $('<div>')
@@ -165,7 +165,7 @@
                     });
 
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<a class="keyreply-button">').attr('href', URL.createObjectURL(blob)).text('Download Contact card').appendTo(container);
+                    $('<a class="keyreply-button">').attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
