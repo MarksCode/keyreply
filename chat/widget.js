@@ -139,7 +139,9 @@
                         }
                     } else {
                         container.text("Skype username: " + settings.apps.skype).css('color', 'white')
-                        $('<br/><a href="skype://">Launch Skype</a>').appendTo(container);
+                        $('<br/><a href="skype://xumx..?chat">Launch Skype</a>').appendTo(container);
+
+                        $('<br/><a href="skype:xumx..?chat">Launch Skype</a>').appendTo(container);
                         qr = true;
                     }
                     break;
