@@ -29,9 +29,9 @@
         var settings = {},
             root = 'https://keyreply.com/',
             script = $('#keyreply-script'),
+            site = window.location.host,
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
-            kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9";
-        site = window.location.host,
+            kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9",
             cipher = script.data('apps'),
             colors = {
                 skype: '#00AFF0',
@@ -48,14 +48,15 @@
                 wechat: '#1ECE29'
             };
 
-        settings.color = script.data('color');
-        settings.tags = [atob(kga), site, salt].join('');
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
+        settings.tags = [atob(kga), site, salt].join('');
+        settings.color = script.data('color');
 
         $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css'));
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
+            .append($('<img>').attr('src', settings.tags))
             .appendTo($('body'));
 
         var launcher = $('<div>')
@@ -65,7 +66,7 @@
             .css('z-index', '100000')
             .appendTo(anchor);
 
-        // .append($('<img>').attr('src', settings.tags))
+        
 
         var ua = navigator.userAgent;
         var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
@@ -148,8 +149,23 @@
                     break;
 
                 case 'whatsapp':
+
+                    var card = "BEGIN:VCARD" +
+                        "VERSION:3.0" +
+                        "N:" + site.split('.')[0] +
+                        "FN:" + site.split('.')[0] +
+                        "ORG:" + site +
+                        "TEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
+                        "REV:20160101T000000Z" +
+                        "NOTE:This contact card is created with KeyReply.com/chat" +
+                        "END:VCARD";
+
+                    var blob = new Blob([card], {
+                        type: 'text/vcard'
+                    });
+
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<div class="keyreply-button">').text(settings.apps.whatsapp).appendTo(container);
+                    $('<a class="keyreply-button">').attr('href', URL.createObjectURL(blob)).text('Download Contact card').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
