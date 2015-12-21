@@ -52,7 +52,7 @@
         settings.tags = [atob(kga), site, salt].join('');
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
 
-        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css'));
+        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/chat/widget.css'));
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -148,8 +148,10 @@
                     break;
 
                 case 'whatsapp':
-                    container.text("Whatsapp number: " + settings.apps.whatsapp).css('color', 'white');
-                    $('<a href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
+                    container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
+                    $('<div class="keyreply-button">').text(settings.apps.whatsapp).appendTo(container);
+                    $('<br><span>').text('2: Start chat').appendTo(container);
+                    $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
                     break;
 

@@ -13,6 +13,18 @@
     transition: width 0.25s, height 0.25s, bottom 0.25s;
 }
 
+.keyreply-button {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+    border: 2px solid currentColor;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+}
+
 .keyreply-launcher,
 .keyreply-chat-icon {
     height: 50px;
@@ -31,11 +43,12 @@
     opacity: 0
 }
 
-.keyreply-panel {
-    width: 300px;
-    height: 300px;
-    right: 75px;
-    bottom: 20px !important; 
+.keyreply-chat-icon.keyreply-panel {
+    width: 280px;
+    height: 280px;
+    right: 70px;
+    bottom: 20px !important;
+    z-index: 9999;
 }
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {
@@ -49,7 +62,7 @@
     top: 0;
     left: 0;
     opacity: 1;
-    margin: 50px;
+    margin: 40px;
     border-radius: 5px;
     visibility: visible;
     background-size: contain;
@@ -64,7 +77,7 @@
 
 .keyreply-label {
     opacity: 0;
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: -4px;
     line-height: 32px;
     font-size: 20px;
