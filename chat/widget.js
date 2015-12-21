@@ -132,7 +132,11 @@
 
                 case 'skype':
                     if (Mobile) {
-                        link = "skype://" + settings.apps.skype + "?chat";
+                        if (Android) {
+                            link = "skype:" + settings.apps.skype + "?chat";
+                        } else if (iOS) {
+                            link = "skype://" + settings.apps.skype + "?chat";
+                        }
                     } else {
                         container.text("Skype username: " + settings.apps.skype).css('color', 'white')
                         $('<br/><a href="skype://">Launch Skype</a>').appendTo(container);
