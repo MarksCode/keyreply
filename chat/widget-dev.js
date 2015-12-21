@@ -27,11 +27,11 @@
         var $ = window.jQuery;
 
         var settings = {},
-            root = 'https://keyreply.com/',
             script = $('#keyreply-script'),
             site = window.location.host,
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
             kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9",
+            root = (site == 'localhost:8080') ? '' : 'https://keyreply.com/',
             cipher = script.data('apps'),
             colors = {
                 skype: '#00AFF0',
@@ -52,7 +52,7 @@
         settings.tags = [atob(kga), site, salt].join('');
         settings.color = script.data('color');
 
-        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/chat/widget.css'));
+        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css'));
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -151,14 +151,14 @@
                 case 'whatsapp':
 
                     var card = "BEGIN:VCARD" +
-                        "VERSION:3.0" +
-                        "N:" + site.split('.')[0] +
-                        "FN:" + site.split('.')[0] +
-                        "ORG:" + site +
-                        "TEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
-                        "REV:20160101T000000Z" +
-                        "NOTE:This contact card is created with KeyReply.com/chat" +
-                        "END:VCARD";
+                        "\nVERSION:3.0" +
+                        "\nN:" + site.split('.')[0] +
+                        "\nFN:" + site.split('.')[0] +
+                        "\nORG:" + site +
+                        "\nTEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
+                        "\nREV:20160101T000000Z" +
+                        "\nNOTE:This contact card is created with KeyReply.com/chat" +
+                        "\nEND:VCARD";
 
                     var blob = new Blob([card], {
                         type: 'text/vcard'
