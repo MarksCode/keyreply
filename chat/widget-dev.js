@@ -158,6 +158,7 @@
                     qr = true;
                     break;
                 case 'line':
+                    // line://ti/p/NnU-iyIV5a
                     container.css('background-image', 'url("' + settings.apps.line + '")');
                     qr = true;
                     break;
