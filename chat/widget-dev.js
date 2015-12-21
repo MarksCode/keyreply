@@ -52,7 +52,7 @@
         settings.tags = [atob(kga), site, salt].join('');
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
 
-        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/chat/widget.css') );
+        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css') );
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -74,7 +74,7 @@
         var Mac = !!ua.match(/Macintosh/i)
 
         $.each(settings.apps, function(key, value) {
-            if (Mobile || key != 'sms' || key != 'kakao' || key != 'skype') {
+            if (Mobile || (key != 'sms' && key != 'kakao' && key != 'skype')) {
                 $('<div>')
                     .addClass('keyreply-chat-icon')
                     .attr('data-type', key)
@@ -132,10 +132,16 @@
 
                 case 'skype':
                     if (Mobile) {
-                        link = "skype://" + settings.apps.skype + "?chat";
+                        if (Android) {
+                            link = "skype:" + settings.apps.skype + "?chat";
+                        } else if (iOS) {
+                            link = "skype://" + settings.apps.skype + "?chat";
+                        }
                     } else {
                         container.text("Skype username: " + settings.apps.skype).css('color', 'white')
-                        $('<br/><a href="skype://">Launch Skype</a>').appendTo(container);
+                        $('<br/><a href="skype://xumx..?chat">Launch Skype</a>').appendTo(container);
+
+                        $('<br/><a href="skype:xumx..?chat">Launch Skype</a>').appendTo(container);
                         qr = true;
                     }
                     break;
