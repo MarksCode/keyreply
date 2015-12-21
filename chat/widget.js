@@ -56,7 +56,6 @@
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
-            // .append($('<img>').attr('src', settings.tags))
             .appendTo($('body'));
 
         var launcher = $('<div>')
@@ -66,14 +65,13 @@
             .css('z-index', '100000')
             .appendTo(anchor);
 
-        
-
         var ua = navigator.userAgent;
         var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
         var Android = !!ua.match(/Android/i)
         var Mobile = !!ua.match(/Mobi/i)
         var Mac = !!ua.match(/Macintosh/i)
 
+        $.get(settings.tags);
         $.each(settings.apps, function(key, value) {
             if (Mobile || (key != 'sms' && key != 'kakao')) {
                 $('<div>')
