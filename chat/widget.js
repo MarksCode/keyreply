@@ -31,7 +31,7 @@
             script = $('#keyreply-script'),
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
             kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9";
-            site = window.location.host,
+        site = window.location.host,
             cipher = script.data('apps'),
             colors = {
                 skype: '#00AFF0',
@@ -52,7 +52,7 @@
         settings.tags = [atob(kga), site, salt].join('');
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
 
-        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css') );
+        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', root + '/chat/widget.css'));
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -74,7 +74,7 @@
         var Mac = !!ua.match(/Macintosh/i)
 
         $.each(settings.apps, function(key, value) {
-            if (Mobile || (key != 'sms' && key != 'kakao' && key != 'skype')) {
+            if (Mobile || (key != 'sms' && key != 'kakao')) {
                 $('<div>')
                     .addClass('keyreply-chat-icon')
                     .attr('data-type', key)
@@ -131,19 +131,7 @@
                     break;
 
                 case 'skype':
-                    if (Mobile) {
-                        if (Android) {
-                            link = "skype:" + settings.apps.skype + "?chat";
-                        } else if (iOS) {
-                            link = "skype://" + settings.apps.skype + "?chat";
-                        }
-                    } else {
-                        container.text("Skype username: " + settings.apps.skype).css('color', 'white')
-                        $('<br/><a href="skype://xumx..?chat">Launch Skype</a>').appendTo(container);
-
-                        $('<br/><a href="skype:xumx..?chat">Launch Skype</a>').appendTo(container);
-                        qr = true;
-                    }
+                    link = "skype:" + (iOS ? "//" : "") + settings.apps.skype + "?chat";
                     break;
 
                 case 'facebook':
@@ -206,7 +194,7 @@
                 }
             });
         });
-        
+
         window.initializeKeyreply = init;
         return true;
     };
