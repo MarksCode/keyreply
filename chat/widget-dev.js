@@ -154,11 +154,11 @@
                     break;
 
                 case 'whatsapp':
-
+                    var name = site.split('.')[0];
                     var card = "BEGIN:VCARD" +
                         "\nVERSION:3.0" +
-                        "\nN:" + site.split('.')[0] +
-                        "\nFN:" + site.split('.')[0] +
+                        "\nN:" + name +
+                        "\nFN:" + name +
                         "\nORG:" + site +
                         "\nTEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
                         "\nREV:20160101T000000Z" +
@@ -170,7 +170,7 @@
                     });
 
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<a class="keyreply-button">').attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
+                    $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
