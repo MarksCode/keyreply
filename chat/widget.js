@@ -43,6 +43,7 @@
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
             kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9",
             cipher = script.data('apps'),
+            align = script.data('align'),
             whitelabel = script.data('whitelabel'),
             colors = {
                 skype: '#00AFF0',
@@ -83,7 +84,7 @@
             });
 
         if (!whitelabel) {
-            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">get this widget</a>')
+            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">get widget</a>')
                 .addClass('keyreply-brand')
                 .appendTo(launcher)
                 .click(function(event) {
