@@ -93,9 +93,10 @@
     filter: alpha(opacity=0);
     border: 0;
     right: 0px;
-    width: 84px
-    -webkit-transition: visibility 0s, opacity 0.5s linear 5s;
-    transition: visibility 0s, opacity 0.5s linear 5s;
+    width: 90px;
+    text-align: right;
+    -webkit-transition: visibility 0s, opacity 0.5s linear 3s;
+    transition: visibility 0s, opacity 0.5s linear 3s;
 }
 
 .keyreply-label {
