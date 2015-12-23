@@ -172,12 +172,12 @@
                     });
 
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
+                    $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
                     break;
-                    
+
                 case 'wechat':
                     container.css('background-image', 'url("' + settings.apps.wechat + '")');
                     qr = true;
