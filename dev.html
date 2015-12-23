@@ -2,31 +2,32 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
+        <script src="/chat/html5-qrcode.js"></script>
+    <script src="/chat/jsqrcode-combined.min.js"></script>
 </head>
 
 <body>
     <div id="reader" style="width:300px;height:250px">
     </div>
     <script>
-    // $('#reader').html5_qrcode(function(data) {
-    //         console.log(data)
-    //         if (data.indexOf('http')) {
+    $('#reader').html5_qrcode(function(data) {
+            alert(data);
+            if (data.indexOf('http')) {
                 
-    //         }
-    //         $('#reader').html5_qrcode_stop()
-    //     },
-    //     function(error) {
-    //     	console.log(error)
-    //     	// $('#reader').html5_qrcode_stop()
-    //         //show read errors 
-    //     },
-    //     function(videoError) {
-    //         console.log(videoError)
-    //     	$('#reader').html5_qrcode_stop()
-    //         //the video stream could be opened
-    //     }
-    // );
+            }
+            $('#reader').html5_qrcode_stop()
+        },
+        function(error) {
+        	console.log(error)
+        	// $('#reader').html5_qrcode_stop()
+            //show read errors 
+        },
+        function(videoError) {
+            console.log(videoError)
+        	$('#reader').html5_qrcode_stop()
+            //the video stream could be opened
+        }
+    );
     </script>
     <a href="snapchat://?u=justin">snapchat 1</a>
     <a href="snapchat:?u=justin">snapchat 2 </a>

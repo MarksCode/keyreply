@@ -9,8 +9,8 @@
 
 .keyreply-chat-icon {
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
-    -webkit-transition: width 0.25s, height 0.25s, bottom 0.25s;
-    transition: width 0.25s, height 0.25s, bottom 0.25s;
+    -webkit-transition: width 0.25s, height 0.25s;
+    transition: width 0.25s, height 0.25s;
 }
 
 .keyreply-button {
@@ -47,8 +47,8 @@
     width: 280px;
     height: 280px;
     right: 70px;
-    bottom: 20px !important;
     z-index: 9999;
+    /*bottom: 20px !important;*/
 }
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {
