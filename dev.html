@@ -10,25 +10,27 @@
     <div id="reader" style="width:300px;height:250px">
     </div>
     <script>
-    $('#reader').html5_qrcode(function(data) {
-            alert(data);
-            if (data.indexOf('http')) {
+    // $('#reader').html5_qrcode(function(data) {
+    //         alert(data);
+    //         if (data.indexOf('http')) {
                 
-            }
-            $('#reader').html5_qrcode_stop()
-        },
-        function(error) {
-        	console.log(error)
-        	// $('#reader').html5_qrcode_stop()
-            //show read errors 
-        },
-        function(videoError) {
-            console.log(videoError)
-        	$('#reader').html5_qrcode_stop()
-            //the video stream could be opened
-        }
-    );
+    //         }
+    //         $('#reader').html5_qrcode_stop()
+    //     },
+    //     function(error) {
+    //     	console.log(error)
+    //     	// $('#reader').html5_qrcode_stop()
+    //         //show read errors 
+    //     },
+    //     function(videoError) {
+    //         console.log(videoError)
+    //     	$('#reader').html5_qrcode_stop()
+    //         //the video stream could be opened
+    //     }
+    // );
     </script>
+    <a href="tel://82888399">Phone number</a>
+
     <a href="snapchat://?u=justin">snapchat 1</a>
     <a href="snapchat:?u=justin">snapchat 2 </a>
     <style>
