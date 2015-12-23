@@ -1,36 +1,41 @@
+.keyreply-brand,
+.keyreply-chat-icon,
+.keyreply-button,
+.keyreply-label {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
 .keyreply-launcher,
 .keyreply-chat-icon {
     cursor: pointer;
-    bottom: 20px;
     position: fixed;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
-    z-index: 10000;
-}
-
-.keyreply-chat-icon {
-    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
-    -webkit-transition: width 0.25s, height 0.25s;
-    transition: width 0.25s, height 0.25s;
-}
-
-.keyreply-button {
-    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
-    color: white;
-    text-decoration: none;
-    border: 2px solid currentColor;
-    font-weight: 500;
-    cursor: pointer;
-    display: block;
-    padding: 0.2rem 0.4rem;
-    text-align: center;
-}
-
-.keyreply-launcher,
-.keyreply-chat-icon {
     height: 50px;
     width: 50px;
     right: 14px;
-    border-radius: 25px
+    bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    border-radius: 25px;
+}
+
+.keyreply-chat-icon {
+    -webkit-transition: width 0.25s, height 0.25s;
+    transition: width 0.25s, height 0.25s;
+    display: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.keyreply-button {
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    padding: 3px 6px;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
 }
 
 .keyreply-chat-icon img {
@@ -38,17 +43,11 @@
     width: 50px;
 }
 
-.keyreply-chat-icon {
-    display: none;
-    opacity: 0
-}
-
 .keyreply-chat-icon.keyreply-panel {
     width: 280px;
     height: 280px;
     right: 70px;
     z-index: 9999;
-    /*bottom: 20px !important;*/
 }
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {
@@ -62,6 +61,7 @@
     top: 0;
     left: 0;
     opacity: 1;
+    filter: alpha(opacity=100);
     margin: 40px;
     border-radius: 5px;
     visibility: visible;
@@ -73,10 +73,34 @@
 .keyreply-chat-icon:not(.keyreply-panel) .keyreply-qr {
     visibility: hidden;
     opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.keyreply-launcher.keyreply-launcher-active .keyreply-brand {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.keyreply-brand {
+    text-decoration: none;
+    position: absolute;
+    visibility: hidden;
+    font-weight: 500;
+    font-size: 12px;
+    bottom: -18px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    border: 0;
+    right: 0px;
+    width: 120px;
+    -webkit-transition: visibility 0s, opacity 0.5s linear 5s;
+    transition: visibility 0s, opacity 0.5s linear 5s;
 }
 
 .keyreply-label {
     opacity: 0;
+    filter: alpha(opacity=0);
     margin-top: 10px;
     margin-left: -4px;
     line-height: 32px;
@@ -96,8 +120,110 @@
 
 .keyreply-chat-icon:hover .keyreply-label {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 .keyreply-chat-icon.keyreply-panel .keyreply-label {
     opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+/* Click Effects */
+
+.keyreply-launcher {
+    -webkit-transition: color 0.7s;
+    transition: color 0.7s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.keyreply-effect:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    filter: alpha(opacity=0);
+    pointer-events: none;
+}
+
+.keyreply-effect:before,
+.keyreply-effect:after {
+    box-shadow: 0 0 0 2px rgba(111, 148, 182, 0.6);
+}
+
+.keyreply-effect.keyreply-show-effect:before {
+    -webkit-animation: keyreply-effect-1 0.5s forwards;
+    animation: keyreply-effect-1 0.5s forwards;
+}
+
+.keyreply-effect.keyreply-show-effect:after {
+    -webkit-animation: keyreply-effect-2 0.5s forwards;
+    animation: keyreply-effect-2 0.5s forwards;
+}
+
+@-webkit-keyframes keyreply-effect-1 {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale3d(0.5, 0.5, 1);
+        transform: scale3d(0.5, 0.5, 1);
+    }
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes keyreply-effect-1 {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale3d(0.5, 0.5, 1);
+        transform: scale3d(0.5, 0.5, 1);
+    }
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@-webkit-keyframes keyreply-effect-2 {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale3d(0.5, 0.5, 1);
+        transform: scale3d(0.5, 0.5, 1);
+    }
+    50%,
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+}
+
+@keyframes keyreply-effect-2 {
+    0% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale3d(0.5, 0.5, 1);
+        transform: scale3d(0.5, 0.5, 1);
+    }
+    50%,
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
 }

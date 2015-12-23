@@ -1,14 +1,16 @@
 (function() {
     //Load Stylesheet
+    var root = 'https://keyreply.com';
     var head = document.getElementsByTagName('head')[0],
-        link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = 'https://keyreply.com/chat/widget.css';
-    head.appendChild(link);
+        stylesheet = document.createElement('link');
+    stylesheet.type = 'text/css';
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = root + '/chat/widget.css';
+    head.appendChild(stylesheet);
 
-
-    (window.jQuery && init()) || loadScript("https://code.jquery.com/jquery-2.1.4.min.js", init);
+    setTimeout(function() {
+        (window.jQuery && init()) || loadScript("https://code.jquery.com/jquery-2.1.4.min.js", init);
+    }, 1000);
 
     function loadScript(url, callback) {
 
@@ -40,8 +42,8 @@
             site = window.location.host,
             salt = '\x26\x63\x69\x64\x3D' + Math.round(2147483647 * Math.random()),
             kga = "aHR0cHM6Ly9zc2wuZ29vZ2xlLWFuYWx5dGljcy5jb20vY29sbGVjdD92PTEmdGlkPVVBLTU1OTEzMzY2LTEzJnQ9cGFnZXZpZXcmZGw9",
-            root = 'https://keyreply.com/',
             cipher = script.data('apps'),
+            whitelabel = script.data('whitelabel'),
             colors = {
                 skype: '#00AFF0',
                 whatsapp: '#30BE2D',
@@ -67,11 +69,27 @@
 
         var launcher = $('<div>')
             .addClass('keyreply-launcher')
+            .addClass('keyreply-effect')
             .css('background-image', 'url("data:image/svg+xml;charset=utf8,%3Csvg width=\'26\' height=\'26\' viewBox=\'0 0 26 26\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cellipse fill=\'' + escape(settings.color) + '\' cx=\'13\' cy=\'13\' rx=\'12\' ry=\'12\'/%3E%3Cpath d=\'M6.798 15.503l1.453-.92c.617.215 1.29.334 2 .334 2.898 0 5.247-1.996 5.247-4.46 0-2.46-2.35-4.457-5.248-4.457C7.35 6 5 7.996 5 10.458c0 1.446.81 2.73 2.065 3.545l-.503 1.273c-.038.03-.062.076-.062.127 0 .09.074.162.166.162.054 0 .1-.024.132-.062z\' stroke=\'' + escape(settings.color) + '\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3Cpath d=\'M20.297 18.97l.04-.065-.578-1.155c1.066-.814 1.737-1.993 1.737-3.305 0-2.455-2.35-4.445-5.248-4.445-2.9 0-5.25 1.99-5.25 4.445s2.35 4.445 5.25 4.445c.838 0 1.63-.167 2.334-.463l1.39.756c.035.05.095.085.163.085.107 0 .194-.085.194-.19 0-.04-.012-.076-.033-.107z\' stroke=\'' + escape(settings.color) + '\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3C/g%3E%3C/svg%3E")')
             .css('background-color', settings.color)
             .css('background-size', 'contain')
             .css('z-index', '100000')
-            .appendTo(anchor);
+            .appendTo(anchor)
+            .click(function() {
+                launcher.addClass('keyreply-show-effect');
+                setTimeout(function() {
+                    launcher.removeClass('keyreply-show-effect')
+                }, 700);
+            });
+
+        if (!whitelabel) {
+            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">powered by KeyReply</a>')
+                .addClass('keyreply-brand')
+                .appendTo(launcher)
+                .click(function(event) {
+                    event.stopPropagation();
+                });
+        }
 
         var ua = navigator.userAgent;
         var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
@@ -88,7 +106,7 @@
                     .css('background-color', colors[key])
                     .append(
                         $('<img>')
-                        .attr('src', root + 'chat/images/apps/' + key + '.svg')
+                        .attr('src', root + '/chat/images/apps/' + key + '.svg')
                         .attr('alt', key)
                     )
                     .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)).css('color', 'white'))
@@ -108,11 +126,14 @@
                         img.hide();
                     });
 
+                    launcher.removeClass('keyreply-launcher-active');
                 } else {
                     img.show().animate({
                         'opacity': 1,
                         'bottom': (72 + index * 52) + 'px'
                     }, 'fast');
+
+                    launcher.addClass('keyreply-launcher-active');
                 }
             })
         })
@@ -163,12 +184,16 @@
                         "\nFN:" + name +
                         "\nORG:" + site +
                         "\nTEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
+                        "\nREV:20160101T000000Z" +
+                        "\nNOTE:This contact card is created with KeyReply.com/chat" +
                         "\nEND:VCARD";
 
+                    var blob = new Blob([card], {
+                        type: 'text/vcard'
+                    });
 
-                    container.css('color', 'white').css('padding-top', '30px').text("1: Add to Contacts")
-                    $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
-                    // $('<a class="keyreply-button">').attr('href', 'tel:' + settings.apps.whatsapp).text(settings.apps.whatsapp).appendTo(container);
+                    container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
+                    $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
@@ -179,9 +204,15 @@
                     qr = true;
                     break;
                 case 'line':
-                    // line://ti/p/NnU-iyIV5a
-                    container.css('background-image', 'url("' + settings.apps.line + '")');
-                    qr = true;
+                    if (Mobile) {
+                        var match = settings.apps.line.match(/ti\/p\/.+/)
+                        if (match) {
+                            link = "line://" + match[0]
+                        }
+                    } else {
+                        link = settings.apps.line;
+                    }
+
                     break;
                 case 'snapchat':
                     app.find('.keyreply-label').css('color', '#1F1F1F');
