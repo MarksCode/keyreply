@@ -93,7 +93,7 @@
     filter: alpha(opacity=0);
     border: 0;
     right: 0px;
-    width: 120px;
+    width: 84px
     -webkit-transition: visibility 0s, opacity 0.5s linear 5s;
     transition: visibility 0s, opacity 0.5s linear 5s;
 }

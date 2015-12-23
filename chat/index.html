@@ -549,9 +549,7 @@
                         </div>
                     </div>
             </div>
-
             <div class="modal" style="display:none; width: 500px; height: 300px;">
-                
             </div>
             <footer>
                 <ul class="icons" style="color:#555555;">
@@ -650,7 +648,11 @@
     }
 
     $(function() {
-        if (!navigator.getUserMedia) {
+        if (!(navigator.getUserMedia 
+            || navigator.webkitGetUserMedia 
+            || navigator.mozGetUserMedia 
+            || navigator.msGetUserMedia)) {
+            
             $('.scan').siblings('input').show();
             $('.scan').remove()
         }
