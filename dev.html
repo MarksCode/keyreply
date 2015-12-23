@@ -29,10 +29,17 @@
     //     }
     // );
     </script>
-    <a href="tel://82888399">Phone number</a>
+    <a id="long" href="tel://82888399">Phone number</a>
+<br>
+<a href="blob:http%3A//localhost%3A8080/a00e92cd-2d72-4320-a931-b440a6ebbbc9">file</a>
+<br>
 
     <a href="snapchat://?u=justin">snapchat 1</a>
     <a href="snapchat:?u=justin">snapchat 2 </a>
+
+    <script>
+    $('#long').trigger('taphold');
+    </script>
     <style>
     /*	.keyreply-launcher, .keyreply-chat-icon {
 		right: initial !important;
