@@ -361,7 +361,7 @@
                             </div>
                             <input name="line" style="display:none;" type="text" placeholder="Line invite link">
                             <div class="button-k scan" height="50">Scan QR Code with Webcam</div>
-                            <a class="hint" target="_blank" href="#">What is my Line invite code?</a>
+                            <a class="hint" target="_blank" href="#">What is my Line invite link?</a>
                         </div>
                         <div class="input-block inverse inactive" style="background: #FFFC00;">
                             <img class="app-icon" src="images/apps/snapchat.svg" alt="snapchat">
@@ -549,6 +549,10 @@
                         </div>
                     </div>
             </div>
+
+            <div class="modal" style="display:none; width: 500px; height: 300px;">
+                
+            </div>
             <footer>
                 <ul class="icons" style="color:#555555;">
                     <li><a target="_blank" href="https://twitter.com/keyreply" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -646,6 +650,10 @@
     }
 
     $(function() {
+        if (!navigator.getUserMedia) {
+            $('.scan').siblings('input').show();
+            $('.scan').remove()
+        }
 
         $('.scan').click(function() {
             var that = $(this);
