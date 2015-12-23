@@ -185,16 +185,11 @@
                         "\nFN:" + name +
                         "\nORG:" + site +
                         "\nTEL;TYPE=WORK,VOICE:" + settings.apps.whatsapp +
-                        "\nREV:20160101T000000Z" +
-                        "\nNOTE:This contact card is created with KeyReply.com/chat" +
                         "\nEND:VCARD";
 
-                    var blob = new Blob([card], {
-                        type: 'text/vcard'
-                    });
-
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
+                    $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
+                    // $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
