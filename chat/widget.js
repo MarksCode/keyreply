@@ -83,7 +83,7 @@
             });
 
         if (!whitelabel) {
-            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">powered by KeyReply</a>')
+            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">get this widget</a>')
                 .addClass('keyreply-brand')
                 .appendTo(launcher)
                 .click(function(event) {
