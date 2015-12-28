@@ -277,7 +277,13 @@
                         "\nEND:VCARD";
 
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
-                    $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
+
+                    if (Android) {
+                        $('<a target="_blank" class="keyreply-button">').attr('href', "tel://" + settings.apps.whatsapp).text(settings.apps.whatsapp).appendTo(container);
+                    } else {
+                        $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
+                    }
+
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;

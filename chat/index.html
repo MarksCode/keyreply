@@ -318,7 +318,7 @@
                         <div class="input-block inactive" style="background: #0AD02C;">
                             <img class="app-icon" src="images/apps/sms.svg" alt="sms">
                             <div class="app-label">
-                                SMS
+                                Text Message
                                 <div class="checkbox-container">
                                     <input type="checkbox" class="toggle" />
                                     <label for="toggle" class="well"></label>
@@ -340,13 +340,13 @@
                         <div class="input-block inactive" style="background: #2DAAE1;">
                             <img class="app-icon" src="images/apps/twitter.svg" alt="Twitter Direct Messages">
                             <div class="app-label">
-                                Twitter (Direct Message)
+                                Twitter
                                 <div class="checkbox-container">
                                     <input type="checkbox" class="toggle" />
                                     <label for="toggle" class="well"></label>
                                 </div>
                             </div>
-                            <input name="twitter" type="text" placeholder="@screen_name…">
+                            <input name="twitter" type="text" placeholder="@username…">
                             <a class="hint" target="_blank" href="https://support.twitter.com/articles/14606">How to receive Direct Messages from anyone?</a>
                         </div>
                         <div class="input-block inactive" style="background: #00AFF0;">
@@ -663,8 +663,6 @@
         var embed = document.getElementById("embed");
 
         embed.value = '<!-- Live Chat Widget powered by https://keyreply.com/chat/ -->\n<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-align="right" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
-        embed.focus();
-        embed.select();
 
         $('#keyreply-script').data('apps', payload).data('color', color);
         $('#keyreply-container').remove();
@@ -697,11 +695,10 @@
                     if (block.is('.inactive')) {
                         block.find('input[type=checkbox]').click();
                     }
+                    generate();
                 },
                 function(error) {
-                    console.log(error)
-                        // $('#reader').html5_qrcode_stop()
-                        //show read errors 
+                    console.log(error);
                 },
                 function(videoError) {
                     console.log(videoError)
@@ -734,17 +731,18 @@
 
                     var reader = new FileReader();
 
-                    reader.onload = function(e) {
-                        $input[0].data = e.target.result;
-                    };
-
-                    // Read in the image file as a data URL.
-                    reader.readAsDataURL(f);
-
                     var block = $(e.target).parent();
                     if (block.is('.inactive')) {
                         block.find('input[type=checkbox]').click();
                     }
+
+                    reader.onload = function(e) {
+                        $input[0].data = e.target.result;
+                        generate();
+                    };
+
+                    // Read in the image file as a data URL.
+                    reader.readAsDataURL(f);
                 }
             });
 
@@ -764,7 +762,10 @@
             items: '.input-block',
             delay: 100,
             opacity: 0.8,
-            placeholder: 'sortable-placeholder'
+            placeholder: 'sortable-placeholder',
+            stop: function() {
+                generate();
+            }
         });
 
         $("#get-it").click(function() {
@@ -779,11 +780,17 @@
         });
 
         $('input[type=checkbox]').click(function(event) {
+            var block = $(event.target).parent().parent().parent();
             if ($(event.target).is(':checked')) {
-                $(event.target).parent().parent().parent().removeClass("inactive");
+                block.removeClass("inactive");
+                block.find('input').focus();
             } else {
-                $(event.target).parent().parent().parent().addClass("inactive");
+                block.addClass("inactive");
             }
+        });
+
+        $('input[type=text]').blur(function() {
+            generate();
         });
 
         $('input[type=text]').focus(function(event) {
@@ -796,6 +803,7 @@
         $('#icon-color-picker > div').click(function(event) {
             $(event.currentTarget).addClass('selected');
             $(event.currentTarget).siblings().removeClass('selected');
+            generate();
         });
     });
     </script>
