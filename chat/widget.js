@@ -226,7 +226,14 @@
                     link = "sms:" + settings.apps.sms;
                     break;
                 case 'phone':
-                    link = "tel:" + settings.apps.phone;
+                    if (Mobile) {
+                        link = "tel:" + settings.apps.phone;
+                    } else {
+                        container.css('color', 'white').css('padding-top', '32px')
+                        $('<a target="_blank" class="keyreply-button">').attr('href', "tel://" + settings.apps.phone).text(settings.apps.phone).appendTo(container);
+                        qr = true;
+                        break;
+                    }
                     break;
                 case 'facetime':
                     link = "facetime-audio:" + settings.apps.facetime;
