@@ -7,6 +7,7 @@
 
 #keyreply-container {
     position: fixed;
+    z-index: 10000;
     right: 0;
     bottom: 0;
 }
@@ -31,7 +32,6 @@
 .keyreply-chat-icon {
     cursor: pointer;
     position: absolute;
-    z-index: 10000;
     width: 50px;
     height: 50px;
     right: 14px;
@@ -73,7 +73,7 @@
     top: 50% !important;
     margin-right: -140px;
     margin-top: -140px;
-    z-index: 10001;
+    z-index: 11;
 }
 
 #keyreply-container.left .keyreply-chat-icon.keyreply-panel{
@@ -82,7 +82,7 @@
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {
     width: 150px;
-    z-index: 10002;
+    z-index: 12;
 }
 
 .keyreply-chat-icon.keyreply-panel .keyreply-qr {
