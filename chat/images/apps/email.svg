@@ -1,20 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
-    <title>Mail</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Mail" sketch:type="MSArtboardGroup">
-            <g sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
-                <ellipse id="Background" fill="#2D70E7" sketch:type="MSShapeGroup" cx="12" cy="12" rx="12" ry="12"></ellipse>
-                <g id="Group" transform="translate(5.000000, 6.000000)" sketch:type="MSShapeGroup">
-                    <rect id="Rectangle-4" fill="#FFFFFF" x="0" y="0.857142857" width="14.1176471" height="10.2857143" rx="1"></rect>
-                    <path d="M5.29411765,6 L0.454747817,10.8419364" id="Line" stroke="#2D70E7" stroke-width="0.5" stroke-linecap="square"></path>
-                    <path d="M8.82352941,6 L13.929587,10.824149" id="Line" stroke="#2D70E7" stroke-width="0.5" stroke-linecap="square"></path>
-                    <path d="M0,0.857142857 L7.05882353,6.85714286 L14.321325,0.742361886" id="Line" stroke="#2D70E7" stroke-width="0.5" stroke-linecap="square"></path>
-                </g>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <ellipse cx="12" cy="12" fill="#2D70E7" rx="12" ry="12"/>
+    <g transform="translate(5 6)">
+      <rect width="14.118" height="10.286" y=".857" fill="#FFF" rx="1"/>
+      <path stroke="#2D70E7" stroke-width=".5" d="M5.294 6l-4.84 4.842M8.824 6l5.106 4.824M0 .857l7.06 6L14.32.742" stroke-linecap="square"/>
     </g>
+  </g>
 </svg>

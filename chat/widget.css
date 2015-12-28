@@ -5,17 +5,23 @@
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Lato, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
+#keyreply-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 .keyreply-launcher,
 .keyreply-chat-icon {
     cursor: pointer;
-    position: fixed;
-    height: 50px;
+    position: absolute;
+    z-index: 10000;
     width: 50px;
+    height: 50px;
     right: 14px;
     bottom: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
-    z-index: 10000;
     border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 .keyreply-chat-icon {
@@ -44,14 +50,19 @@
 }
 
 .keyreply-chat-icon.keyreply-panel {
+    position: fixed;
     width: 280px;
     height: 280px;
-    right: 70px;
-    z-index: 9999;
+    right: 50% !important;
+    top: 50% !important;
+    margin-right: -140px;
+    margin-top: -140px;
+    z-index: 10001;
 }
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {
     width: 150px;
+    z-index: 10002;
 }
 
 .keyreply-chat-icon.keyreply-panel .keyreply-qr {
@@ -102,6 +113,7 @@
 .keyreply-label {
     opacity: 0;
     filter: alpha(opacity=0);
+    color: white;
     margin-top: 10px;
     margin-left: -4px;
     line-height: 32px;
@@ -119,23 +131,23 @@
     transition: opacity 0.4s;
 }
 
-.keyreply-chat-icon:hover .keyreply-label {
+.keyreply-chat-icon:hover > .keyreply-label {
     opacity: 1;
     filter: alpha(opacity=100);
 }
 
-.keyreply-chat-icon.keyreply-panel .keyreply-label {
+.keyreply-chat-icon.keyreply-panel > .keyreply-label {
     opacity: 1;
     filter: alpha(opacity=100);
 }
 
 
 /* Click Effects */
-
 .keyreply-launcher {
-    -webkit-transition: color 0.7s;
     transition: color 0.7s;
+    -webkit-transition: color 0.7s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-size: contain;
 }
 
 .keyreply-effect:before {

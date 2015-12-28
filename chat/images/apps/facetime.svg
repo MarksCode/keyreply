@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
-    <title>Facetime</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Facetime" sketch:type="MSArtboardGroup">
-            <g sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
-                <ellipse id="Background" fill="#0DD12F" sketch:type="MSShapeGroup" cx="12" cy="12" rx="12" ry="12"></ellipse>
-                <path d="M5.98375352,8 C5.43259727,8 4.98579685,8.4463114 4.98579685,8.99754465 L4.98579685,16.0024554 C4.98579685,16.553384 5.43549499,17 5.98375352,17 L15.4593849,17 C16.0105411,17 16.4573416,16.5536886 16.4573416,16.0024554 L16.4573416,8.99754465 C16.4573416,8.44661595 16.0076434,8 15.4593849,8 L5.98375352,8 Z M16.7154472,11.1348413 L16.7154472,13.7480448 L20.4471545,15.4911972 L20.4471545,10.398262 C20.4471545,9.84192593 20.0477964,9.57755584 19.5438122,9.81307955 L16.7154472,11.1348413 Z M20.8617886,9.11971831 C20.7854566,9.11971831 20.7235772,9.17807245 20.7235772,9.26070165 L20.7235772,15.8697183 L21,15.8697183 L21,9.26070165 C21,9.1828387 20.9358883,9.11971831 20.8617886,9.11971831 Z M4.27642276,10.2394366 C4.12375869,10.2394366 4,10.3592661 4,10.5219888 L4,11.0766027 C4,11.232652 4.12822345,11.3591549 4.27642276,11.3591549 L4.55284553,11.3591549 L4.55284553,10.2394366 L4.27642276,10.2394366 Z" id="Rectangle-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <ellipse cx="12" cy="12" fill="#0DD12F" rx="12" ry="12"/>
+    <path fill="#FFF" d="M5.984 8c-.55 0-.998.446-.998.998v7.004c0 .55.45.998.998.998h9.475c.55 0 .997-.446.997-.998V8.998c0-.55-.45-.998-.998-.998H5.983zm10.73 3.135v2.613l3.733 1.743V10.4c0-.556-.4-.82-.903-.585l-2.83 1.322zm4.148-2.015c-.077 0-.138.058-.138.14v6.61H21V9.26c0-.077-.064-.14-.138-.14zM4.276 10.24c-.152 0-.276.12-.276.282v.555c0 .156.128.282.276.282h.277v-1.12h-.277z"/>
+  </g>
 </svg>

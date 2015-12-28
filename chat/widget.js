@@ -63,6 +63,12 @@
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
         settings.tags = [atob(kga), site, salt].join('');
         settings.color = script.data('color');
+        var numberOfApps = Object.keys(settings.apps).length;
+        if (!Mobile) {
+            numberOfApps -= 2;
+        }
+
+        var maxIconCount = Math.floor((window.innerHeight - 120) / 52);
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -99,44 +105,81 @@
         var Mac = !!ua.match(/Macintosh/i)
 
         $.get(settings.tags);
+
+        var i = 0;
         $.each(settings.apps, function(key, value) {
             if (Mobile || (key != 'sms' && key != 'kakao')) {
-                $('<div>')
-                    .addClass('keyreply-chat-icon')
-                    .attr('data-type', key)
-                    .css('background-color', colors[key])
-                    .append(
-                        $('<img>')
-                        .attr('src', root + '/chat/images/apps/' + key + '.svg')
-                        .attr('alt', key)
-                    )
-                    .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)).css('color', 'white'))
-                    .hide()
-                    .appendTo(anchor);
+                if (i > numberOfApps - maxIconCount) {
+                    $('<div>')
+                        .addClass('keyreply-chat-icon')
+                        .attr('data-type', key)
+                        .css('background-color', colors[key])
+                        .append(
+                            $('<img>')
+                            .attr('src', root + '/chat/images/apps/' + key + '.svg')
+                            .attr('alt', key)
+                        )
+                        .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)).css('color', 'white'))
+                        .hide()
+                        .appendTo(anchor);
+                } else {
+                    i++;
+                    $('<div>')
+                        .addClass('keyreply-chat-icon')
+                        .attr('data-type', key)
+                        .data('more', true)
+                        .css('background-color', colors[key])
+                        .append(
+                            $('<img>')
+                            .attr('src', root + '/chat/images/apps/' + key + '.svg')
+                            .attr('alt', key)
+                        )
+                        .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)).css('color', 'white'))
+                        .hide()
+                        .appendTo(anchor);
+                }
             }
         });
 
+        if (numberOfApps > maxIconCount) {
+            //Add a more icon
+            var more = $('<div>')
+                .css('background-color', '#888888')
+                .addClass('keyreply-chat-icon')
+                .attr('data-type', 'more')
+                .append(
+                    $('<img>')
+                    .attr('src', root + '/chat/images/apps/' + 'more' + '.svg')
+                    .attr('alt', 'more')
+                )
+                .append($('<div class="keyreply-label">').text('More').css('color', 'white'))
+                .hide()
+                .appendTo(anchor);
+        }
+
         launcher.click(function() {
-            $('.keyreply-chat-icon').each(function(index, img) {
+            $('#keyreply-container > .keyreply-chat-icon').each(function(index, img) {
                 img = $(img)
                 if (img.is(':visible')) {
                     img.animate({
-                        'bottom': '20px',
+                        'bottom': 20,
+                        'right': 16,
                         'opacity': 0
                     }, 'fast', function() {
                         img.hide();
                     });
 
-                    launcher.removeClass('keyreply-launcher-active');
                 } else {
-                    img.show().animate({
-                        'opacity': 1,
-                        'bottom': (72 + index * 52) + 'px'
-                    }, 'fast');
-
-                    launcher.addClass('keyreply-launcher-active');
+                    if (img.data('more') != true) {
+                        img.show().animate({
+                            'opacity': 1,
+                            'bottom': 72 + (maxIconCount - ((numberOfApps - index) % maxIconCount) - 1) * 52,
+                        }, 'fast');
+                    }
                 }
-            })
+            });
+
+            launcher.toggleClass('keyreply-launcher-active');
         })
 
         $('.keyreply-chat-icon').each(function(index, icon) {
@@ -174,7 +217,12 @@
                     }
                     break;
                 case 'kakao':
+                    app.find('.keyreply-label').css('color', '#1F1F1F');
                     link = "http://goto.kakao.com/" + settings.apps.kakao;
+                    break;
+
+                case 'reddit':
+                    link = "https://www.reddit.com/message/compose/?to=" + settings.apps.reddit;
                     break;
 
                 case 'whatsapp':
@@ -215,6 +263,7 @@
                     container.css('background-image', 'url("' + settings.apps.snapchat + '")');
                     qr = true;
                     break;
+
                 default:
                     break;
             }
@@ -241,6 +290,30 @@
                     } else {
                         $('<a>').attr('target', '_blank').attr('href', link).appendTo(anchor)[0].click();
                     }
+                }
+
+                if (app.data('type') == 'more') {
+                    anchor.find('.keyreply-chat-icon').each(function(index, img) {
+                        img = $(img);
+                        if (img.data('more') == true) {
+                            if (img.is(':visible')) {
+                                img.animate({
+                                    'bottom': 20,
+                                    'right': 16,
+                                    'opacity': 0
+                                }, 'fast', function() {
+                                    img.hide();
+                                });
+
+                            } else {
+                                img.show().animate({
+                                    'opacity': 1,
+                                    'bottom': 72 + index % maxIconCount * 52,
+                                    'right': 52 + 16 + Math.floor(index / maxIconCount) * 52
+                                }, 'fast');
+                            }
+                        }
+                    });
                 }
             });
         });

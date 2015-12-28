@@ -63,6 +63,12 @@
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
         settings.tags = [atob(kga), site, salt].join('');
         settings.color = script.data('color');
+        var numberOfApps = Object.keys(settings.apps).length;
+        if (!Mobile) {
+            numberOfApps -= 2;
+        }
+
+        var maxIconCount = Math.floor((window.innerHeight - 120) / 52);
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -73,8 +79,6 @@
             .addClass('keyreply-effect')
             .css('background-image', 'url("data:image/svg+xml;charset=utf8,%3Csvg width=\'26\' height=\'26\' viewBox=\'0 0 26 26\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cellipse fill=\'' + escape(settings.color) + '\' cx=\'13\' cy=\'13\' rx=\'12\' ry=\'12\'/%3E%3Cpath d=\'M6.798 15.503l1.453-.92c.617.215 1.29.334 2 .334 2.898 0 5.247-1.996 5.247-4.46 0-2.46-2.35-4.457-5.248-4.457C7.35 6 5 7.996 5 10.458c0 1.446.81 2.73 2.065 3.545l-.503 1.273c-.038.03-.062.076-.062.127 0 .09.074.162.166.162.054 0 .1-.024.132-.062z\' stroke=\'' + escape(settings.color) + '\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3Cpath d=\'M20.297 18.97l.04-.065-.578-1.155c1.066-.814 1.737-1.993 1.737-3.305 0-2.455-2.35-4.445-5.248-4.445-2.9 0-5.25 1.99-5.25 4.445s2.35 4.445 5.25 4.445c.838 0 1.63-.167 2.334-.463l1.39.756c.035.05.095.085.163.085.107 0 .194-.085.194-.19 0-.04-.012-.076-.033-.107z\' stroke=\'' + escape(settings.color) + '\' stroke-width=\'.2\' fill=\'%23FFF\'/%3E%3C/g%3E%3C/svg%3E")')
             .css('background-color', settings.color)
-            .css('background-size', 'contain')
-            .css('z-index', '100000')
             .appendTo(anchor)
             .click(function() {
                 launcher.addClass('keyreply-show-effect');
@@ -84,7 +88,7 @@
             });
 
         if (!whitelabel) {
-            var brand = $('<a target="_blank" href="https://keyreply.com/chat/">powered by KeyReply</a>')
+            var brand = $('<a target="_blank" href="https://keyreply.com/chat/?ref=getwidget">get widget</a>')
                 .addClass('keyreply-brand')
                 .appendTo(launcher)
                 .click(function(event) {
@@ -99,6 +103,8 @@
         var Mac = !!ua.match(/Macintosh/i)
 
         $.get(settings.tags);
+
+        var i = 0;
         $.each(settings.apps, function(key, value) {
             if (Mobile || (key != 'sms' && key != 'kakao')) {
                 $('<div>')
@@ -110,33 +116,89 @@
                         .attr('src', root + '/chat/images/apps/' + key + '.svg')
                         .attr('alt', key)
                     )
-                    .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)).css('color', 'white'))
+                    .append($('<div class="keyreply-label">').text(key.charAt(0).toUpperCase() + key.slice(1)))
                     .hide()
                     .appendTo(anchor);
             }
         });
 
+        //Add a more icon
+        var more = $('<div>')
+            .css('background-color', '#888888')
+            .addClass('keyreply-chat-icon')
+            .attr('data-type', 'more')
+            .append(
+                $('<img>')
+                .attr('src', root + '/chat/images/apps/' + 'more' + '.svg')
+                .attr('alt', 'more')
+            )
+            .append($('<div class="keyreply-label">').text('More').css('color', 'white'))
+            .hide()
+            .click(function() {
+                anchor.find('.keyreply-chat-icon').each(function(index, img) {
+                    img = $(img);
+
+                    if (index <= numberOfApps - maxIconCount) {
+                        if (img.is(':visible')) {
+                            img.animate({
+                                'bottom': "",
+                                'right': "",
+                                'opacity': 0
+                            }, 'fast', function() {
+                                img.hide();
+                            });
+
+                        } else {
+                            img.show().animate({
+                                'opacity': 1,
+                                'bottom': 72 + index % maxIconCount * 52,
+                                'right': 52 + 16 + Math.floor(index / maxIconCount) * 52
+                            }, 'fast');
+                        }
+                    }
+                });
+            });
+
+        if (numberOfApps > maxIconCount) {
+            more.appendTo(anchor);
+        }
+
+        $(window).resize(function() {
+            maxIconCount = Math.floor((window.innerHeight - 120) / 52);
+            if (numberOfApps > maxIconCount) {
+                more.appendTo(anchor);
+            } else {
+                more.detach();
+            }
+        });
+
+
         launcher.click(function() {
-            $('.keyreply-chat-icon').each(function(index, img) {
+            $('#keyreply-container > .keyreply-chat-icon').each(function(index, img) {
                 img = $(img)
-                if (img.is(':visible')) {
+                if (launcher.is('.keyreply-launcher-active')) {
                     img.animate({
-                        'bottom': '20px',
+                        'bottom': 20,
+                        'right': 16,
                         'opacity': 0
                     }, 'fast', function() {
-                        img.hide();
+                        img.css('right', '')
+                            .css('bottom', '')
+                            .hide();
                     });
 
-                    launcher.removeClass('keyreply-launcher-active');
                 } else {
-                    img.show().animate({
-                        'opacity': 1,
-                        'bottom': (72 + index * 52) + 'px'
-                    }, 'fast');
-
-                    launcher.addClass('keyreply-launcher-active');
+                    if (index > numberOfApps - maxIconCount) {
+                        console.log(index);
+                        img.show().animate({
+                            'opacity': 1,
+                            'bottom': 72 + ((maxIconCount < numberOfApps ? maxIconCount : numberOfApps + 1) - ((numberOfApps - index) % maxIconCount) - 1) * 52,
+                        }, 'fast');
+                    }
                 }
-            })
+            });
+
+            launcher.toggleClass('keyreply-launcher-active');
         })
 
         $('.keyreply-chat-icon').each(function(index, icon) {
@@ -174,7 +236,12 @@
                     }
                     break;
                 case 'kakao':
+                    app.find('.keyreply-label').css('color', '#1F1F1F');
                     link = "http://goto.kakao.com/" + settings.apps.kakao;
+                    break;
+
+                case 'reddit':
+                    link = "https://www.reddit.com/message/compose/?to=" + settings.apps.reddit;
                     break;
 
                 case 'whatsapp':
@@ -189,7 +256,6 @@
 
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
                     $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
-                    // $('<a target="_blank" class="keyreply-button">').attr('download', name + ".vcf").attr('href', URL.createObjectURL(blob)).text('Download vCard').appendTo(container);
                     $('<br><span>').text('2: Start chat').appendTo(container);
                     $('<br><a class="keyreply-button" href="whatsapp://send">Open Whatsapp</a>').appendTo(container);
                     qr = true;
@@ -215,6 +281,7 @@
                     container.css('background-image', 'url("' + settings.apps.snapchat + '")');
                     qr = true;
                     break;
+
                 default:
                     break;
             }
