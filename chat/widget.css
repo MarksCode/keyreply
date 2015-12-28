@@ -11,6 +11,22 @@
     bottom: 0;
 }
 
+#keyreply-container.left {
+    right: auto;
+    left: 0;
+}
+
+#keyreply-container.left {
+    right: auto;
+    left: 0;
+}
+
+#keyreply-container.left .keyreply-launcher,
+#keyreply-container.left .keyreply-chat-icon {
+    right: auto;
+    left: 14px;
+}
+
 .keyreply-launcher,
 .keyreply-chat-icon {
     cursor: pointer;
@@ -58,6 +74,10 @@
     margin-right: -140px;
     margin-top: -140px;
     z-index: 10001;
+}
+
+#keyreply-container.left .keyreply-chat-icon.keyreply-panel{
+    left: auto;
 }
 
 .keyreply-chat-icon:not(.keyreply-panel):hover {

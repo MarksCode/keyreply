@@ -79,6 +79,10 @@
             .attr('id', 'keyreply-container')
             .appendTo($('body'));
 
+        if (align == 'left') {
+            anchor.addClass('left');
+        }
+
         var launcher = $('<div>')
             .addClass('keyreply-launcher')
             .addClass('keyreply-effect')
@@ -154,11 +158,15 @@
                             });
 
                         } else {
-                            img.show().animate({
+                            //Setting
+                            var option = {
                                 'opacity': 1,
-                                'bottom': 72 + index % maxIconCount * 52,
-                                'right': 52 + 16 + Math.floor(index / maxIconCount) * 52
-                            }, 'fast');
+                                'bottom': 72 + index % maxIconCount * 52
+                            }
+
+                            option[(align == 'left' ? 'left' : 'right')] = 52 + 16 + Math.floor(index / maxIconCount) * 52;
+                            option[(align == 'left' ? 'right' : 'left')] = "auto";
+                            img.show().animate(option, 'fast');
                         }
                     }
                 });
