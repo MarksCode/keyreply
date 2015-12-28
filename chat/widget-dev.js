@@ -57,7 +57,12 @@
                 kakao: '#FBDE24',
                 line: '#3ACE01',
                 snapchat: '#FFFC00',
-                wechat: '#1ECE29'
+                wechat: '#1ECE29',
+                reddit: '#017AD4',
+                twitter: '#2DAAE1',
+                hipchat: '#274970',
+                slack: '#423843',
+                handouts: '#70AD46'
             };
 
         settings.apps = JSON.parse(decodeURI(atob(cipher)));
@@ -241,7 +246,16 @@
                     break;
 
                 case 'reddit':
+                    //Deeplink not possible
                     link = "https://www.reddit.com/message/compose/?to=" + settings.apps.reddit;
+                    break;
+
+                case 'twitter':
+                    if (Mobile) {
+                        link = "twitter://user?screen_name=" + settings.apps.twitter.replace('@', '');
+                    } else {
+                        link = "https://twitter.com/" + settings.apps.twitter.replace('@', '');
+                    }
                     break;
 
                 case 'whatsapp':
