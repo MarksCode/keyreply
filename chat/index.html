@@ -608,6 +608,9 @@
                         </div>
                     </div>
             </div>
+            <div class="preview" style="display:none; position:fixed; bottom:35px; right:75px;">
+                <img src="/chat/images/preview.png" alt="">
+            </div>
             <div class="modal" style="display:none; width: 500px; height: 300px;">
             </div>
             <footer>
@@ -618,43 +621,6 @@
                 </ul>
                 <span style="font-size: 16px; color: #555555;">KeyReply helps you reply better and faster across all platforms. <a href="https://keyreply.com/">Check it out! </a> </span>
                 <br>
-                <style>
-                #wrapper {
-                    padding-bottom: 8px;
-                }
-                
-                #embedhunt-embedder-product-slug-div {
-                    max-width: 480px;
-                }
-                
-                #embedhunt-embedder-product-slug-div .post {
-                    margin-left: 0;
-                    margin-right: 0;
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-                
-                .powered_by {
-                    display: none !important;
-                }
-                </style>
-                <script type="text/javascript" id="embedhunt-44661" class="embedhunt-async-script-loader">
-                (function() {
-                    function async_load() {
-                        var s = document.createElement('script');
-                        s.type = 'text/javascript';
-                        s.async = true;
-                        var theUrl = '//embedhunt.com/products/44661/widget';
-                        s.src = theUrl;
-                        var embedder = document.getElementById('embedhunt-44661');
-                        embedder.parentNode.insertBefore(s, embedder);
-                    }
-                    if (window.attachEvent)
-                        window.attachEvent('onload', async_load);
-                    else
-                        window.addEventListener('load', async_load, false);
-                })();
-                </script>
             </footer>
         </section>
         <!-- Banner -->
@@ -696,7 +662,7 @@
         var payload = btoa(encodeURI(JSON.stringify(apps)));
         var embed = document.getElementById("embed");
 
-        embed.value = '<!-- Live Chat Widget powered by https://keyreply.com/chat/ -->\n<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
+        embed.value = '<!-- Live Chat Widget powered by https://keyreply.com/chat/ -->\n<script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-align="right" data-color="' + color + '" data-apps="' + payload + '"><\/script>'
         embed.focus();
         embed.select();
 
@@ -704,6 +670,9 @@
         $('#keyreply-container').remove();
 
         window.initializeKeyreply();
+
+        $('.preview').show();
+        $('.keyreply-launcher').click();
     }
 
     $(function() {
