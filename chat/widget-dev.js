@@ -73,7 +73,7 @@
             numberOfApps -= 2;
         }
 
-        var maxIconCount = Math.floor((window.innerHeight - 120) / 52);
+        var maxIconCount = Math.floor((window.innerHeight - 150) / 52);
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
@@ -177,7 +177,7 @@
         }
 
         $(window).resize(function() {
-            maxIconCount = Math.floor((window.innerHeight - 120) / 52);
+            maxIconCount = Math.floor((window.innerHeight - 150) / 52);
             if (numberOfApps > maxIconCount) {
                 more.appendTo(anchor);
             } else {
@@ -286,7 +286,7 @@
                     container.css('color', 'white').css('padding-top', '32px').text("1: Add to Contacts")
 
                     if (Android) {
-                        $('<a target="_blank" class="keyreply-button">').attr('href', "tel://" + settings.apps.whatsapp).text(settings.apps.whatsapp).appendTo(container);
+                        $('<a target="_blank" class="keyreply-button">').attr('href', "tel:" + settings.apps.whatsapp).text(settings.apps.whatsapp).appendTo(container);
                     } else {
                         $('<a target="_blank" class="keyreply-button">').attr('rel', 'external').attr('download', name + ".vcf").attr('href', "data:text/directory;base64," + btoa(card)).text(settings.apps.whatsapp).appendTo(container);
                     }

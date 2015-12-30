@@ -73,7 +73,7 @@
             numberOfApps -= 2;
         }
 
-        var maxIconCount = Math.floor((window.innerHeight - 120) / 52);
+        var maxIconCount = Math.floor((window.innerHeight - 150) / 52);
 
         var anchor = $('<div>')
             .attr('id', 'keyreply-container')
