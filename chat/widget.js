@@ -177,7 +177,7 @@
         }
 
         $(window).resize(function() {
-            maxIconCount = Math.floor((window.innerHeight - 120) / 52);
+            maxIconCount = Math.floor((window.innerHeight - 150) / 52);
             if (numberOfApps > maxIconCount) {
                 more.appendTo(anchor);
             } else {
